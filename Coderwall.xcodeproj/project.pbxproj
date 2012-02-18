@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE60B66A14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
+		BE60B66C14EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
+		BE60B66E14EFA64100CF7151 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
+		BE60B67414EFA64100CF7151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE60B67214EFA64100CF7151 /* InfoPlist.strings */; };
+		BE60B67614EFA64100CF7151 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67514EFA64100CF7151 /* main.m */; };
+		BE60B67A14EFA64100CF7151 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67914EFA64100CF7151 /* AppDelegate.m */; };
+		BE60B67D14EFA64100CF7151 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE60B67B14EFA64100CF7151 /* MainStoryboard_iPhone.storyboard */; };
+		BE60B68014EFA64100CF7151 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE60B67E14EFA64100CF7151 /* MainStoryboard_iPad.storyboard */; };
+		BE60B68E14EFA64100CF7151 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */; };
+		BE60B68F14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
+		BE60B69014EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
+		BE60B69814EFA64100CF7151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE60B69614EFA64100CF7151 /* InfoPlist.strings */; };
+		BE60B69B14EFA64100CF7151 /* CoderwallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B69A14EFA64100CF7151 /* CoderwallTests.m */; };
+		BE60B6A614EFB09100CF7151 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6A514EFB09100CF7151 /* ProfileViewController.m */; };
+		BE60B6AC14EFB0FD00CF7151 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6AB14EFB0FD00CF7151 /* User.m */; };
+		BE60B6C414EFBA7500CF7151 /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60B6C214EFBA7500CF7151 /* app-icon-retina.png */; };
+		BE60B6C514EFBA7500CF7151 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60B6C314EFBA7500CF7151 /* app-icon.png */; };
+		BE60B6C714EFBA9B00CF7151 /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60B6C614EFBA9B00CF7151 /* app-icon-retina.png */; };
+		BE60B6C914EFBAA400CF7151 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60B6C814EFBAA400CF7151 /* app-icon.png */; };
+		BE60B6CB14EFBAE700CF7151 /* inset-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BE60B6CA14EFBAE700CF7151 /* inset-logo.png */; };
+		BE60B74814EFBE6000CF7151 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73014EFBE6000CF7151 /* NSObject+SBJson.m */; };
+		BE60B74914EFBE6000CF7151 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73314EFBE6000CF7151 /* SBJsonParser.m */; };
+		BE60B74A14EFBE6000CF7151 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73514EFBE6000CF7151 /* SBJsonStreamParser.m */; };
+		BE60B74B14EFBE6000CF7151 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73714EFBE6000CF7151 /* SBJsonStreamParserAccumulator.m */; };
+		BE60B74C14EFBE6000CF7151 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73914EFBE6000CF7151 /* SBJsonStreamParserAdapter.m */; };
+		BE60B74D14EFBE6000CF7151 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73B14EFBE6000CF7151 /* SBJsonStreamParserState.m */; };
+		BE60B74E14EFBE6000CF7151 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73D14EFBE6000CF7151 /* SBJsonStreamWriter.m */; };
+		BE60B74F14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B73F14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.m */; };
+		BE60B75014EFBE6000CF7151 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74114EFBE6000CF7151 /* SBJsonStreamWriterState.m */; };
+		BE60B75114EFBE6000CF7151 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74314EFBE6000CF7151 /* SBJsonTokeniser.m */; };
+		BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */; };
+		BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */; };
+		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
+		BE60B76714F0617600CF7151 /* RoundedPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76214F0617600CF7151 /* RoundedPanelView.m */; };
+		BE60B76814F0617600CF7151 /* RoundedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76414F0617600CF7151 /* RoundedTableView.m */; };
+		BE60B76914F0617600CF7151 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76614F0617600CF7151 /* ShadowView.m */; };
+		BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76B14F06C3E00CF7151 /* StatsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE60B65C14EFA64000CF7151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE60B66414EFA64100CF7151;
+			remoteInfo = Coderwall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE60B66914EFA64100CF7151 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE60B66B14EFA64100CF7151 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE60B67114EFA64100CF7151 /* Coderwall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Coderwall-Info.plist"; sourceTree = "<group>"; };
+		BE60B67314EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE60B67514EFA64100CF7151 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE60B67714EFA64100CF7151 /* Coderwall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Coderwall-Prefix.pch"; sourceTree = "<group>"; };
+		BE60B67814EFA64100CF7151 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE60B67914EFA64100CF7151 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE60B67C14EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		BE60B67F14EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		BE60B68C14EFA64100CF7151 /* CoderwallTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoderwallTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		BE60B69514EFA64100CF7151 /* CoderwallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoderwallTests-Info.plist"; sourceTree = "<group>"; };
+		BE60B69714EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE60B69914EFA64100CF7151 /* CoderwallTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoderwallTests.h; sourceTree = "<group>"; };
+		BE60B69A14EFA64100CF7151 /* CoderwallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoderwallTests.m; sourceTree = "<group>"; };
+		BE60B6A414EFB09100CF7151 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		BE60B6A514EFB09100CF7151 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		BE60B6AA14EFB0FD00CF7151 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = "../../Coderwall-old/Coderwall/User.h"; sourceTree = "<group>"; };
+		BE60B6AB14EFB0FD00CF7151 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "../../Coderwall-old/Coderwall/User.m"; sourceTree = "<group>"; };
+		BE60B6C214EFBA7500CF7151 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-retina.png"; path = "../../Coderwall-old/app-icon-retina.png"; sourceTree = "<group>"; };
+		BE60B6C314EFBA7500CF7151 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "../../Coderwall-old/app-icon.png"; sourceTree = "<group>"; };
+		BE60B6C614EFBA9B00CF7151 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-retina.png"; sourceTree = "<group>"; };
+		BE60B6C814EFBAA400CF7151 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		BE60B6CA14EFBAE700CF7151 /* inset-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inset-logo.png"; sourceTree = "<group>"; };
+		BE60B72F14EFBE6000CF7151 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		BE60B73014EFBE6000CF7151 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		BE60B73114EFBE6000CF7151 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		BE60B73214EFBE6000CF7151 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		BE60B73314EFBE6000CF7151 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		BE60B73414EFBE6000CF7151 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		BE60B73514EFBE6000CF7151 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		BE60B73614EFBE6000CF7151 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		BE60B73714EFBE6000CF7151 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		BE60B73814EFBE6000CF7151 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		BE60B73914EFBE6000CF7151 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		BE60B73A14EFBE6000CF7151 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		BE60B73B14EFBE6000CF7151 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		BE60B73C14EFBE6000CF7151 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		BE60B73D14EFBE6000CF7151 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		BE60B73E14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		BE60B73F14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		BE60B74014EFBE6000CF7151 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		BE60B74114EFBE6000CF7151 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		BE60B74214EFBE6000CF7151 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		BE60B74314EFBE6000CF7151 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		BE60B74414EFBE6000CF7151 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		BE60B74614EFBE6000CF7151 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
+		BE60B76114F0617600CF7151 /* RoundedPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedPanelView.h; sourceTree = "<group>"; };
+		BE60B76214F0617600CF7151 /* RoundedPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedPanelView.m; sourceTree = "<group>"; };
+		BE60B76314F0617600CF7151 /* RoundedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedTableView.h; sourceTree = "<group>"; };
+		BE60B76414F0617600CF7151 /* RoundedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedTableView.m; sourceTree = "<group>"; };
+		BE60B76514F0617600CF7151 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
+		BE60B76614F0617600CF7151 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
+		BE60B76A14F06C3E00CF7151 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		BE60B76B14F06C3E00CF7151 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE60B66214EFA64100CF7151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B66A14EFA64100CF7151 /* UIKit.framework in Frameworks */,
+				BE60B66C14EFA64100CF7151 /* Foundation.framework in Frameworks */,
+				BE60B66E14EFA64100CF7151 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE60B68814EFA64100CF7151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B68E14EFA64100CF7151 /* SenTestingKit.framework in Frameworks */,
+				BE60B68F14EFA64100CF7151 /* UIKit.framework in Frameworks */,
+				BE60B69014EFA64100CF7151 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE60B65A14EFA64000CF7151 = {
+			isa = PBXGroup;
+			children = (
+				BE60B6C814EFBAA400CF7151 /* app-icon.png */,
+				BE60B6C614EFBA9B00CF7151 /* app-icon-retina.png */,
+				BE60B66F14EFA64100CF7151 /* Coderwall */,
+				BE60B69314EFA64100CF7151 /* CoderwallTests */,
+				BE60B66814EFA64100CF7151 /* Frameworks */,
+				BE60B66614EFA64100CF7151 /* Products */,
+				BE60B72E14EFBE6000CF7151 /* SBJson */,
+			);
+			sourceTree = "<group>";
+		};
+		BE60B66614EFA64100CF7151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B66514EFA64100CF7151 /* Coderwall.app */,
+				BE60B68C14EFA64100CF7151 /* CoderwallTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE60B66814EFA64100CF7151 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B66914EFA64100CF7151 /* UIKit.framework */,
+				BE60B66B14EFA64100CF7151 /* Foundation.framework */,
+				BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */,
+				BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE60B66F14EFA64100CF7151 /* Coderwall */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B75E14F05DE700CF7151 /* Protocols */,
+				BE60B6C114EFBA6200CF7151 /* Resources */,
+				BE60B6A714EFB09700CF7151 /* Models */,
+				BE60B6A814EFB0A000CF7151 /* Controllers */,
+				BE60B6A914EFB0AF00CF7151 /* Views */,
+				BE60B67814EFA64100CF7151 /* AppDelegate.h */,
+				BE60B67914EFA64100CF7151 /* AppDelegate.m */,
+				BE60B67014EFA64100CF7151 /* Supporting Files */,
+			);
+			path = Coderwall;
+			sourceTree = "<group>";
+		};
+		BE60B67014EFA64100CF7151 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B67114EFA64100CF7151 /* Coderwall-Info.plist */,
+				BE60B67214EFA64100CF7151 /* InfoPlist.strings */,
+				BE60B67514EFA64100CF7151 /* main.m */,
+				BE60B67714EFA64100CF7151 /* Coderwall-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE60B69314EFA64100CF7151 /* CoderwallTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B69914EFA64100CF7151 /* CoderwallTests.h */,
+				BE60B69A14EFA64100CF7151 /* CoderwallTests.m */,
+				BE60B69414EFA64100CF7151 /* Supporting Files */,
+			);
+			path = CoderwallTests;
+			sourceTree = "<group>";
+		};
+		BE60B69414EFA64100CF7151 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B69514EFA64100CF7151 /* CoderwallTests-Info.plist */,
+				BE60B69614EFA64100CF7151 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE60B6A714EFB09700CF7151 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B6AA14EFB0FD00CF7151 /* User.h */,
+				BE60B6AB14EFB0FD00CF7151 /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BE60B6A814EFB0A000CF7151 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B6A414EFB09100CF7151 /* ProfileViewController.h */,
+				BE60B6A514EFB09100CF7151 /* ProfileViewController.m */,
+				BE60B75414EFC4D500CF7151 /* MasterViewController.h */,
+				BE60B75514EFC4D500CF7151 /* MasterViewController.m */,
+				BE60B76A14F06C3E00CF7151 /* StatsViewController.h */,
+				BE60B76B14F06C3E00CF7151 /* StatsViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BE60B6A914EFB0AF00CF7151 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B76014F0615600CF7151 /* ViewExtensions */,
+				BE60B67B14EFA64100CF7151 /* MainStoryboard_iPhone.storyboard */,
+				BE60B67E14EFA64100CF7151 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BE60B6C114EFBA6200CF7151 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B6CA14EFBAE700CF7151 /* inset-logo.png */,
+				BE60B6C214EFBA7500CF7151 /* app-icon-retina.png */,
+				BE60B6C314EFBA7500CF7151 /* app-icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BE60B72E14EFBE6000CF7151 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B72F14EFBE6000CF7151 /* NSObject+SBJson.h */,
+				BE60B73014EFBE6000CF7151 /* NSObject+SBJson.m */,
+				BE60B73114EFBE6000CF7151 /* SBJson.h */,
+				BE60B73214EFBE6000CF7151 /* SBJsonParser.h */,
+				BE60B73314EFBE6000CF7151 /* SBJsonParser.m */,
+				BE60B73414EFBE6000CF7151 /* SBJsonStreamParser.h */,
+				BE60B73514EFBE6000CF7151 /* SBJsonStreamParser.m */,
+				BE60B73614EFBE6000CF7151 /* SBJsonStreamParserAccumulator.h */,
+				BE60B73714EFBE6000CF7151 /* SBJsonStreamParserAccumulator.m */,
+				BE60B73814EFBE6000CF7151 /* SBJsonStreamParserAdapter.h */,
+				BE60B73914EFBE6000CF7151 /* SBJsonStreamParserAdapter.m */,
+				BE60B73A14EFBE6000CF7151 /* SBJsonStreamParserState.h */,
+				BE60B73B14EFBE6000CF7151 /* SBJsonStreamParserState.m */,
+				BE60B73C14EFBE6000CF7151 /* SBJsonStreamWriter.h */,
+				BE60B73D14EFBE6000CF7151 /* SBJsonStreamWriter.m */,
+				BE60B73E14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.h */,
+				BE60B73F14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.m */,
+				BE60B74014EFBE6000CF7151 /* SBJsonStreamWriterState.h */,
+				BE60B74114EFBE6000CF7151 /* SBJsonStreamWriterState.m */,
+				BE60B74214EFBE6000CF7151 /* SBJsonTokeniser.h */,
+				BE60B74314EFBE6000CF7151 /* SBJsonTokeniser.m */,
+				BE60B74414EFBE6000CF7151 /* SBJsonUTF8Stream.h */,
+				BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */,
+				BE60B74614EFBE6000CF7151 /* SBJsonWriter.h */,
+				BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+		BE60B75E14F05DE700CF7151 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		BE60B76014F0615600CF7151 /* ViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				BE60B76114F0617600CF7151 /* RoundedPanelView.h */,
+				BE60B76214F0617600CF7151 /* RoundedPanelView.m */,
+				BE60B76314F0617600CF7151 /* RoundedTableView.h */,
+				BE60B76414F0617600CF7151 /* RoundedTableView.m */,
+				BE60B76514F0617600CF7151 /* ShadowView.h */,
+				BE60B76614F0617600CF7151 /* ShadowView.m */,
+			);
+			name = ViewExtensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE60B66414EFA64100CF7151 /* Coderwall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE60B69E14EFA64100CF7151 /* Build configuration list for PBXNativeTarget "Coderwall" */;
+			buildPhases = (
+				BE60B66114EFA64100CF7151 /* Sources */,
+				BE60B66214EFA64100CF7151 /* Frameworks */,
+				BE60B66314EFA64100CF7151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coderwall;
+			productName = Coderwall;
+			productReference = BE60B66514EFA64100CF7151 /* Coderwall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE60B68B14EFA64100CF7151 /* CoderwallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE60B6A114EFA64100CF7151 /* Build configuration list for PBXNativeTarget "CoderwallTests" */;
+			buildPhases = (
+				BE60B68714EFA64100CF7151 /* Sources */,
+				BE60B68814EFA64100CF7151 /* Frameworks */,
+				BE60B68914EFA64100CF7151 /* Resources */,
+				BE60B68A14EFA64100CF7151 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE60B69214EFA64100CF7151 /* PBXTargetDependency */,
+			);
+			name = CoderwallTests;
+			productName = CoderwallTests;
+			productReference = BE60B68C14EFA64100CF7151 /* CoderwallTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE60B65C14EFA64000CF7151 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Bearded Apps";
+			};
+			buildConfigurationList = BE60B65F14EFA64000CF7151 /* Build configuration list for PBXProject "Coderwall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE60B65A14EFA64000CF7151;
+			productRefGroup = BE60B66614EFA64100CF7151 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE60B66414EFA64100CF7151 /* Coderwall */,
+				BE60B68B14EFA64100CF7151 /* CoderwallTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE60B66314EFA64100CF7151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B67414EFA64100CF7151 /* InfoPlist.strings in Resources */,
+				BE60B67D14EFA64100CF7151 /* MainStoryboard_iPhone.storyboard in Resources */,
+				BE60B68014EFA64100CF7151 /* MainStoryboard_iPad.storyboard in Resources */,
+				BE60B6C414EFBA7500CF7151 /* app-icon-retina.png in Resources */,
+				BE60B6C514EFBA7500CF7151 /* app-icon.png in Resources */,
+				BE60B6C714EFBA9B00CF7151 /* app-icon-retina.png in Resources */,
+				BE60B6C914EFBAA400CF7151 /* app-icon.png in Resources */,
+				BE60B6CB14EFBAE700CF7151 /* inset-logo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE60B68914EFA64100CF7151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B69814EFA64100CF7151 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE60B68A14EFA64100CF7151 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE60B66114EFA64100CF7151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B67614EFA64100CF7151 /* main.m in Sources */,
+				BE60B67A14EFA64100CF7151 /* AppDelegate.m in Sources */,
+				BE60B6A614EFB09100CF7151 /* ProfileViewController.m in Sources */,
+				BE60B6AC14EFB0FD00CF7151 /* User.m in Sources */,
+				BE60B74814EFBE6000CF7151 /* NSObject+SBJson.m in Sources */,
+				BE60B74914EFBE6000CF7151 /* SBJsonParser.m in Sources */,
+				BE60B74A14EFBE6000CF7151 /* SBJsonStreamParser.m in Sources */,
+				BE60B74B14EFBE6000CF7151 /* SBJsonStreamParserAccumulator.m in Sources */,
+				BE60B74C14EFBE6000CF7151 /* SBJsonStreamParserAdapter.m in Sources */,
+				BE60B74D14EFBE6000CF7151 /* SBJsonStreamParserState.m in Sources */,
+				BE60B74E14EFBE6000CF7151 /* SBJsonStreamWriter.m in Sources */,
+				BE60B74F14EFBE6000CF7151 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				BE60B75014EFBE6000CF7151 /* SBJsonStreamWriterState.m in Sources */,
+				BE60B75114EFBE6000CF7151 /* SBJsonTokeniser.m in Sources */,
+				BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */,
+				BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */,
+				BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */,
+				BE60B76714F0617600CF7151 /* RoundedPanelView.m in Sources */,
+				BE60B76814F0617600CF7151 /* RoundedTableView.m in Sources */,
+				BE60B76914F0617600CF7151 /* ShadowView.m in Sources */,
+				BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE60B68714EFA64100CF7151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE60B69B14EFA64100CF7151 /* CoderwallTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE60B69214EFA64100CF7151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE60B66414EFA64100CF7151 /* Coderwall */;
+			targetProxy = BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE60B67214EFA64100CF7151 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE60B67314EFA64100CF7151 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE60B67B14EFA64100CF7151 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE60B67C14EFA64100CF7151 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BE60B67E14EFA64100CF7151 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE60B67F14EFA64100CF7151 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BE60B69614EFA64100CF7151 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE60B69714EFA64100CF7151 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE60B69C14EFA64100CF7151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE60B69D14EFA64100CF7151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE60B69F14EFA64100CF7151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
+				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE60B6A014EFA64100CF7151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
+				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BE60B6A214EFA64100CF7151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
+				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		BE60B6A314EFA64100CF7151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
+				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE60B65F14EFA64000CF7151 /* Build configuration list for PBXProject "Coderwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE60B69C14EFA64100CF7151 /* Debug */,
+				BE60B69D14EFA64100CF7151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE60B69E14EFA64100CF7151 /* Build configuration list for PBXNativeTarget "Coderwall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE60B69F14EFA64100CF7151 /* Debug */,
+				BE60B6A014EFA64100CF7151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE60B6A114EFA64100CF7151 /* Build configuration list for PBXNativeTarget "CoderwallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE60B6A214EFA64100CF7151 /* Debug */,
+				BE60B6A314EFA64100CF7151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE60B65C14EFA64000CF7151 /* Project object */;
+}

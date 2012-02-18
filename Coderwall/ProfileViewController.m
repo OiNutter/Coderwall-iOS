@@ -1,0 +1,70 @@
+//
+//  ProfileViewController.m
+//  Coderwall
+//
+//  Created by Will on 18/02/2012.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "ProfileViewController.h"
+#import "AppDelegateProtocol.h"
+#import "User.h"
+
+@interface ProfileViewController ()
+
+@end
+
+@implementation ProfileViewController
+
+- (User*) currentUser;
+{
+	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+	User* currentUser = (User*) theDelegate.currentUser;
+	return currentUser;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    User *user = [self currentUser];
+    //[fullName setText:[NSString stringWithFormat:user.name]];
+    //NSString *summaryDetails = [[NSString alloc] initWithString:user.title];
+    //if(summaryDetails.length != 0)
+    //    summaryDetails = [summaryDetails stringByAppendingString:@" at "];
+    
+    //summaryDetails = [summaryDetails stringByAppendingString:user.company];
+    
+    //if(summaryDetails.length != 0)
+    //    summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
+    
+    //summaryDetails = [summaryDetails stringByAppendingString:user.location];       
+    //[summary setText:summaryDetails];
+    //[avatar setImage:[user getAvatar]];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+@end
