@@ -240,11 +240,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsy-nB-sZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController title="Master" definesPresentationContext="YES" id="FY8-FR-NNu" customClass="MasterViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Profile" id="ZrF-1m-Lr0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="eoC-WM-hCC">
-                            <connections>
-                                <segue destination="kl7-X5-xcD" kind="modal" id="tqr-G2-ctz"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="eoC-WM-hCC"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uiN-f3-Z1P">
@@ -268,7 +264,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1A-TY-67C" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Search" id="kl7-X5-xcD" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="Zsl-19-JdR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" id="j8t-Fa-vhb">
