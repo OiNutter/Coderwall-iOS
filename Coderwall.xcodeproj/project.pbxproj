@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
+		BE1C7F8114F17C1B00E460AC /* BadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */; };
+		BE5663C914F19C37002BC157 /* TableBottomBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C614F19C37002BC157 /* TableBottomBg.png */; };
+		BE5663CA14F19C37002BC157 /* TableMiddleBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C714F19C37002BC157 /* TableMiddleBg.png */; };
+		BE5663CB14F19C37002BC157 /* TableTopBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C814F19C37002BC157 /* TableTopBg.png */; };
+		BE5663CE14F1AF7C002BC157 /* ProfileBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663CD14F1AF7C002BC157 /* ProfileBg.png */; };
 		BE60B66A14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
 		BE60B66C14EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
 		BE60B66E14EFA64100CF7151 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
@@ -40,9 +46,6 @@
 		BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */; };
 		BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */; };
 		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
-		BE60B76714F0617600CF7151 /* RoundedPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76214F0617600CF7151 /* RoundedPanelView.m */; };
-		BE60B76814F0617600CF7151 /* RoundedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76414F0617600CF7151 /* RoundedTableView.m */; };
-		BE60B76914F0617600CF7151 /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76614F0617600CF7151 /* ShadowView.m */; };
 		BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76B14F06C3E00CF7151 /* StatsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesViewController.h; sourceTree = "<group>"; };
+		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
+		BE1C7F7F14F17C1B00E460AC /* BadgeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeViewCell.h; sourceTree = "<group>"; };
+		BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeViewCell.m; sourceTree = "<group>"; };
+		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBottomBg.png; sourceTree = "<group>"; };
+		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableMiddleBg.png; sourceTree = "<group>"; };
+		BE5663C814F19C37002BC157 /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopBg.png; sourceTree = "<group>"; };
+		BE5663CD14F1AF7C002BC157 /* ProfileBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileBg.png; sourceTree = "<group>"; };
 		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE60B66914EFA64100CF7151 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE60B66B14EFA64100CF7151 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,12 +123,6 @@
 		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
-		BE60B76114F0617600CF7151 /* RoundedPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedPanelView.h; sourceTree = "<group>"; };
-		BE60B76214F0617600CF7151 /* RoundedPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedPanelView.m; sourceTree = "<group>"; };
-		BE60B76314F0617600CF7151 /* RoundedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedTableView.h; sourceTree = "<group>"; };
-		BE60B76414F0617600CF7151 /* RoundedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedTableView.m; sourceTree = "<group>"; };
-		BE60B76514F0617600CF7151 /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
-		BE60B76614F0617600CF7151 /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
 		BE60B76A14F06C3E00CF7151 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		BE60B76B14F06C3E00CF7151 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +247,8 @@
 				BE60B75514EFC4D500CF7151 /* MasterViewController.m */,
 				BE60B76A14F06C3E00CF7151 /* StatsViewController.h */,
 				BE60B76B14F06C3E00CF7151 /* StatsViewController.m */,
+				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
+				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +266,10 @@
 		BE60B6C114EFBA6200CF7151 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE5663CD14F1AF7C002BC157 /* ProfileBg.png */,
+				BE5663C614F19C37002BC157 /* TableBottomBg.png */,
+				BE5663C714F19C37002BC157 /* TableMiddleBg.png */,
+				BE5663C814F19C37002BC157 /* TableTopBg.png */,
 				BE60B6CA14EFBAE700CF7151 /* inset-logo.png */,
 				BE60B6C214EFBA7500CF7151 /* app-icon-retina.png */,
 				BE60B6C314EFBA7500CF7151 /* app-icon.png */,
@@ -309,12 +320,8 @@
 		BE60B76014F0615600CF7151 /* ViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE60B76114F0617600CF7151 /* RoundedPanelView.h */,
-				BE60B76214F0617600CF7151 /* RoundedPanelView.m */,
-				BE60B76314F0617600CF7151 /* RoundedTableView.h */,
-				BE60B76414F0617600CF7151 /* RoundedTableView.m */,
-				BE60B76514F0617600CF7151 /* ShadowView.h */,
-				BE60B76614F0617600CF7151 /* ShadowView.m */,
+				BE1C7F7F14F17C1B00E460AC /* BadgeViewCell.h */,
+				BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */,
 			);
 			name = ViewExtensions;
 			sourceTree = "<group>";
@@ -398,6 +405,10 @@
 				BE60B6C714EFBA9B00CF7151 /* app-icon-retina.png in Resources */,
 				BE60B6C914EFBAA400CF7151 /* app-icon.png in Resources */,
 				BE60B6CB14EFBAE700CF7151 /* inset-logo.png in Resources */,
+				BE5663C914F19C37002BC157 /* TableBottomBg.png in Resources */,
+				BE5663CA14F19C37002BC157 /* TableMiddleBg.png in Resources */,
+				BE5663CB14F19C37002BC157 /* TableTopBg.png in Resources */,
+				BE5663CE14F1AF7C002BC157 /* ProfileBg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,10 +460,9 @@
 				BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */,
 				BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */,
 				BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */,
-				BE60B76714F0617600CF7151 /* RoundedPanelView.m in Sources */,
-				BE60B76814F0617600CF7151 /* RoundedTableView.m in Sources */,
-				BE60B76914F0617600CF7151 /* ShadowView.m in Sources */,
 				BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */,
+				BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */,
+				BE1C7F8114F17C1B00E460AC /* BadgeViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +642,7 @@
 				BE60B6A014EFA64100CF7151 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE60B6A114EFA64100CF7151 /* Build configuration list for PBXNativeTarget "CoderwallTests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +651,7 @@
 				BE60B6A314EFA64100CF7151 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

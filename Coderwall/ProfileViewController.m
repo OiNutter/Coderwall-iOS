@@ -41,7 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     User *user = [self currentUser];
-    //[fullName setText:[NSString stringWithFormat:user.name]];
+    [fullName setText:[NSString stringWithFormat:user.name]];
     //NSString *summaryDetails = [[NSString alloc] initWithString:user.title];
     //if(summaryDetails.length != 0)
     //    summaryDetails = [summaryDetails stringByAppendingString:@" at "];
@@ -52,7 +52,15 @@
     //    summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
     
     //summaryDetails = [summaryDetails stringByAppendingString:user.location];       
-    //[summary setText:summaryDetails];
+    NSString *summaryDetails = [[NSString alloc] initWithString:user.location];
+    CGSize maximumSize = CGSizeMake(260, 80);
+    UIFont *summaryFont = [UIFont fontWithName:@"Helvetica" size:14];
+    CGSize summaryStringSize = [summaryDetails sizeWithFont:summaryFont 
+                                               constrainedToSize:maximumSize 
+                                                   lineBreakMode:summary.lineBreakMode];
+    
+    [summary setText:summaryDetails];
+    [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
     //[avatar setImage:[user getAvatar]];
 }
 
