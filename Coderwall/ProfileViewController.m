@@ -42,17 +42,17 @@
 {
     User *user = [self currentUser];
     [fullName setText:[NSString stringWithFormat:user.name]];
-    //NSString *summaryDetails = [[NSString alloc] initWithString:user.title];
-    //if(summaryDetails.length != 0)
-    //    summaryDetails = [summaryDetails stringByAppendingString:@" at "];
+    NSString *summaryDetails = [[NSString alloc] initWithString:user.title];
+    if(summaryDetails.length != 0)
+        summaryDetails = [summaryDetails stringByAppendingString:@" at "];
     
-    //summaryDetails = [summaryDetails stringByAppendingString:user.company];
+    summaryDetails = [summaryDetails stringByAppendingString:user.company];
     
-    //if(summaryDetails.length != 0)
-    //    summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
+    if(summaryDetails.length != 0)
+        summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
     
-    //summaryDetails = [summaryDetails stringByAppendingString:user.location];       
-    NSString *summaryDetails = [[NSString alloc] initWithString:user.location];
+    summaryDetails = [summaryDetails stringByAppendingString:user.location];       
+    
     CGSize maximumSize = CGSizeMake(260, 80);
     UIFont *summaryFont = [UIFont fontWithName:@"Helvetica" size:14];
     CGSize summaryStringSize = [summaryDetails sizeWithFont:summaryFont 
@@ -61,7 +61,7 @@
     
     [summary setText:summaryDetails];
     [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
-    //[avatar setImage:[user getAvatar]];
+    [avatar setImage:[user getAvatar]];
 }
 
 - (void)viewDidUnload
