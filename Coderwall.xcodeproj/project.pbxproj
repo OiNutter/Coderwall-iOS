@@ -21,6 +21,8 @@
 		BE5663E114F1BD43002BC157 /* badges@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663DB14F1BD43002BC157 /* badges@2x.png */; };
 		BE5663E214F1BD43002BC157 /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663DC14F1BD43002BC157 /* stats.png */; };
 		BE5663E314F1BD43002BC157 /* stats@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663DD14F1BD43002BC157 /* stats@2x.png */; };
+		BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */; };
+		BE5663EA14F2E856002BC157 /* AccomplishmentsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */; };
 		BE60B66A14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
 		BE60B66C14EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
 		BE60B66E14EFA64100CF7151 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
@@ -82,6 +84,10 @@
 		BE5663DB14F1BD43002BC157 /* badges@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badges@2x.png"; sourceTree = "<group>"; };
 		BE5663DC14F1BD43002BC157 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
 		BE5663DD14F1BD43002BC157 /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats@2x.png"; sourceTree = "<group>"; };
+		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
+		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewController.m; sourceTree = "<group>"; };
+		BE5663E814F2E856002BC157 /* AccomplishmentsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewCell.h; sourceTree = "<group>"; };
+		BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewCell.m; sourceTree = "<group>"; };
 		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE60B66914EFA64100CF7151 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BE60B66B14EFA64100CF7151 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -259,6 +265,8 @@
 				BE60B76B14F06C3E00CF7151 /* StatsViewController.m */,
 				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
 				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
+				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
+				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,6 +348,8 @@
 			children = (
 				BE1C7F7F14F17C1B00E460AC /* BadgeViewCell.h */,
 				BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */,
+				BE5663E814F2E856002BC157 /* AccomplishmentsViewCell.h */,
+				BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */,
 			);
 			name = ViewExtensions;
 			path = "View Extensions";
@@ -488,6 +498,8 @@
 				BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */,
 				BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */,
 				BE1C7F8114F17C1B00E460AC /* BadgeViewCell.m in Sources */,
+				BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */,
+				BE5663EA14F2E856002BC157 /* AccomplishmentsViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

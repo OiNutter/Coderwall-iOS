@@ -23,8 +23,7 @@
 {
     // Get current User
     User *user = [self currentUser];
-    self.navigationItem.title = @"OiNutter";
-    //self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
     
     // Add Coderwall logo to navigation bar
     UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];

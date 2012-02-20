@@ -31,6 +31,7 @@
 - (id) initWithUsername:(NSString *) user
 {
     self = [super init];
+    NSLog(user);
     
     [self load:user];
     
@@ -39,11 +40,9 @@
 
 - (void) load:(NSString *) user
 {
-    NSLog(@"loading");
     NSString *urlString = [NSString stringWithFormat:@"http://coderwall.com/%@.json?full=true", user];
 	NSString *response = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
     [self setDetails:[response JSONValue]];    
-    NSLog(@"loaded");
 }
 
 - (void) setDetails:(NSDictionary *) details
@@ -59,7 +58,6 @@
     self.accomplishments = [details objectForKey:@"accomplishments"];
     self.stats = [details objectForKey:@"stats"];
     self.specialities = [details objectForKey:@"username"];
-    NSLog(self.location);
 }
 
 - (UIImage *) getAvatar

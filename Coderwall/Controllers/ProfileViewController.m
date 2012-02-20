@@ -42,11 +42,16 @@
 {
     User *user = [self currentUser];
     [fullName setText:[NSString stringWithFormat:user.name]];
-    NSString *summaryDetails = [[NSString alloc] initWithString:user.title];
-    if(summaryDetails.length != 0)
+    NSString *summaryDetails = [[NSString alloc] initWithString:@""];
+    
+    if(user.title != (id)[NSNull null])
+        summaryDetails = [summaryDetails stringByAppendingString:user.title];
+    
+    if(summaryDetails.length != 0 && user.company != (id)[NSNull null] && user.company.length != 0)
         summaryDetails = [summaryDetails stringByAppendingString:@" at "];
     
-    summaryDetails = [summaryDetails stringByAppendingString:user.company];
+    if(user.company != (id)[NSNull null])
+       summaryDetails = [summaryDetails stringByAppendingString:user.company];
     
     if(summaryDetails.length != 0)
         summaryDetails = [summaryDetails stringByAppendingString:@"\n"];

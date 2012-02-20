@@ -159,16 +159,43 @@
             </objects>
             <point key="canvasLocation" x="-106" y="-502"/>
         </scene>
-        <!--View Controller - Accomplishments-->
+        <!--Accomplishments View Controller - Accomplishments-->
         <scene sceneID="DSW-AS-BcX">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yGJ-ol-lCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Accomplishments" id="9xf-0b-Kta" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dct-9a-iiv">
+                <viewController title="Accomplishments" id="9xf-0b-Kta" customClass="AccomplishmentsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UnG-Ra-qhi">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="accomplishmentCell" id="1Jz-Mq-ieh" customClass="AccomplishmentsViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="I5F-ah-xVM" userLabel="detail">
+                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="detail" destination="I5F-ah-xVM" id="N9f-UL-1A4"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9xf-0b-Kta" id="Etc-7c-kIS"/>
+                            <outlet property="delegate" destination="9xf-0b-Kta" id="xnO-dN-e7h"/>
+                        </connections>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Accomplishments" image="accomplishments.png" id="RwR-up-wy2"/>
                 </viewController>
             </objects>
@@ -293,14 +320,23 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ProfileBg.png" width="400" height="385"/>
-        <image name="accomplishments.png" width="30" height="30"/>
+        <image name="ProfileBg.png" width="16" height="16"/>
+        <image name="accomplishments.png" width="16" height="16"/>
         <image name="app-icon-retina.png" width="16" height="16"/>
-        <image name="badges.png" width="30" height="30"/>
-        <image name="profile.png" width="30" height="30"/>
-        <image name="stats.png" width="30" height="30"/>
+        <image name="badges.png" width="16" height="16"/>
+        <image name="profile.png" width="16" height="16"/>
+        <image name="stats.png" width="16" height="16"/>
     </resources>
     <classes>
+        <class className="AccomplishmentsViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AccomplishmentsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsViewController.h"/>
+        </class>
         <class className="BadgeViewCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgeViewCell.h"/>
             <relationships>
