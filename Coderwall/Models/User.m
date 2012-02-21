@@ -31,7 +31,6 @@
 - (id) initWithUsername:(NSString *) user
 {
     self = [super init];
-    NSLog(user);
     
     [self load:user];
     

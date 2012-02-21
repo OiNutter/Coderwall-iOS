@@ -155,9 +155,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AccomplishmentsViewCell *cell = [self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    AccomplishmentsViewCell *cell = (AccomplishmentsViewCell *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
     int height = cell.detail.frame.size.height + 22;
-    NSLog([NSString stringWithFormat:@"%i"]);
     if(indexPath.row == 0 || indexPath.row == self.accomplishments.count-1)
         height += 10;
     

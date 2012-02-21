@@ -9,7 +9,7 @@
 #import "BadgesViewController.h"
 #import "User.h"
 #import "AppDelegateProtocol.h"
-#import "BadgeViewCell.h";
+#import "BadgeViewCell.h"
 
 @interface BadgesViewController ()
 
@@ -59,14 +59,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog([NSString stringWithFormat:@"%i",self.badges.count ]);
     return [self.badges count];
 }
 
