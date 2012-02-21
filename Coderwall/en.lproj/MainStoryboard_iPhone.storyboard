@@ -17,7 +17,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="QED-PF-X55">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="Opg-Eh-V29">
                                         <rect key="frame" x="0.0" y="46" width="320" height="45"/>
@@ -103,6 +103,21 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="713" y="-502"/>
+        </scene>
+        <!--View Controller - Search-->
+        <scene sceneID="yDu-6q-Bcm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDI-ov-jDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Search" id="ojN-6v-Pq8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t9v-49-qLK">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="search.png" id="oCe-Zx-JnI"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1086" y="-502"/>
         </scene>
         <!--Badges View Controller - Badges-->
         <scene sceneID="xtG-Nw-ZGc">
@@ -268,7 +283,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsy-nB-sZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController title="Master" definesPresentationContext="YES" id="FY8-FR-NNu" customClass="MasterViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Profile" id="ZrF-1m-Lr0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="eoC-WM-hCC"/>
+                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="fxR-1e-0Jt"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uiN-f3-Z1P">
@@ -281,43 +296,11 @@
                         <segue destination="S6q-OQ-aD7" kind="relationship" relationship="viewControllers" id="4Pt-1H-gQV"/>
                         <segue destination="9xf-0b-Kta" kind="relationship" relationship="viewControllers" id="sHC-Mf-Iu3"/>
                         <segue destination="JQh-wk-mdF" kind="relationship" relationship="viewControllers" id="BDE-y3-t4s"/>
+                        <segue destination="ojN-6v-Pq8" kind="relationship" relationship="viewControllers" id="T6e-Wg-yLJ"/>
                     </connections>
                 </tabBarController>
             </objects>
             <point key="canvasLocation" x="-1048" y="-204"/>
-        </scene>
-        <!--View Controller - Search-->
-        <scene sceneID="f05-46-Lma">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l1A-TY-67C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="Search" id="kl7-X5-xcD" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Zsl-19-JdR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" id="j8t-Fa-vhb">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <navigationBar contentMode="scaleToFill" id="frb-1Y-qdh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.85098039219999999" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Title" id="JUK-cc-TL8">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Xgq-Nv-J1A"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1048" y="399"/>
         </scene>
     </scenes>
     <resources>
@@ -325,6 +308,8 @@
         <image name="app-icon-retina.png" width="114" height="114"/>
         <image name="badges.png" width="30" height="30"/>
         <image name="profile.png" width="30" height="30"/>
+        <image name="search.png" width="30" height="30"/>
+        <image name="settings.png" width="20" height="20"/>
         <image name="stats.png" width="30" height="30"/>
     </resources>
     <classes>
