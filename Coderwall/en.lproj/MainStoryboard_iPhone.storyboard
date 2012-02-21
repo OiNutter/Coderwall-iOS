@@ -176,10 +176,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="I5F-ah-xVM" userLabel="detail">
-                                            <rect key="frame" x="20" y="11" width="280" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="I5F-ah-xVM" userLabel="detail">
+                                            <rect key="frame" x="20" y="11" width="32" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -210,7 +210,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="top" image="ProfileBg.png" id="Vi4-OE-m3Y">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Vi4-OE-m3Y" userLabel="panelBg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -239,6 +239,7 @@
                     <connections>
                         <outlet property="avatar" destination="Evb-1k-9be" id="lxt-ID-aQd"/>
                         <outlet property="fullName" destination="PLT-LT-rEs" id="ZqG-42-zbY"/>
+                        <outlet property="profileBg" destination="Vi4-OE-m3Y" id="rli-n6-t2U"/>
                         <outlet property="summary" destination="hm3-54-YJO" id="XS2-d5-Vlx"/>
                     </connections>
                 </viewController>
@@ -320,12 +321,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ProfileBg.png" width="16" height="16"/>
-        <image name="accomplishments.png" width="16" height="16"/>
-        <image name="app-icon-retina.png" width="16" height="16"/>
-        <image name="badges.png" width="16" height="16"/>
-        <image name="profile.png" width="16" height="16"/>
-        <image name="stats.png" width="16" height="16"/>
+        <image name="accomplishments.png" width="30" height="30"/>
+        <image name="app-icon-retina.png" width="114" height="114"/>
+        <image name="badges.png" width="30" height="30"/>
+        <image name="profile.png" width="30" height="30"/>
+        <image name="stats.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AccomplishmentsViewCell" superclassName="UITableViewCell">
@@ -356,6 +356,7 @@
             <relationships>
                 <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fullName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="profileBg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="summary" candidateClass="UILabel"/>
             </relationships>
         </class>

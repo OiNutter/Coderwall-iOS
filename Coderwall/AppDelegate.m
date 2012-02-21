@@ -16,7 +16,7 @@
 
 - (id) init;
 {
-    self.currentUser = [[User alloc] initWithUsername:@"schacon"];
+    self.currentUser = [[User alloc] initWithUsername:@"OiNutter"];
     //[currentUser release];
 	return [super init];
 }

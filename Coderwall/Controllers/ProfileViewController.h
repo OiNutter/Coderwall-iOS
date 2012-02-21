@@ -12,6 +12,7 @@
     IBOutlet UILabel *fullName;
     IBOutlet UILabel *summary;
     IBOutlet UIImageView *avatar;
+    IBOutlet UIImageView *profileBg;
 }
 
 @end
