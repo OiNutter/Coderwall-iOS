@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
-		BE1C7F8114F17C1B00E460AC /* BadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */; };
+		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
 		BE5663C914F19C37002BC157 /* TableBottomBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C614F19C37002BC157 /* TableBottomBg.png */; };
 		BE5663CA14F19C37002BC157 /* TableMiddleBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C714F19C37002BC157 /* TableMiddleBg.png */; };
 		BE5663CB14F19C37002BC157 /* TableTopBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C814F19C37002BC157 /* TableTopBg.png */; };
@@ -54,11 +54,12 @@
 		BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */; };
 		BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */; };
 		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
-		BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B76B14F06C3E00CF7151 /* StatsViewController.m */; };
 		BE9E92F414F417EA00FC3704 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F214F417EA00FC3704 /* settings.png */; };
 		BE9E92F514F417EA00FC3704 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F314F417EA00FC3704 /* settings@2x.png */; };
 		BE9E92F914F4195100FC3704 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F714F4195100FC3704 /* search.png */; };
 		BE9E92FA14F4195100FC3704 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F814F4195100FC3704 /* search@2x.png */; };
+		BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
+		BE9E930014F5658500FC3704 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +75,8 @@
 /* Begin PBXFileReference section */
 		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesViewController.h; sourceTree = "<group>"; };
 		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
-		BE1C7F7F14F17C1B00E460AC /* BadgeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeViewCell.h; sourceTree = "<group>"; };
-		BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeViewCell.m; sourceTree = "<group>"; };
+		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
+		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
 		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBottomBg.png; sourceTree = "<group>"; };
 		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableMiddleBg.png; sourceTree = "<group>"; };
 		BE5663C814F19C37002BC157 /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopBg.png; sourceTree = "<group>"; };
@@ -90,7 +91,7 @@
 		BE5663DD14F1BD43002BC157 /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats@2x.png"; sourceTree = "<group>"; };
 		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
 		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewController.m; sourceTree = "<group>"; };
-		BE5663E814F2E856002BC157 /* AccomplishmentsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewCell.h; sourceTree = "<group>"; };
+		BE5663E814F2E856002BC157 /* AccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentCell.h; sourceTree = "<group>"; };
 		BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewCell.m; sourceTree = "<group>"; };
 		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE60B66914EFA64100CF7151 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -145,12 +146,14 @@
 		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
-		BE60B76A14F06C3E00CF7151 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
-		BE60B76B14F06C3E00CF7151 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		BE9E92F814F4195100FC3704 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		BE9E92FE14F5658400FC3704 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatCell.h; sourceTree = "<group>"; };
+		BE9E92FF14F5658400FC3704 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,12 +272,12 @@
 				BE60B6A514EFB09100CF7151 /* ProfileViewController.m */,
 				BE60B75414EFC4D500CF7151 /* MasterViewController.h */,
 				BE60B75514EFC4D500CF7151 /* MasterViewController.m */,
-				BE60B76A14F06C3E00CF7151 /* StatsViewController.h */,
-				BE60B76B14F06C3E00CF7151 /* StatsViewController.m */,
 				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
 				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
 				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
 				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
+				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
+				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,10 +361,12 @@
 		BE60B76014F0615600CF7151 /* ViewExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				BE1C7F7F14F17C1B00E460AC /* BadgeViewCell.h */,
-				BE1C7F8014F17C1B00E460AC /* BadgeViewCell.m */,
-				BE5663E814F2E856002BC157 /* AccomplishmentsViewCell.h */,
+				BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */,
+				BE1C7F8014F17C1B00E460AC /* BadgeCell.m */,
+				BE5663E814F2E856002BC157 /* AccomplishmentCell.h */,
 				BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */,
+				BE9E92FE14F5658400FC3704 /* StatCell.h */,
+				BE9E92FF14F5658400FC3704 /* StatCell.m */,
 			);
 			name = ViewExtensions;
 			path = "View Extensions";
@@ -511,11 +516,12 @@
 				BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */,
 				BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */,
 				BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */,
-				BE60B76C14F06C3E00CF7151 /* StatsViewController.m in Sources */,
 				BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */,
-				BE1C7F8114F17C1B00E460AC /* BadgeViewCell.m in Sources */,
+				BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */,
 				BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */,
 				BE5663EA14F2E856002BC157 /* AccomplishmentsViewCell.m in Sources */,
+				BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */,
+				BE9E930014F5658500FC3704 /* StatCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

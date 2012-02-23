@@ -1,16 +1,21 @@
 //
-//  AccomplishmentsViewCell.m
+//  SpecialityCell.m
 //  Coderwall
 //
-//  Created by Will on 20/02/2012.
+//  Created by Will on 22/02/2012.
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
-#import "AccomplishmentCell.h"
+#import "SpecialityCell.h"
 
-@implementation AccomplishmentCell
+@implementation SpecialityCell
 
-@synthesize detail;
+@synthesize speciality;
+
+-(void) setYPos:(CGFloat) yPos
+{
+    speciality.frame = CGRectMake(speciality.frame.origin.x, yPos, speciality.frame.size.width, speciality.frame.size.height);
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

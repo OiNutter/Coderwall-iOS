@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccomplishmentsViewCell : UITableViewCell
+@interface AccomplishmentCell : UITableViewCell
 {
     IBOutlet UILabel *detail;
 }

@@ -9,7 +9,7 @@
 #import "BadgesViewController.h"
 #import "User.h"
 #import "AppDelegateProtocol.h"
-#import "BadgeViewCell.h"
+#import "BadgeCell.h"
 
 @interface BadgesViewController ()
 
@@ -68,10 +68,10 @@
     return [self.badges count];
 }
 
-- (BadgeViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (BadgeCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"badgeCell";
-    BadgeViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BadgeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     NSDictionary *badge = [self.badges objectAtIndex:indexPath.row];

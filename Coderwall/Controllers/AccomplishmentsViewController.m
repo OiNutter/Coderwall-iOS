@@ -9,7 +9,7 @@
 #import "AccomplishmentsViewController.h"
 #import "User.h"
 #import "AppDelegateProtocol.h"
-#import "AccomplishmentsViewCell.h"
+#import "AccomplishmentCell.h"
 
 @interface AccomplishmentsViewController ()
 
@@ -69,10 +69,10 @@
     return [accomplishments count];
 }
 
-- (AccomplishmentsViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (AccomplishmentCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"accomplishmentCell";
-    AccomplishmentsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    AccomplishmentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSString *accomplishment = [accomplishments objectAtIndex:indexPath.row];
     
     CGSize maximumSize = CGSizeMake(280, 9999);
@@ -155,12 +155,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AccomplishmentsViewCell *cell = (AccomplishmentsViewCell *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    AccomplishmentCell *cell = (AccomplishmentCell *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
     int height = cell.detail.frame.size.height + 22;
-    if(indexPath.row == 0 || indexPath.row == self.accomplishments.count-1)
+    if(indexPath.row == 0)
         height += 10;
     
-    
+    if(indexPath.row == self.accomplishments.count-1)
+        height+=10; 
     
     return height;
 }

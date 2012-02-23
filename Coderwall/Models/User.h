@@ -17,7 +17,7 @@
     NSString *title;
     NSString *company;
     NSString *thumbnail;
-    int endorsements;
+    NSNumber *endorsements;
     NSArray *badges;
     NSArray *accomplishments;
     NSArray *stats;
@@ -31,7 +31,7 @@
 @property NSString *title;
 @property NSString *company;
 @property NSString *thumbnail;
-@property int endorsements;
+@property NSNumber *endorsements;
 @property NSArray *badges;
 @property NSArray *accomplishments;
 @property NSArray *stats;

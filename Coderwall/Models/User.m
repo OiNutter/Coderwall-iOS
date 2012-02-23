@@ -52,11 +52,11 @@
     self.title = [details objectForKey:@"title"];
     self.company = [details objectForKey:@"company"];
     self.thumbnail = [details objectForKey:@"thumbnail"];
-    self.endorsements = [[details objectForKey:@"endorsements"] intValue];
+    self.endorsements = [details objectForKey:@"endorsements"];
     self.badges = [details objectForKey:@"badges"];
     self.accomplishments = [details objectForKey:@"accomplishments"];
     self.stats = [details objectForKey:@"stats"];
-    self.specialities = [details objectForKey:@"username"];
+    self.specialities = [details objectForKey:@"specialities"];
 }
 
 - (UIImage *) getAvatar

@@ -1,16 +1,19 @@
 //
-//  AccomplishmentsViewCell.m
+//  BadgeViewCell.m
 //  Coderwall
 //
-//  Created by Will on 20/02/2012.
+//  Created by Will on 19/02/2012.
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
-#import "AccomplishmentCell.h"
+#import "BadgeCell.h"
+#import "QuartzCore/QuartzCore.h"
 
-@implementation AccomplishmentCell
+@implementation BadgeCell
 
+@synthesize badge;
 @synthesize detail;
+@synthesize title;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

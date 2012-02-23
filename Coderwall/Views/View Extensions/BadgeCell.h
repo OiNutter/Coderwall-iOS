@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BadgeViewCell : UITableViewCell{
+@interface BadgeCell : UITableViewCell{
     IBOutlet UIImageView *badge;
     IBOutlet UILabel *title;
     IBOutlet UILabel *detail;
