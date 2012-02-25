@@ -13,5 +13,6 @@
 @protocol AppDelegateProtocol <NSObject>
 
 - (User *) currentUser;
+- (void) setCurrentUser:(User *) currentUser;
 
 @end

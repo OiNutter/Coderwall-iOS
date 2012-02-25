@@ -16,8 +16,15 @@
 
 - (id) init;
 {
-    self.currentUser = [[User alloc] initWithUsername:@"mdeiters"];
-    //[currentUser release];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [userDefaults stringForKey:@"UserName"];
+    NSLog(userName);
+    self.currentUser = [[User alloc] initWithUsername:userName];
+    //if(userName == (id)[NSNull null] || userName == @""){
+
+    //} else {
+    //    self.currentUser = [[User alloc] initWithUsername:userName];
+    //}
 	return [super init];
 }
 

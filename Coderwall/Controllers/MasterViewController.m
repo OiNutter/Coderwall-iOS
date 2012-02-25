@@ -21,14 +21,21 @@
 
 -(void) viewDidLoad
 {
-    // Get current User
-    User *user = [self currentUser];
-    self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
     
     // Add Coderwall logo to navigation bar
     UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
     UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
     self.navigationItem.leftBarButtonItem = fakeButtonItem;
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    // Get current User
+    User *user = [self currentUser];
+    self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
 }
 
 @end

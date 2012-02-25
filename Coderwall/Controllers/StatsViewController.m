@@ -10,7 +10,6 @@
 #import "AppDelegateProtocol.h"
 #import "User.h"
 #import "StatCell.h"
-#import "SpecialityCell.h"
 
 @interface StatsViewController ()
 

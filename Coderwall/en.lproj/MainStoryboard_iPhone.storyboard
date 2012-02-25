@@ -234,7 +234,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsy-nB-sZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController title="Master" definesPresentationContext="YES" id="FY8-FR-NNu" customClass="MasterViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Profile" id="ZrF-1m-Lr0">
-                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="fxR-1e-0Jt"/>
+                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="fxR-1e-0Jt">
+                            <connections>
+                                <segue destination="SbM-Z6-PLT" kind="push" id="rdC-8K-D7X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uiN-f3-Z1P">
@@ -251,7 +255,52 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="-1048" y="-204"/>
+            <point key="canvasLocation" x="-1068" y="-196"/>
+        </scene>
+        <!--Settings View Controller - Settings-->
+        <scene sceneID="itH-f4-lyv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAg-JD-KSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Settings" id="SbM-Z6-PLT" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8x-yu-DQ1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="hLG-Yj-tSp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="tB2-gL-VkH" userLabel="settingsBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UAn-os-Puu">
+                                        <rect key="frame" x="20" y="18" width="79" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Username" minimumFontSize="17" id="dBT-gQ-k8p">
+                                        <rect key="frame" x="107" y="17" width="188" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Kco-JP-MdT"/>
+                    <connections>
+                        <outlet property="settingsBg" destination="tB2-gL-VkH" id="G0l-Gj-y0z"/>
+                        <outlet property="userNameInput" destination="dBT-gQ-k8p" id="waE-Vk-SKr"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1068" y="443"/>
         </scene>
     </scenes>
     <resources>
@@ -294,6 +343,13 @@
                 <relationship kind="outlet" name="fullName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="profileBg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="summary" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="StatCell" superclassName="UITableViewCell">

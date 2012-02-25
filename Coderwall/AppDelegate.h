@@ -14,4 +14,5 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain) User *currentUser;
 
+- (void) setCurrentUser:(User *)currentUser;
 @end

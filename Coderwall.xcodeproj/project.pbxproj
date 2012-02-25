@@ -54,6 +54,7 @@
 		BE60B75214EFBE6000CF7151 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */; };
 		BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */; };
 		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
+		BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
 		BE9E92F414F417EA00FC3704 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F214F417EA00FC3704 /* settings.png */; };
 		BE9E92F514F417EA00FC3704 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F314F417EA00FC3704 /* settings@2x.png */; };
 		BE9E92F914F4195100FC3704 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F714F4195100FC3704 /* search.png */; };
@@ -146,6 +147,8 @@
 		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
+		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
 				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
+				BE73BA1414F8FFAB00220316 /* SettingsViewController.h */,
+				BE73BA1514F8FFAB00220316 /* SettingsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				BE5663EA14F2E856002BC157 /* AccomplishmentsViewCell.m in Sources */,
 				BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */,
 				BE9E930014F5658500FC3704 /* StatCell.m in Sources */,
+				BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
