@@ -8,23 +8,16 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import "SettingsViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize currentUser;
+@synthesize refreshes;
 
 - (id) init;
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *userName = [userDefaults stringForKey:@"UserName"];
-    NSLog(userName);
-    self.currentUser = [[User alloc] initWithUsername:userName];
-    //if(userName == (id)[NSNull null] || userName == @""){
-
-    //} else {
-    //    self.currentUser = [[User alloc] initWithUsername:userName];
-    //}
 	return [super init];
 }
 
@@ -38,7 +31,15 @@
     }
     
     //load
-    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [userDefaults stringForKey:@"UserName"];
+    if(userName != (id)[NSNull null] && userName != @"")
+        self.currentUser = [[User alloc] initWithUsername:userName];
+
+    refreshes = [[NSMutableArray alloc] init];
+    [refreshes addObject:@"Badges"];
+    [refreshes addObject:@"Accomplishments"];
+    [refreshes addObject:@"Stats"];
     return YES;
 }
 							

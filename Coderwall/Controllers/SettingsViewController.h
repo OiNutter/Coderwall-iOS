@@ -13,4 +13,5 @@
     IBOutlet UIImageView *settingsBg;   
     IBOutlet UITextField *userNameInput;
 }
+-(IBAction) userNameChanged: (id) sender;
 @end

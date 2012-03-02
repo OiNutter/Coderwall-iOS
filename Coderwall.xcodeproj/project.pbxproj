@@ -55,12 +55,15 @@
 		BE60B75314EFBE6000CF7151 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */; };
 		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
 		BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
+		BE886C5114F95249003BC113 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
+		BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5414F953E0003BC113 /* ClearSearchBar.m */; };
 		BE9E92F414F417EA00FC3704 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F214F417EA00FC3704 /* settings.png */; };
 		BE9E92F514F417EA00FC3704 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F314F417EA00FC3704 /* settings@2x.png */; };
 		BE9E92F914F4195100FC3704 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F714F4195100FC3704 /* search.png */; };
 		BE9E92FA14F4195100FC3704 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F814F4195100FC3704 /* search@2x.png */; };
 		BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
 		BE9E930014F5658500FC3704 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
+		BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +152,10 @@
 		BE60B75F14F05DFE00CF7151 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
 		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		BE886C5314F953E0003BC113 /* ClearSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearSearchBar.h; sourceTree = "<group>"; };
+		BE886C5414F953E0003BC113 /* ClearSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearSearchBar.m; sourceTree = "<group>"; };
 		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
@@ -157,6 +164,8 @@
 		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		BE9E92FE14F5658400FC3704 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatCell.h; sourceTree = "<group>"; };
 		BE9E92FF14F5658400FC3704 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatCell.m; sourceTree = "<group>"; };
+		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +292,10 @@
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 				BE73BA1414F8FFAB00220316 /* SettingsViewController.h */,
 				BE73BA1514F8FFAB00220316 /* SettingsViewController.m */,
+				BE886C4F14F95249003BC113 /* SearchViewController.h */,
+				BE886C5014F95249003BC113 /* SearchViewController.m */,
+				BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */,
+				BEDD01D015005369006C4C29 /* SearchResultsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +385,8 @@
 				BE5663E914F2E856002BC157 /* AccomplishmentsViewCell.m */,
 				BE9E92FE14F5658400FC3704 /* StatCell.h */,
 				BE9E92FF14F5658400FC3704 /* StatCell.m */,
+				BE886C5314F953E0003BC113 /* ClearSearchBar.h */,
+				BE886C5414F953E0003BC113 /* ClearSearchBar.m */,
 			);
 			name = ViewExtensions;
 			path = "View Extensions";
@@ -528,6 +543,9 @@
 				BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */,
 				BE9E930014F5658500FC3704 /* StatCell.m in Sources */,
 				BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */,
+				BE886C5114F95249003BC113 /* SearchViewController.m in Sources */,
+				BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */,
+				BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

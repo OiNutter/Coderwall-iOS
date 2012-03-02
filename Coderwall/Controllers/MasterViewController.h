@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MasterViewController : UITabBarController
-
+-(void)showSearchResults;
 @end

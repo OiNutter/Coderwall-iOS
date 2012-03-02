@@ -27,6 +27,19 @@
 	return currentUser;
 }
 
+- (NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
+	return refreshes;
+}
+
+- (void)setRefreshes:(NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    [theDelegate setRefreshes:refreshes];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -65,7 +78,22 @@
         
     statsData = [[NSArray alloc] initWithArray:data];
     sections = [[NSArray alloc] initWithArray:keys];
+    
+    NSMutableArray *refreshes = [self refreshes];
+    [refreshes removeObject:@"Stats"];
+    [self setRefreshes:refreshes];
         
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSMutableArray *refreshes = [self refreshes];
+    NSInteger index = [refreshes indexOfObject:@"Stats"];
+    if(index != NSNotFound){
+        [self viewDidLoad];
+        [self.tableView reloadData];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -16,7 +16,7 @@
 
 @implementation SettingsViewController
 
-- (User*) currentUser;
+- (User*) currentUser
 {
 	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
 	User* currentUser = (User*) theDelegate.currentUser;
@@ -27,6 +27,19 @@
 {
     id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
     [theDelegate setCurrentUser:currentUser];
+}
+
+- (NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
+	return refreshes;
+}
+
+- (void)setRefreshes:(NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    [theDelegate setRefreshes:refreshes];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,6 +53,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"Loaded Settings");
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [settingsBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)]];
@@ -55,15 +69,28 @@
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userNameInput setText:[userDefaults stringForKey:@"UserName"]];
-    [userNameInput addTarget:self action:@selector(userNameChanged) forControlEvents:UIControlEventEditingChanged];
-
 }
 
--(void) userNameChanged
+-(void) userNameChanged:(id) sender
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setValue:self->userNameInput.text forKey:@"UserName"];
-    [self setCurrentUser:[[User alloc] initWithUsername:self->userNameInput.text]];
+    if(self->userNameInput.text.length >0){
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setValue:self->userNameInput.text forKey:@"UserName"];
+        [userDefaults synchronize];
+        [self setCurrentUser:[[User alloc] initWithUsername:self->userNameInput.text]];
+        NSMutableArray *refreshes = [[NSMutableArray alloc] init];
+        [refreshes addObject:@"Badges"];
+        [refreshes addObject:@"Accomplishments"];
+        [refreshes addObject:@"Stats"];
+        [self setRefreshes:refreshes];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
+														message:nil
+													   delegate:nil
+                                              cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+		[alert show];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

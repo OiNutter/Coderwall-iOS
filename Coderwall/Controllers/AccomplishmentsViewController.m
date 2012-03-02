@@ -26,6 +26,19 @@
 	return currentUser;
 }
 
+- (NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
+	return refreshes;
+}
+
+- (void)setRefreshes:(NSMutableArray *)refreshes
+{
+    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
+    [theDelegate setRefreshes:refreshes];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -40,7 +53,9 @@
     [super viewDidLoad];
     User *user = [self currentUser];
     accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];
-    
+    NSMutableArray *refreshes = [self refreshes];
+    [refreshes removeObject:@"Accomplishments"];
+    [self setRefreshes:refreshes];
 }
 
 - (void)viewDidUnload
@@ -48,6 +63,17 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSMutableArray *refreshes = [self refreshes];
+    NSInteger index = [refreshes indexOfObject:@"Accomplishments"];
+    if(index != NSNotFound){
+        [self viewDidLoad];
+        [self.tableView reloadData];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

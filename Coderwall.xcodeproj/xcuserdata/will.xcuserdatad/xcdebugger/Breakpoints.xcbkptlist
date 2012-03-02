@@ -7,13 +7,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Coderwall/Controllers/SettingsViewController.m"
-         timestampString = "351870199.612688"
+         filePath = "Coderwall/Controllers/BadgesViewController.m"
+         timestampString = "352341201.862363"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
-         landmarkName = "-viewWillAppear:"
+         startingLineNumber = "57"
+         endingLineNumber = "57"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -21,7 +21,7 @@
 
 -(void) viewDidLoad
 {
-    
+    [super viewDidLoad];
     // Add Coderwall logo to navigation bar
     UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
     UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
@@ -29,13 +29,24 @@
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
+    User *user = [self currentUser];
+    if(user == (id)[NSNull null] || user.userName == @"" || user.userName.length == 0)
+        [self performSegueWithIdentifier:@"ShowSettings" sender:self];
 }
 
--(void) viewDidAppear:(BOOL)animated
+-(void) viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     // Get current User
     User *user = [self currentUser];
-    self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0)
+        self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+
+}
+
+- (void)showSearchResults
+{
+    [self performSegueWithIdentifier:@"SearchResults" sender:self];
 }
 
 @end

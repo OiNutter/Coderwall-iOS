@@ -25,7 +25,7 @@
 
 - (id)init
 {
-    return [self initWithUsername:@"OiNutter"];
+    return [self initWithUsername:@""];
 }
 
 - (id) initWithUsername:(NSString *) user
@@ -39,6 +39,7 @@
 
 - (void) load:(NSString *) user
 {
+    NSLog(@"Loading...");
     NSString *urlString = [NSString stringWithFormat:@"http://coderwall.com/%@.json?full=true", user];
 	NSString *response = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
     [self setDetails:[response JSONValue]];    

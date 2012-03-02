@@ -14,5 +14,7 @@
 
 - (User *) currentUser;
 - (void) setCurrentUser:(User *) currentUser;
+- (NSMutableArray *)refreshes;
+- (void) setRefreshes:(NSMutableArray *)refreshes;
 
 @end
