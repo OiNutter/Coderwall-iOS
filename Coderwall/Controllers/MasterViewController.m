@@ -49,4 +49,13 @@
     [self performSegueWithIdentifier:@"SearchResults" sender:self];
 }
 
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+    else
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 @end

@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
 		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
+		BE546A551501690F00B9A200 /* app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A541501690F00B9A200 /* app-icon-ipad.png */; };
+		BE546A571501694B00B9A200 /* app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A561501694B00B9A200 /* app-icon-ipad.png */; };
+		BE546A5A1501901F00B9A200 /* MasteriPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A591501901F00B9A200 /* MasteriPadViewController.m */; };
+		BE546A5E150193DC00B9A200 /* TableBottomBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */; };
+		BE546A5F150193DC00B9A200 /* TableMiddleBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */; };
+		BE546A60150193DC00B9A200 /* TableTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */; };
+		BE546A631501967900B9A200 /* BadgesiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A621501967800B9A200 /* BadgesiPadViewController.m */; };
+		BE546A6615019A3D00B9A200 /* iPadBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */; };
+		BE546A6815019F8F00B9A200 /* iPadBadgeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */; };
+		BE546A6A15019FA000B9A200 /* PanelBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A6915019FA000B9A200 /* PanelBg@2x.png */; };
 		BE5663C914F19C37002BC157 /* TableBottomBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C614F19C37002BC157 /* TableBottomBg.png */; };
 		BE5663CA14F19C37002BC157 /* TableMiddleBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C714F19C37002BC157 /* TableMiddleBg.png */; };
 		BE5663CB14F19C37002BC157 /* TableTopBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BE5663C814F19C37002BC157 /* TableTopBg.png */; };
@@ -81,6 +91,19 @@
 		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
 		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
 		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
+		BE546A541501690F00B9A200 /* app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-ipad.png"; sourceTree = "<group>"; };
+		BE546A561501694B00B9A200 /* app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-ipad.png"; sourceTree = "<group>"; };
+		BE546A581501901F00B9A200 /* MasteriPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasteriPadViewController.h; sourceTree = "<group>"; };
+		BE546A591501901F00B9A200 /* MasteriPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasteriPadViewController.m; sourceTree = "<group>"; };
+		BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableBottomBg@2x.png"; path = "../../../../../Dropbox/Coderwall/img/TableBottomBg@2x.png"; sourceTree = "<group>"; };
+		BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableMiddleBg@2x.png"; path = "../../../../../Dropbox/Coderwall/img/TableMiddleBg@2x.png"; sourceTree = "<group>"; };
+		BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableTopBg@2x.png"; path = "../../../../../Dropbox/Coderwall/img/TableTopBg@2x.png"; sourceTree = "<group>"; };
+		BE546A611501967800B9A200 /* BadgesiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesiPadViewController.h; sourceTree = "<group>"; };
+		BE546A621501967800B9A200 /* BadgesiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesiPadViewController.m; sourceTree = "<group>"; };
+		BE546A6415019A3D00B9A200 /* iPadBadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadBadgeCell.h; sourceTree = "<group>"; };
+		BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadBadgeCell.m; sourceTree = "<group>"; };
+		BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadBadgeBg.png; sourceTree = "<group>"; };
+		BE546A6915019FA000B9A200 /* PanelBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PanelBg@2x.png"; sourceTree = "<group>"; };
 		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBottomBg.png; sourceTree = "<group>"; };
 		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableMiddleBg.png; sourceTree = "<group>"; };
 		BE5663C814F19C37002BC157 /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopBg.png; sourceTree = "<group>"; };
@@ -195,6 +218,7 @@
 		BE60B65A14EFA64000CF7151 = {
 			isa = PBXGroup;
 			children = (
+				BE546A561501694B00B9A200 /* app-icon-ipad.png */,
 				BE60B66F14EFA64100CF7151 /* Coderwall */,
 				BE60B69314EFA64100CF7151 /* CoderwallTests */,
 				BE60B66814EFA64100CF7151 /* Frameworks */,
@@ -296,6 +320,10 @@
 				BE886C5014F95249003BC113 /* SearchViewController.m */,
 				BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */,
 				BEDD01D015005369006C4C29 /* SearchResultsViewController.m */,
+				BE546A581501901F00B9A200 /* MasteriPadViewController.h */,
+				BE546A591501901F00B9A200 /* MasteriPadViewController.m */,
+				BE546A611501967800B9A200 /* BadgesiPadViewController.h */,
+				BE546A621501967800B9A200 /* BadgesiPadViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +341,12 @@
 		BE60B6C114EFBA6200CF7151 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BE546A6915019FA000B9A200 /* PanelBg@2x.png */,
+				BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */,
+				BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */,
+				BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */,
+				BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */,
+				BE546A541501690F00B9A200 /* app-icon-ipad.png */,
 				BE9E92F714F4195100FC3704 /* search.png */,
 				BE9E92F814F4195100FC3704 /* search@2x.png */,
 				BE9E92F214F417EA00FC3704 /* settings.png */,
@@ -387,6 +421,8 @@
 				BE9E92FF14F5658400FC3704 /* StatCell.m */,
 				BE886C5314F953E0003BC113 /* ClearSearchBar.h */,
 				BE886C5414F953E0003BC113 /* ClearSearchBar.m */,
+				BE546A6415019A3D00B9A200 /* iPadBadgeCell.h */,
+				BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */,
 			);
 			name = ViewExtensions;
 			path = "View Extensions";
@@ -485,6 +521,13 @@
 				BE9E92F514F417EA00FC3704 /* settings@2x.png in Resources */,
 				BE9E92F914F4195100FC3704 /* search.png in Resources */,
 				BE9E92FA14F4195100FC3704 /* search@2x.png in Resources */,
+				BE546A551501690F00B9A200 /* app-icon-ipad.png in Resources */,
+				BE546A571501694B00B9A200 /* app-icon-ipad.png in Resources */,
+				BE546A5E150193DC00B9A200 /* TableBottomBg@2x.png in Resources */,
+				BE546A5F150193DC00B9A200 /* TableMiddleBg@2x.png in Resources */,
+				BE546A60150193DC00B9A200 /* TableTopBg@2x.png in Resources */,
+				BE546A6815019F8F00B9A200 /* iPadBadgeBg.png in Resources */,
+				BE546A6A15019FA000B9A200 /* PanelBg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +589,9 @@
 				BE886C5114F95249003BC113 /* SearchViewController.m in Sources */,
 				BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */,
 				BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */,
+				BE546A5A1501901F00B9A200 /* MasteriPadViewController.m in Sources */,
+				BE546A631501967900B9A200 /* BadgesiPadViewController.m in Sources */,
+				BE546A6615019A3D00B9A200 /* iPadBadgeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
