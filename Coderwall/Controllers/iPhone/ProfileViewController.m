@@ -71,6 +71,7 @@
     } else {
         [summary setText:@""];
         [fullName setText:@""];
+        [avatar setImage:Nil];
     }
 }
 

@@ -40,7 +40,6 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"Loaded Settings");
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [settingsBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)]];
@@ -80,7 +79,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
+    else
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
 		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
 		BE546A571501694B00B9A200 /* app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A561501694B00B9A200 /* app-icon-ipad.png */; };
@@ -89,42 +90,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgesViewController.h; path = iPhone/BadgesViewController.h; sourceTree = "<group>"; };
-		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgesViewController.m; path = iPhone/BadgesViewController.m; sourceTree = "<group>"; };
+		BE19C3E915038F6200AAEE5E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BE19C3EA15038F6200AAEE5E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BadgesViewController.h; sourceTree = "<group>"; };
+		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
 		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
 		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
-		BE546A561501694B00B9A200 /* app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-ipad.png"; path = "iPad/app-icon-ipad.png"; sourceTree = "<group>"; };
-		BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableBottomBg@2x.png"; path = "Retina/TableBottomBg@2x.png"; sourceTree = "<group>"; };
-		BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableMiddleBg@2x.png"; path = "Retina/TableMiddleBg@2x.png"; sourceTree = "<group>"; };
-		BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TableTopBg@2x.png"; path = "Retina/TableTopBg@2x.png"; sourceTree = "<group>"; };
-		BE546A611501967800B9A200 /* BadgesiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BadgesiPadViewController.h; path = iPad/BadgesiPadViewController.h; sourceTree = "<group>"; };
-		BE546A621501967800B9A200 /* BadgesiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BadgesiPadViewController.m; path = iPad/BadgesiPadViewController.m; sourceTree = "<group>"; };
+		BE546A561501694B00B9A200 /* app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-ipad.png"; sourceTree = "<group>"; };
+		BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableBottomBg@2x.png"; sourceTree = "<group>"; };
+		BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableMiddleBg@2x.png"; sourceTree = "<group>"; };
+		BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableTopBg@2x.png"; sourceTree = "<group>"; };
+		BE546A611501967800B9A200 /* BadgesiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesiPadViewController.h; sourceTree = "<group>"; };
+		BE546A621501967800B9A200 /* BadgesiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesiPadViewController.m; sourceTree = "<group>"; };
 		BE546A6415019A3D00B9A200 /* iPadBadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadBadgeCell.h; sourceTree = "<group>"; };
 		BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadBadgeCell.m; sourceTree = "<group>"; };
-		BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPadBadgeBg.png; path = iPad/iPadBadgeBg.png; sourceTree = "<group>"; };
-		BE546A6915019FA000B9A200 /* PanelBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PanelBg@2x.png"; path = "Retina/PanelBg@2x.png"; sourceTree = "<group>"; };
-		BE546A6B15028AE900B9A200 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SummaryViewController.h; path = iPad/SummaryViewController.h; sourceTree = "<group>"; };
-		BE546A6C15028AE900B9A200 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SummaryViewController.m; path = iPad/SummaryViewController.m; sourceTree = "<group>"; };
+		BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadBadgeBg.png; sourceTree = "<group>"; };
+		BE546A6915019FA000B9A200 /* PanelBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PanelBg@2x.png"; sourceTree = "<group>"; };
+		BE546A6B15028AE900B9A200 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SummaryViewController.h; sourceTree = "<group>"; };
+		BE546A6C15028AE900B9A200 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		BE546A6E15028B7800B9A200 /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
 		BE546A6F15028B7800B9A200 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		BE546A711502E81500B9A200 /* iPadAccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadAccomplishmentCell.h; sourceTree = "<group>"; };
 		BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadAccomplishmentCell.m; sourceTree = "<group>"; };
-		BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccomplishmentsiPadViewController.h; path = iPad/AccomplishmentsiPadViewController.h; sourceTree = "<group>"; };
-		BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccomplishmentsiPadViewController.m; path = iPad/AccomplishmentsiPadViewController.m; sourceTree = "<group>"; };
-		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TableBottomBg.png; path = Standard/TableBottomBg.png; sourceTree = "<group>"; };
-		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TableMiddleBg.png; path = Standard/TableMiddleBg.png; sourceTree = "<group>"; };
-		BE5663C814F19C37002BC157 /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TableTopBg.png; path = Standard/TableTopBg.png; sourceTree = "<group>"; };
-		BE5663CD14F1AF7C002BC157 /* PanelBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PanelBg.png; path = Standard/PanelBg.png; sourceTree = "<group>"; };
-		BE5663D514F1B92E002BC157 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = Standard/profile.png; sourceTree = "<group>"; };
-		BE5663D614F1BB02002BC157 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "Retina/profile@2x.png"; sourceTree = "<group>"; };
-		BE5663D814F1BD43002BC157 /* accomplishments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accomplishments.png; path = Standard/accomplishments.png; sourceTree = "<group>"; };
-		BE5663D914F1BD43002BC157 /* accomplishments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accomplishments@2x.png"; path = "Retina/accomplishments@2x.png"; sourceTree = "<group>"; };
-		BE5663DA14F1BD43002BC157 /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = badges.png; path = Standard/badges.png; sourceTree = "<group>"; };
-		BE5663DB14F1BD43002BC157 /* badges@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "badges@2x.png"; path = "Retina/badges@2x.png"; sourceTree = "<group>"; };
-		BE5663DC14F1BD43002BC157 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stats.png; path = Standard/stats.png; sourceTree = "<group>"; };
-		BE5663DD14F1BD43002BC157 /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stats@2x.png"; path = "Retina/stats@2x.png"; sourceTree = "<group>"; };
-		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccomplishmentsViewController.h; path = iPhone/AccomplishmentsViewController.h; sourceTree = "<group>"; };
-		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccomplishmentsViewController.m; path = iPhone/AccomplishmentsViewController.m; sourceTree = "<group>"; };
+		BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AccomplishmentsiPadViewController.h; sourceTree = "<group>"; };
+		BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsiPadViewController.m; sourceTree = "<group>"; };
+		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBottomBg.png; sourceTree = "<group>"; };
+		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableMiddleBg.png; sourceTree = "<group>"; };
+		BE5663C814F19C37002BC157 /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopBg.png; sourceTree = "<group>"; };
+		BE5663CD14F1AF7C002BC157 /* PanelBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PanelBg.png; sourceTree = "<group>"; };
+		BE5663D514F1B92E002BC157 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		BE5663D614F1BB02002BC157 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
+		BE5663D814F1BD43002BC157 /* accomplishments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accomplishments.png; sourceTree = "<group>"; };
+		BE5663D914F1BD43002BC157 /* accomplishments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accomplishments@2x.png"; sourceTree = "<group>"; };
+		BE5663DA14F1BD43002BC157 /* badges.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badges.png; sourceTree = "<group>"; };
+		BE5663DB14F1BD43002BC157 /* badges@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badges@2x.png"; sourceTree = "<group>"; };
+		BE5663DC14F1BD43002BC157 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
+		BE5663DD14F1BD43002BC157 /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats@2x.png"; sourceTree = "<group>"; };
+		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
+		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewController.m; sourceTree = "<group>"; };
 		BE5663E814F2E856002BC157 /* AccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentCell.h; sourceTree = "<group>"; };
 		BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsCell.m; sourceTree = "<group>"; };
 		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,13 +148,13 @@
 		BE60B69714EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE60B69914EFA64100CF7151 /* CoderwallTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoderwallTests.h; sourceTree = "<group>"; };
 		BE60B69A14EFA64100CF7151 /* CoderwallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoderwallTests.m; sourceTree = "<group>"; };
-		BE60B6A414EFB09100CF7151 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = iPhone/ProfileViewController.h; sourceTree = "<group>"; };
-		BE60B6A514EFB09100CF7151 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = iPhone/ProfileViewController.m; sourceTree = "<group>"; };
+		BE60B6A414EFB09100CF7151 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		BE60B6A514EFB09100CF7151 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		BE60B6AA14EFB0FD00CF7151 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BE60B6AB14EFB0FD00CF7151 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		BE60B6C614EFBA9B00CF7151 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon-retina.png"; path = "Retina/app-icon-retina.png"; sourceTree = "<group>"; };
-		BE60B6C814EFBAA400CF7151 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-icon.png"; path = "Standard/app-icon.png"; sourceTree = "<group>"; };
-		BE60B6CA14EFBAE700CF7151 /* inset-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inset-logo.png"; path = "Standard/inset-logo.png"; sourceTree = "<group>"; };
+		BE60B6C614EFBA9B00CF7151 /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-retina.png"; sourceTree = "<group>"; };
+		BE60B6C814EFBAA400CF7151 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		BE60B6CA14EFBAE700CF7151 /* inset-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inset-logo.png"; sourceTree = "<group>"; };
 		BE60B72F14EFBE6000CF7151 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		BE60B73014EFBE6000CF7151 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		BE60B73114EFBE6000CF7151 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -177,25 +180,25 @@
 		BE60B74514EFBE6000CF7151 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		BE60B74614EFBE6000CF7151 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = Shared/MasterViewController.h; sourceTree = "<group>"; };
-		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = Shared/MasterViewController.m; sourceTree = "<group>"; };
-		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Shared/SettingsViewController.h; sourceTree = "<group>"; };
-		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Shared/SettingsViewController.m; sourceTree = "<group>"; };
-		BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateProtocol.h; path = Protocols/AppDelegateProtocol.h; sourceTree = "<group>"; };
-		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = Shared/SearchViewController.h; sourceTree = "<group>"; };
-		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = Shared/SearchViewController.m; sourceTree = "<group>"; };
+		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
+		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SearchViewController.h; sourceTree = "<group>"; };
+		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BE886C5314F953E0003BC113 /* ClearSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearSearchBar.h; sourceTree = "<group>"; };
 		BE886C5414F953E0003BC113 /* ClearSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearSearchBar.m; sourceTree = "<group>"; };
-		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Standard/settings.png; sourceTree = "<group>"; };
-		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "Retina/settings@2x.png"; sourceTree = "<group>"; };
-		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = Standard/search.png; sourceTree = "<group>"; };
-		BE9E92F814F4195100FC3704 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search@2x.png"; path = "Retina/search@2x.png"; sourceTree = "<group>"; };
-		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsViewController.h; path = iPhone/StatsViewController.h; sourceTree = "<group>"; };
-		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsViewController.m; path = iPhone/StatsViewController.m; sourceTree = "<group>"; };
+		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		BE9E92F814F4195100FC3704 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = StatsViewController.h; sourceTree = "<group>"; };
+		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		BE9E92FE14F5658400FC3704 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatCell.h; sourceTree = "<group>"; };
 		BE9E92FF14F5658400FC3704 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatCell.m; sourceTree = "<group>"; };
-		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultsViewController.h; path = Shared/SearchResultsViewController.h; sourceTree = "<group>"; };
-		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultsViewController.m; path = Shared/SearchResultsViewController.m; sourceTree = "<group>"; };
+		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,7 +377,7 @@
 			children = (
 				BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */,
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BE60B76014F0615600CF7151 /* ViewExtensions */ = {
@@ -405,7 +408,7 @@
 				BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */,
 				BE546A561501694B00B9A200 /* app-icon-ipad.png */,
 			);
-			name = iPad;
+			path = iPad;
 			sourceTree = "<group>";
 		};
 		BE74BFB5150383DE00433091 /* Retina */ = {
@@ -423,7 +426,7 @@
 				BE546A5D150193DC00B9A200 /* TableTopBg@2x.png */,
 				BE546A6915019FA000B9A200 /* PanelBg@2x.png */,
 			);
-			name = Retina;
+			path = Retina;
 			sourceTree = "<group>";
 		};
 		BE74BFB6150383E900433091 /* Standard */ = {
@@ -442,7 +445,7 @@
 				BE5663C714F19C37002BC157 /* TableMiddleBg.png */,
 				BE5663C814F19C37002BC157 /* TableTopBg.png */,
 			);
-			name = Standard;
+			path = Standard;
 			sourceTree = "<group>";
 		};
 		BE74BFB71503857200433091 /* iPad */ = {
@@ -454,8 +457,10 @@
 				BE546A6C15028AE900B9A200 /* SummaryViewController.m */,
 				BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */,
 				BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */,
+				BE19C3E915038F6200AAEE5E /* DetailViewController.h */,
+				BE19C3EA15038F6200AAEE5E /* DetailViewController.m */,
 			);
-			name = iPad;
+			path = iPad;
 			sourceTree = "<group>";
 		};
 		BE74BFB81503858700433091 /* iPhone */ = {
@@ -470,7 +475,7 @@
 				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 			);
-			name = iPhone;
+			path = iPhone;
 			sourceTree = "<group>";
 		};
 		BE74BFB91503858E00433091 /* Shared */ = {
@@ -485,7 +490,7 @@
 				BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */,
 				BEDD01D015005369006C4C29 /* SearchResultsViewController.m */,
 			);
-			name = Shared;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -654,6 +659,7 @@
 				BE546A7015028B7800B9A200 /* ProfileCell.m in Sources */,
 				BE546A731502E81600B9A200 /* iPadAccomplishmentCell.m in Sources */,
 				BE546A761502E96700B9A200 /* AccomplishmentsiPadViewController.m in Sources */,
+				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -91,11 +91,20 @@
     statsData = [[NSArray alloc] initWithArray:data];
     sections = [[NSArray alloc] initWithArray:keys];
     
-    //UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
-    //UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
-    //self.parentViewController.navigationItem.leftBarButtonItem = fakeButtonItem;
-    //self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:user.userName];
-    
+
+    if([NSStringFromClass([self.parentViewController class]) isEqualToString:@"MasterViewController"]){
+        UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
+        UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
+        self.parentViewController.navigationItem.leftBarButtonItem = fakeButtonItem;
+        self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+}
+
+- (void)reloadTable
+{
+    [self viewDidLoad];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated

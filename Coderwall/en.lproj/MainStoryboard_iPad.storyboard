@@ -26,7 +26,13 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zad-2f-nQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="RBo-NC-HiN" customClass="MasterViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="gA1-hF-aBD"/>
+                    <navigationItem key="navigationItem" id="gA1-hF-aBD">
+                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="eCw-JB-dvt">
+                            <connections>
+                                <segue destination="qYM-eM-D52" kind="push" identifier="ShowSettings" id="AHJ-DS-mUf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bwd-eM-k8c">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -170,6 +176,56 @@
             </objects>
             <point key="canvasLocation" x="2020" y="-1039"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Zxh-Xh-Hyr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPu-rO-Bjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qYM-eM-D52" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kDG-ul-V4v">
+                        <rect key="frame" x="0.0" y="64" width="320" height="655"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="4bj-rY-Rki" userLabel="settingsBg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="040-Zr-4tb">
+                                <rect key="frame" x="20" y="62" width="280" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">You will need to have signed up on Coderwall with your GitHub user account first. If you haven't already done that go to http://coderwall.com and sign up now.</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gXj-Eu-eaQ">
+                                <rect key="frame" x="20" y="18" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Username" minimumFontSize="17" id="KVE-ZB-EQC">
+                                <rect key="frame" x="107" y="17" width="188" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="userNameChanged:" destination="qYM-eM-D52" eventType="editingDidEndOnExit" id="hjX-2P-MyJ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EcN-ix-cKA"/>
+                    <connections>
+                        <outlet property="settingsBg" destination="4bj-rY-Rki" id="pzu-V9-Etv"/>
+                        <outlet property="userNameInput" destination="KVE-ZB-EQC" id="TDd-oW-aao"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-209" y="-2123"/>
+        </scene>
         <!--Search Results View Controller-->
         <scene sceneID="OdY-M1-yf0">
             <objects>
@@ -189,14 +245,12 @@
             </objects>
             <point key="canvasLocation" x="1482" y="-2651"/>
         </scene>
-        <!--Master View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="V2S-SW-zdN">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxC-se-2ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController definesPresentationContext="YES" id="VZe-R7-MCu" customClass="MasterViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="jWR-kT-MzH">
-                        <barButtonItem key="rightBarButtonItem" image="settings.png" id="llT-Qf-IFT"/>
-                    </navigationItem>
+                <tabBarController definesPresentationContext="YES" id="VZe-R7-MCu" customClass="DetailViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jWR-kT-MzH"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZN7-pw-ORN">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -543,6 +597,9 @@
         <class className="ClearSearchBar" superclassName="UISearchBar">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ClearSearchBar.h"/>
         </class>
+        <class className="DetailViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
         <class className="MasterViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
         </class>
@@ -559,6 +616,14 @@
         </class>
         <class className="SearchViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="userNameChanged:"/>
+                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="StatCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StatCell.h"/>
