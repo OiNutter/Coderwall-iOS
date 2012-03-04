@@ -66,8 +66,8 @@
     //load
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [userDefaults stringForKey:@"UserName"];
-    if(userName != (id)[NSNull null] && userName != @"")
-        [self setCurrentUser:[[User alloc] initWithUsername:userName]];
+    [self setCurrentUser:[[User alloc] initWithUsername:userName]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

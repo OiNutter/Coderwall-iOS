@@ -23,9 +23,11 @@
 {
     [super viewDidLoad];
     // Add Coderwall logo to navigation bar
-    UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
-    UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
-    self.navigationItem.leftBarButtonItem = fakeButtonItem;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
+        UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
+        UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
+        self.navigationItem.leftBarButtonItem = fakeButtonItem;
+    }
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
@@ -38,9 +40,11 @@
 {
     [super viewWillAppear:animated];
     // Get current User
-    User *user = [self currentUser];
-    if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0)
-        self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
+        User *user = [self currentUser];
+        if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0)
+            self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    }
 
 }
 

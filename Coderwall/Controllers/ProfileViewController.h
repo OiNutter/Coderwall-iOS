@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StatsViewController.h"
 
-@interface ProfileViewController : UIViewController{
+@interface ProfileViewController : UIViewController
+{
     IBOutlet UILabel *fullName;
     IBOutlet UILabel *summary;
     IBOutlet UIImageView *avatar;
     IBOutlet UIImageView *profileBg;
+    IBOutlet UITableView *statsTable;
 }
 
 @end

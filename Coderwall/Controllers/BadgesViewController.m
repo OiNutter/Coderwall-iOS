@@ -26,19 +26,6 @@
 	return currentUser;
 }
 
-- (NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
-	return refreshes;
-}
-
-- (void)setRefreshes:(NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    [theDelegate setRefreshes:refreshes];
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -54,36 +41,11 @@
     [super viewDidLoad];
     User *user = [self currentUser];
     badges = [[NSArray alloc] initWithArray:user.badges];
-    NSMutableArray *refreshes = [self refreshes];
-    [refreshes removeObject:@"Badges"];
-    [self setRefreshes:refreshes];
 }
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSMutableArray *refreshes = [self refreshes];
-    NSInteger index = [refreshes indexOfObject:@"Badges"];
-    if(index != NSNotFound){
-        [self viewDidLoad];
-        [self.tableView reloadData];
-    }
-}
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-    else
-        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source

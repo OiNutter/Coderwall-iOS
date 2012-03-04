@@ -14,7 +14,6 @@
 
 @synthesize window = _window;
 @synthesize currentUser;
-@synthesize refreshes;
 
 - (id) init;
 {
@@ -36,10 +35,6 @@
     if(userName != (id)[NSNull null] && userName != @"")
         self.currentUser = [[User alloc] initWithUsername:userName];
 
-    refreshes = [[NSMutableArray alloc] init];
-    [refreshes addObject:@"Badges"];
-    [refreshes addObject:@"Accomplishments"];
-    [refreshes addObject:@"Stats"];
     return YES;
 }
 							

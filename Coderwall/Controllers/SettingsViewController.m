@@ -29,19 +29,6 @@
     [theDelegate setCurrentUser:currentUser];
 }
 
-- (NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
-	return refreshes;
-}
-
-- (void)setRefreshes:(NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    [theDelegate setRefreshes:refreshes];
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -74,15 +61,13 @@
 -(void) userNameChanged:(id) sender
 {
     if(self->userNameInput.text.length >0){
+        
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setValue:self->userNameInput.text forKey:@"UserName"];
         [userDefaults synchronize];
         [self setCurrentUser:[[User alloc] initWithUsername:self->userNameInput.text]];
-        NSMutableArray *refreshes = [[NSMutableArray alloc] init];
-        [refreshes addObject:@"Badges"];
-        [refreshes addObject:@"Accomplishments"];
-        [refreshes addObject:@"Stats"];
-        [self setRefreshes:refreshes];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
+        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
 														message:nil

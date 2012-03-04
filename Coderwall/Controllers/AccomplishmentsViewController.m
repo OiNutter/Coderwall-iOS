@@ -26,19 +26,6 @@
 	return currentUser;
 }
 
-- (NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	NSMutableArray *refreshes = (NSMutableArray*) theDelegate.refreshes;
-	return refreshes;
-}
-
-- (void)setRefreshes:(NSMutableArray *)refreshes
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    [theDelegate setRefreshes:refreshes];
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -53,27 +40,6 @@
     [super viewDidLoad];
     User *user = [self currentUser];
     accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];
-    NSMutableArray *refreshes = [self refreshes];
-    [refreshes removeObject:@"Accomplishments"];
-    [self setRefreshes:refreshes];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSMutableArray *refreshes = [self refreshes];
-    NSInteger index = [refreshes indexOfObject:@"Accomplishments"];
-    if(index != NSNotFound){
-        [self viewDidLoad];
-        [self.tableView reloadData];
-    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -102,9 +68,8 @@
     NSString *accomplishment = [accomplishments objectAtIndex:indexPath.row];
     
     CGSize maximumSize = CGSizeMake(280, 9999);
-    NSString *descriptionText = accomplishment;
     UIFont *descriptionFont = [UIFont fontWithName:@"Helvetica" size:12];
-    CGSize descriptionStringSize = [descriptionText sizeWithFont:descriptionFont 
+    CGSize descriptionStringSize = [accomplishment sizeWithFont:descriptionFont 
                                                constrainedToSize:maximumSize 
                                                    lineBreakMode:cell.detail.lineBreakMode];
     
@@ -135,49 +100,10 @@
     
     // Configure the cell...
     cell.backgroundView = background;
-    cell.detail.text = descriptionText;
+    cell.detail.text = accomplishment;
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -190,19 +116,6 @@
         height+=10; 
     
     return height;
-}
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 @end

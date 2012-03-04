@@ -13,8 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,retain) User *currentUser;
-@property NSMutableArray *refreshes;
 
 - (void) setCurrentUser:(User *)currentUser;
-- (void) setRefreshes:(NSMutableArray *)refreshes;
+
 @end

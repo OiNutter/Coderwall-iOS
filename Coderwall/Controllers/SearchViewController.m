@@ -63,6 +63,8 @@
         [self setCurrentUser:user];
         [searchBar resignFirstResponder];
         [(MasterViewController *)self.parentViewController showSearchResults];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];                
+        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
 														message:nil

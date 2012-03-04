@@ -15,16 +15,6 @@
 
 @implementation BadgesiPadViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,14 +32,25 @@
             row = [[NSMutableArray alloc] init ];
         }
     }
+    if(i<3 && i>0)
+        [newBadges addObject:row];
     
     badges = [[NSArray alloc] initWithArray:newBadges];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
 }
 
-- (void)viewDidUnload
+- (void)reloadTable
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [self viewDidLoad];
+    [self.tableView reloadData];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:@"Badges"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -64,7 +65,7 @@
     
     // Configure the cell...
     NSMutableArray *row = [self.badges objectAtIndex:indexPath.row];
-    UIImage *background = [[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)];   
+    UIImage *background = [[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15)];   
     CGSize maximumSize = CGSizeMake(190, 60);
     UIFont *descriptionFont = [UIFont fontWithName:@"Helvetica" size:11];
     CGSize descriptionStringSize;
@@ -100,6 +101,8 @@
     } else {
         [cell.title2 setText:@""];
         [cell.detail2 setText:@""];
+        [cell.badge2 setImage:Nil];
+        [cell.bg2 setImage:Nil];
     }
     
     if(row.count >=3){
@@ -119,6 +122,8 @@
     } else {
         [cell.title3 setText:@""];
         [cell.detail3 setText:@""];
+        [cell.badge3 setImage:Nil];
+        [cell.bg3 setImage:Nil];
     }
     
     return cell;
