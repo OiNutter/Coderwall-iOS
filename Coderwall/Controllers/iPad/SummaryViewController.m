@@ -98,7 +98,10 @@
         self.parentViewController.navigationItem.leftBarButtonItem = fakeButtonItem;
         self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:user.userName];
     }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    
+    [self.tableView setBackgroundView:nil];
 }
 
 - (void)reloadTable

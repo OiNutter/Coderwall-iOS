@@ -176,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="2020" y="-1039"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings View Controller - Settings-->
         <scene sceneID="Zxh-Xh-Hyr">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPu-rO-Bjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,14 +189,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="040-Zr-4tb">
-                                <rect key="frame" x="20" y="62" width="280" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">You will need to have signed up on Coderwall with your GitHub user account first. If you haven't already done that go to http://coderwall.com and sign up now.</string>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="gXj-Eu-eaQ">
                                 <rect key="frame" x="20" y="18" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,11 +205,20 @@
                                     <action selector="userNameChanged:" destination="qYM-eM-D52" eventType="editingDidEndOnExit" id="hjX-2P-MyJ"/>
                                 </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" id="CUv-cG-hVP">
+                                <rect key="frame" x="20" y="62" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">You will need to have signed up on Coderwall with your GitHub user account first. If you haven't already done that go to http://coderwall.com and sign up now.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EcN-ix-cKA"/>
+                    <navigationItem key="navigationItem" title="Settings" id="EcN-ix-cKA"/>
                     <connections>
                         <outlet property="settingsBg" destination="4bj-rY-Rki" id="pzu-V9-Etv"/>
                         <outlet property="userNameInput" destination="KVE-ZB-EQC" id="TDd-oW-aao"/>
@@ -581,89 +582,6 @@
         <image name="search.png" width="30" height="30"/>
         <image name="settings.png" width="20" height="20"/>
     </resources>
-    <classes>
-        <class className="AccomplishmentsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsViewController.h"/>
-        </class>
-        <class className="AccomplishmentsiPadViewController" superclassName="AccomplishmentsViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsiPadViewController.h"/>
-        </class>
-        <class className="BadgesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgesViewController.h"/>
-        </class>
-        <class className="BadgesiPadViewController" superclassName="BadgesViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgesiPadViewController.h"/>
-        </class>
-        <class className="ClearSearchBar" superclassName="UISearchBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClearSearchBar.h"/>
-        </class>
-        <class className="DetailViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-        </class>
-        <class className="MasterViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="ProfileCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SearchResultsViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
-        </class>
-        <class className="SearchViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="userNameChanged:"/>
-                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="StatCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="number" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SummaryViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryViewController.h"/>
-        </class>
-        <class className="iPadAccomplishmentCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadAccomplishmentCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="iPadBadgeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadBadgeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="badge1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="badge2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="badge3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title3" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
