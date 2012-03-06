@@ -70,6 +70,7 @@
 		BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
 		BE886C5114F95249003BC113 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
 		BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5414F953E0003BC113 /* ClearSearchBar.m */; };
+		BE93581A150403AF0059A620 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE935819150403AF0059A620 /* DejalActivityView.m */; };
 		BE9E92F414F417EA00FC3704 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F214F417EA00FC3704 /* settings.png */; };
 		BE9E92F514F417EA00FC3704 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F314F417EA00FC3704 /* settings@2x.png */; };
 		BE9E92F914F4195100FC3704 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = BE9E92F714F4195100FC3704 /* search.png */; };
@@ -92,7 +93,7 @@
 /* Begin PBXFileReference section */
 		BE19C3E915038F6200AAEE5E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BE19C3EA15038F6200AAEE5E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = BadgesViewController.h; sourceTree = "<group>"; };
+		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesViewController.h; sourceTree = "<group>"; };
 		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
 		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
 		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
@@ -106,13 +107,13 @@
 		BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadBadgeCell.m; sourceTree = "<group>"; };
 		BE546A6715019F8F00B9A200 /* iPadBadgeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPadBadgeBg.png; sourceTree = "<group>"; };
 		BE546A6915019FA000B9A200 /* PanelBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PanelBg@2x.png"; sourceTree = "<group>"; };
-		BE546A6B15028AE900B9A200 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SummaryViewController.h; sourceTree = "<group>"; };
+		BE546A6B15028AE900B9A200 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
 		BE546A6C15028AE900B9A200 /* SummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryViewController.m; sourceTree = "<group>"; };
 		BE546A6E15028B7800B9A200 /* ProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
 		BE546A6F15028B7800B9A200 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		BE546A711502E81500B9A200 /* iPadAccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadAccomplishmentCell.h; sourceTree = "<group>"; };
 		BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadAccomplishmentCell.m; sourceTree = "<group>"; };
-		BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AccomplishmentsiPadViewController.h; sourceTree = "<group>"; };
+		BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsiPadViewController.h; sourceTree = "<group>"; };
 		BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsiPadViewController.m; sourceTree = "<group>"; };
 		BE5663C614F19C37002BC157 /* TableBottomBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableBottomBg.png; sourceTree = "<group>"; };
 		BE5663C714F19C37002BC157 /* TableMiddleBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableMiddleBg.png; sourceTree = "<group>"; };
@@ -126,7 +127,7 @@
 		BE5663DB14F1BD43002BC157 /* badges@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "badges@2x.png"; sourceTree = "<group>"; };
 		BE5663DC14F1BD43002BC157 /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
 		BE5663DD14F1BD43002BC157 /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats@2x.png"; sourceTree = "<group>"; };
-		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
+		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
 		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewController.m; sourceTree = "<group>"; };
 		BE5663E814F2E856002BC157 /* AccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentCell.h; sourceTree = "<group>"; };
 		BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsCell.m; sourceTree = "<group>"; };
@@ -182,22 +183,24 @@
 		BE60B74714EFBE6000CF7151 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		BE60B75414EFC4D500CF7151 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
-		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SearchViewController.h; sourceTree = "<group>"; };
+		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BE886C5314F953E0003BC113 /* ClearSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearSearchBar.h; sourceTree = "<group>"; };
 		BE886C5414F953E0003BC113 /* ClearSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearSearchBar.m; sourceTree = "<group>"; };
+		BE935818150403AF0059A620 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		BE935819150403AF0059A620 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		BE9E92F214F417EA00FC3704 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		BE9E92F314F417EA00FC3704 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		BE9E92F714F4195100FC3704 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		BE9E92F814F4195100FC3704 /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
-		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = StatsViewController.h; sourceTree = "<group>"; };
+		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		BE9E92FE14F5658400FC3704 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatCell.h; sourceTree = "<group>"; };
 		BE9E92FF14F5658400FC3704 /* StatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatCell.m; sourceTree = "<group>"; };
-		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,6 +231,7 @@
 		BE60B65A14EFA64000CF7151 = {
 			isa = PBXGroup;
 			children = (
+				BE935817150403AF0059A620 /* DejalActivityView */,
 				BE60B66F14EFA64100CF7151 /* Coderwall */,
 				BE60B69314EFA64100CF7151 /* CoderwallTests */,
 				BE60B66814EFA64100CF7151 /* Frameworks */,
@@ -493,6 +497,15 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		BE935817150403AF0059A620 /* DejalActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				BE935818150403AF0059A620 /* DejalActivityView.h */,
+				BE935819150403AF0059A620 /* DejalActivityView.m */,
+			);
+			path = DejalActivityView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +673,7 @@
 				BE546A731502E81600B9A200 /* iPadAccomplishmentCell.m in Sources */,
 				BE546A761502E96700B9A200 /* AccomplishmentsiPadViewController.m in Sources */,
 				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
+				BE93581A150403AF0059A620 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,9 +65,7 @@
         User *user = [[User alloc] initWithUsername:searchBar.text];
         [self setCurrentUser:user];
         [searchBar resignFirstResponder];
-        [(MasterViewController *)self.parentViewController showSearchResults];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];                
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadResultsView) name:@"UserChanged" object:nil];        
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
 														message:nil
@@ -76,6 +74,12 @@
 											  otherButtonTitles:nil];
 		[alert show];
     }
+}
+
+- (void)loadResultsView
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UserChanged" object:nil];
+    [(MasterViewController *)self.parentViewController showSearchResults];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar

@@ -368,6 +368,26 @@
                                     <outlet property="title3" destination="6B9-8n-nYm" id="LJq-Z2-fOc"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emptyCell" textLabel="8da-IG-njE" rowHeight="100" style="IBUITableViewCellStyleDefault" id="sCF-BZ-tfn" customClass="BadgeCell">
+                                <rect key="frame" x="0.0" y="342" width="703" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" id="8da-IG-njE">
+                                            <rect key="frame" x="10" y="0.0" width="683" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="dU2-HM-cUN" id="AFN-tD-huz"/>
@@ -441,6 +461,26 @@
                                     <outlet property="detail2" destination="885-vP-k3E" id="6eO-0V-oBm"/>
                                     <outlet property="detail3" destination="1sC-az-I7O" id="b1v-kk-LgR"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emptyCell" textLabel="0YP-lN-kkZ" rowHeight="100" style="IBUITableViewCellStyleDefault" id="0Dq-Iz-xyP" customClass="BadgeCell">
+                                <rect key="frame" x="0.0" y="217" width="703" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" id="0YP-lN-kkZ">
+                                            <rect key="frame" x="10" y="0.0" width="683" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -582,6 +622,97 @@
         <image name="search.png" width="30" height="30"/>
         <image name="settings.png" width="20" height="20"/>
     </resources>
+    <classes>
+        <class className="AccomplishmentsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsViewController.h"/>
+        </class>
+        <class className="AccomplishmentsiPadViewController" superclassName="AccomplishmentsViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccomplishmentsiPadViewController.h"/>
+        </class>
+        <class className="BadgeCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgeCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="badge" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BadgesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgesViewController.h"/>
+        </class>
+        <class className="BadgesiPadViewController" superclassName="BadgesViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgesiPadViewController.h"/>
+        </class>
+        <class className="ClearSearchBar" superclassName="UISearchBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ClearSearchBar.h"/>
+        </class>
+        <class className="DetailViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
+        <class className="MasterViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="ProfileCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SearchResultsViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="userNameChanged:"/>
+                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="StatCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="number" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SummaryViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryViewController.h"/>
+        </class>
+        <class className="iPadAccomplishmentCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadAccomplishmentCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="iPadBadgeCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadBadgeCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="badge1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="badge2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="badge3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title3" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>

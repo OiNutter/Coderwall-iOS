@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject{
+@interface User : NSObject <NSURLConnectionDelegate>
+{
     
     @private
     NSString *userName;
@@ -22,6 +23,7 @@
     NSArray *accomplishments;
     NSArray *stats;
     NSArray *specialities;
+    NSMutableData *receivedData;
     
 }
 

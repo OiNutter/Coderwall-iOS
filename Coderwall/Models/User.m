@@ -39,10 +39,50 @@
 
 - (void) load:(NSString *) user
 {
-    NSLog(@"Loading...");
     NSString *urlString = [NSString stringWithFormat:@"http://coderwall.com/%@.json?full=true", user];
-	NSString *response = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil];
-    [self setDetails:[response JSONValue]];    
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString ]];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+    
+    if (connection) {
+        receivedData = [NSMutableData data];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Loading" object:self];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectionError" object:connection];        
+    }
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    int code = [httpResponse statusCode];
+    if(code == 200){
+        [receivedData setLength:0];
+    } else {
+        [connection cancel];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ResponseError" object:response];
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    
+    // Append the new data to receivedData.
+    // receivedData is an instance variable declared elsewhere.
+    [receivedData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSString *response = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+    [self setDetails:[response JSONValue]];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"Connection failed! Error - %@ %@",          
+          [error localizedDescription],
+          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
 }
 
 - (void) setDetails:(NSDictionary *) details
@@ -58,6 +98,9 @@
     self.accomplishments = [details objectForKey:@"accomplishments"];
     self.stats = [details objectForKey:@"stats"];
     self.specialities = [details objectForKey:@"specialities"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
 }
 
 - (UIImage *) getAvatar

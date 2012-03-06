@@ -32,8 +32,9 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
     User *user = [self currentUser];
-    if(user == (id)[NSNull null] || user.userName == @"" || user.userName.length == 0)
+    if(user == Nil)
         [self performSegueWithIdentifier:@"ShowSettings" sender:self];
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated
