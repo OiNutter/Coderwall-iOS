@@ -10,6 +10,7 @@
 		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
 		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
+		BE23DF0B1509786C00A149C8 /* defaultavatar.png in Resources */ = {isa = PBXBuildFile; fileRef = BE23DF0A1509786C00A149C8 /* defaultavatar.png */; };
 		BE546A571501694B00B9A200 /* app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A561501694B00B9A200 /* app-icon-ipad.png */; };
 		BE546A5E150193DC00B9A200 /* TableBottomBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */; };
 		BE546A5F150193DC00B9A200 /* TableMiddleBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */; };
@@ -97,6 +98,7 @@
 		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
 		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
 		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
+		BE23DF0A1509786C00A149C8 /* defaultavatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultavatar.png; sourceTree = "<group>"; };
 		BE546A561501694B00B9A200 /* app-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-ipad.png"; sourceTree = "<group>"; };
 		BE546A5B150193DC00B9A200 /* TableBottomBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableBottomBg@2x.png"; sourceTree = "<group>"; };
 		BE546A5C150193DC00B9A200 /* TableMiddleBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableMiddleBg@2x.png"; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		BE74BFB6150383E900433091 /* Standard */ = {
 			isa = PBXGroup;
 			children = (
+				BE23DF0A1509786C00A149C8 /* defaultavatar.png */,
 				BE60B6CA14EFBAE700CF7151 /* inset-logo.png */,
 				BE9E92F714F4195100FC3704 /* search.png */,
 				BE9E92F214F417EA00FC3704 /* settings.png */,
@@ -605,6 +608,7 @@
 				BE546A60150193DC00B9A200 /* TableTopBg@2x.png in Resources */,
 				BE546A6815019F8F00B9A200 /* iPadBadgeBg.png in Resources */,
 				BE546A6A15019FA000B9A200 /* PanelBg@2x.png in Resources */,
+				BE23DF0B1509786C00A149C8 /* defaultavatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

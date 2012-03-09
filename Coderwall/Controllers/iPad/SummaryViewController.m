@@ -54,8 +54,9 @@
             summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
     
         summaryDetails = [summaryDetails stringByAppendingString:user.location];
+        UIImage *(^imageGetter)() = ^{return [user getAvatar];};
     
-        NSArray *profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,[user getAvatar],nil];
+        NSArray *profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,imageGetter,nil];
         NSArray *profileKeys = [[NSArray alloc] initWithObjects:@"fullName",@"summary",@"avatar", nil];
         NSDictionary *userProfile = [[NSDictionary alloc] initWithObjects:profileData forKeys: profileKeys];
     
@@ -149,7 +150,15 @@
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
         cell.title.text = [item objectForKey:@"fullName"];
         cell.detail.text = [item objectForKey:@"summary"];
-        [cell.avatar setImage:[item objectForKey:@"avatar"]];
+        dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
+        dispatch_async(downloadQueue, ^{
+            typedef UIImage *(^imageGetter)();
+            UIImage *userAvatar = ((imageGetter)[item objectForKey:@"avatar"])();
+            dispatch_async(dispatch_get_main_queue(),^{
+                [cell.avatar setImage:userAvatar];
+            });
+        });
+        
         cell.backgroundView = background;
         return cell;
     } else if((NSString *)[sections objectAtIndex:indexPath.section] == @"Specialities"){

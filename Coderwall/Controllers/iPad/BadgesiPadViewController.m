@@ -77,7 +77,14 @@
         NSDictionary *badge1 = [row objectAtIndex:0];
         [cell.title1 setText:[badge1 objectForKey:@"name"]];
         NSURL *url1= [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge1 objectForKey:@"badge"]]];
-        [cell.badge1 setImage:[UIImage imageWithData: [NSData dataWithContentsOfURL:url1]]];
+        dispatch_queue_t badgeQueue1 = dispatch_queue_create("badge queue 1", NULL);
+        dispatch_async(badgeQueue1, ^{
+            UIImage *badge = [UIImage imageWithData: [NSData dataWithContentsOfURL:url1]];
+            dispatch_async(dispatch_get_main_queue(),^{
+                [cell.badge1 setImage:badge];
+            });
+        });
+        dispatch_release(badgeQueue1);
         [cell.bg1 setImage: background];
 
         NSString *descriptionText1= [badge1 objectForKey:@"description"];
@@ -92,7 +99,14 @@
             NSDictionary *badge2 = [row objectAtIndex:1];
             [cell.title2 setText:[badge2 objectForKey:@"name"]];
             NSURL *url2= [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge2 objectForKey:@"badge"]]];
-            [cell.badge2 setImage:[UIImage imageWithData: [NSData dataWithContentsOfURL:url2]]];
+            dispatch_queue_t badgeQueue2 = dispatch_queue_create("badge queue 2", NULL);
+            dispatch_async(badgeQueue2, ^{
+                UIImage *badge = [UIImage imageWithData: [NSData dataWithContentsOfURL:url2]];
+                dispatch_async(dispatch_get_main_queue(),^{
+                    [cell.badge2 setImage:badge];
+                });
+            });
+            dispatch_release(badgeQueue2);
             [cell.bg2 setImage: background];
         
             NSString *descriptionText2= [badge2 objectForKey:@"description"];
@@ -113,7 +127,14 @@
             NSDictionary *badge3 = [row objectAtIndex:2];
             [cell.title3 setText:[badge3 objectForKey:@"name"]];
             NSURL *url3= [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge3 objectForKey:@"badge"]]];
-            [cell.badge3 setImage:[UIImage imageWithData: [NSData dataWithContentsOfURL:url3]]];
+            dispatch_queue_t badgeQueue3 = dispatch_queue_create("badge queue 3", NULL);
+            dispatch_async(badgeQueue3, ^{
+                UIImage *badge = [UIImage imageWithData: [NSData dataWithContentsOfURL:url3]];
+                dispatch_async(dispatch_get_main_queue(),^{
+                    [cell.badge3 setImage:badge];
+                });
+            });
+            dispatch_release(badgeQueue3);
             [cell.bg3 setImage: background];
         
             NSString *descriptionText3= [badge3 objectForKey:@"description"];

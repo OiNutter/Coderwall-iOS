@@ -62,7 +62,14 @@
         
         [summary setText:summaryDetails];
         [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
-        [avatar setImage:[user getAvatar]];
+        dispatch_queue_t downloadQueue = dispatch_queue_create("avatar downloader", NULL);
+        dispatch_async(downloadQueue,^{
+            UIImage *userAvatar = [user getAvatar];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [avatar setImage:userAvatar];
+            });
+        });
+        dispatch_release(downloadQueue);
     } else {
         [summary setText:@""];
         [fullName setText:@""];

@@ -132,7 +132,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="app-icon-retina.png" id="6OO-tQ-pm2" userLabel="badge">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="6OO-tQ-pm2" userLabel="badge">
                                             <rect key="frame" x="15" y="10" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Evb-1k-9be" userLabel="avatar">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="Evb-1k-9be" userLabel="avatar">
                                 <rect key="frame" x="60" y="32" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -407,7 +407,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Ue1-mg-1k0" userLabel="avatar">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="Ue1-mg-1k0" userLabel="avatar">
                                 <rect key="frame" x="60" y="30" width="200" height="198"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -456,7 +456,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="app-icon-retina.png" id="wiK-1b-3Mj" userLabel="badge">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="wiK-1b-3Mj" userLabel="badge">
                                             <rect key="frame" x="15" y="10" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -630,8 +630,8 @@
     </scenes>
     <resources>
         <image name="accomplishments.png" width="30" height="30"/>
-        <image name="app-icon-retina.png" width="114" height="114"/>
         <image name="badges.png" width="30" height="30"/>
+        <image name="defaultavatar.png" width="200" height="200"/>
         <image name="profile.png" width="30" height="30"/>
         <image name="search.png" width="30" height="30"/>
         <image name="settings.png" width="20" height="20"/>

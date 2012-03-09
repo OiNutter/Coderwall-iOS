@@ -40,7 +40,10 @@
 - (void) load:(NSString *) user
 {
     NSString *urlString = [NSString stringWithFormat:@"http://coderwall.com/%@.json?full=true", user];
-    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:urlString ]];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString ]
+                                                cachePolicy:NSURLRequestUseProtocolCachePolicy 
+                                            timeoutInterval:60.0];
+    
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
     
     if (connection) {

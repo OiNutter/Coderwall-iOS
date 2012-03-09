@@ -26,16 +26,6 @@
 	return currentUser;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-       
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -84,7 +74,14 @@
         [cell.detail setText:descriptionText];
     
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
-        [cell.badge setImage:[UIImage imageWithData: [NSData dataWithContentsOfURL:url]]];
+        dispatch_queue_t badgeQueue = dispatch_queue_create("badge queue", NULL);
+        dispatch_async(badgeQueue,^{
+            UIImage *badge = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+                dispatch_async(dispatch_get_main_queue(),^{
+                    [cell.badge setImage:badge];
+                });
+        });
+        dispatch_release(badgeQueue);
     
         UIImageView *background;
         if(indexPath.row == 0)

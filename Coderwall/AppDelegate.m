@@ -80,13 +80,11 @@
 
 - (void)showLoadingOverlay
 {
-    NSLog(@"Show Loading");
     [DejalBezelActivityView activityViewForView:self.window.rootViewController.view];
 }
 
 - (void)removeLoadingOverlay
 {
-    NSLog(@"Remove Loading");
     [DejalBezelActivityView removeView];
 }
 
