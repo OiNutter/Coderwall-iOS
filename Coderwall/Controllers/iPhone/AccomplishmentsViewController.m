@@ -40,6 +40,13 @@
     [super viewDidLoad];
     User *user = [self currentUser];
     accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+}
+
+- (void)reloadTable
+{
+    [self viewDidLoad];
+    [self.tableView reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
