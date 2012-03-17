@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface StatsViewController : UITableViewController
+@interface StatsViewController : UITableViewController <EGORefreshTableHeaderDelegate>
 {
     NSArray *statsData;
     NSArray *sections;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	
+	//  Reloading var should really be your tableviews datasource
+	//  Putting it here for demo purposes 
+	BOOL _reloading;
 }
 
 @property NSArray *statsData;

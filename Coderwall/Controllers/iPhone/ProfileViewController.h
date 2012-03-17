@@ -7,15 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "StatsViewController.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <EGORefreshTableHeaderDelegate, UIScrollViewDelegate>
 {
     IBOutlet UILabel *fullName;
     IBOutlet UILabel *summary;
     IBOutlet UIImageView *avatar;
     IBOutlet UIImageView *profileBg;
-    IBOutlet UITableView *statsTable;
+    IBOutlet UIScrollView *profileScrollView;
+    
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	
+	//  Reloading var should really be your tableviews datasource
+	//  Putting it here for demo purposes 
+	BOOL _reloading;
 }
 
 @end

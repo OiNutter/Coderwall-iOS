@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
 
-@interface SummaryViewController : UITableViewController
+@interface SummaryViewController : UITableViewController <EGORefreshTableHeaderDelegate>
 {
     NSArray *statsData;
     NSArray *sections;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	BOOL _reloading;
 }
 
 @property NSArray *statsData;

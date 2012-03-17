@@ -32,16 +32,17 @@
 {
     self = [super init];
     
-    [self load:user];
+    [self load:user withCache:YES];
     
     return self;
 }
 
-- (void) load:(NSString *) user
+- (void) load:(NSString *) user withCache:(BOOL) useCache
 {
+    NSURLRequestCachePolicy connectionCache = (useCache) ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadRevalidatingCacheData;
     NSString *urlString = [NSString stringWithFormat:@"http://coderwall.com/%@.json?full=true", user];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString ]
-                                                cachePolicy:NSURLRequestUseProtocolCachePolicy 
+                                                cachePolicy:connectionCache
                                             timeoutInterval:60.0];
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
@@ -52,6 +53,11 @@
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectionError" object:connection];        
     }
+}
+
+- (void) refresh
+{
+    [self load:self.userName withCache:NO];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response

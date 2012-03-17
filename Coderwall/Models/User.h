@@ -40,7 +40,8 @@
 @property NSArray *specialities;
 
 - (id) initWithUsername:(NSString *) userName;
-- (void) load:(NSString *) userName;
+- (void) load:(NSString *) userName withCache:(BOOL) useCache;
+- (void) refresh;
 - (void) setDetails:(NSDictionary *) details;
 - (UIImage *) getAvatar;
 

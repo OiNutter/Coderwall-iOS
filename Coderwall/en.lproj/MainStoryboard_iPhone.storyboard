@@ -257,41 +257,51 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4h-pa-ua4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Profile" id="mtT-p3-JKg" customClass="ProfileViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Isc-d0-xZj">
+                    <view key="view" contentMode="scaleToFill" id="FCb-lH-HWE">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Vi4-OE-m3Y" userLabel="panelBg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="BbN-r0-CEM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="Evb-1k-9be" userLabel="avatar">
-                                <rect key="frame" x="60" y="32" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="PLT-LT-rEs" userLabel="fullName">
-                                <rect key="frame" x="30" y="238" width="260" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" red="0.85098039219999999" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="hm3-54-YJO" userLabel="summary">
-                                <rect key="frame" x="30" y="265" width="260" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="suz-t5-VZA" userLabel="panelBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Z0P-RZ-4nS" userLabel="fullName">
+                                        <rect key="frame" x="30" y="228" width="260" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.85098039219999999" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="Kqx-1h-EjL" userLabel="avatar">
+                                        <rect key="frame" x="60" y="20" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="dGe-Nj-ZJc" userLabel="summary">
+                                        <rect key="frame" x="30" y="257" width="260" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="mtT-p3-JKg" id="9oK-gp-a2X"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="i4R-aa-Kx4"/>
                     <connections>
-                        <outlet property="avatar" destination="Evb-1k-9be" id="lxt-ID-aQd"/>
-                        <outlet property="fullName" destination="PLT-LT-rEs" id="ZqG-42-zbY"/>
-                        <outlet property="profileBg" destination="Vi4-OE-m3Y" id="rli-n6-t2U"/>
-                        <outlet property="summary" destination="hm3-54-YJO" id="XS2-d5-Vlx"/>
+                        <outlet property="avatar" destination="Kqx-1h-EjL" id="mQd-6d-0Tz"/>
+                        <outlet property="fullName" destination="Z0P-RZ-4nS" id="C8s-K6-Zhr"/>
+                        <outlet property="profileBg" destination="suz-t5-VZA" id="3xz-Rk-FFQ"/>
+                        <outlet property="profileScrollView" destination="BbN-r0-CEM" id="oEQ-5r-CLK"/>
+                        <outlet property="summary" destination="dGe-Nj-ZJc" id="f4P-vR-ahP"/>
                     </connections>
                 </viewController>
             </objects>
@@ -403,37 +413,48 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="fkI-dy-CpZ" userLabel="panelBg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="1jF-nH-hna">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="Ue1-mg-1k0" userLabel="avatar">
-                                <rect key="frame" x="60" y="30" width="200" height="198"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="lrH-tF-9Jy" userLabel="fullName">
-                                <rect key="frame" x="30" y="238" width="260" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" red="0.85098039219999999" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="nUn-Ul-Ohr" userLabel="summary">
-                                <rect key="frame" x="30" y="265" width="260" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="f6X-1I-gLi" userLabel="panelBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="cz0-he-kZH" userLabel="fullName">
+                                        <rect key="frame" x="30" y="228" width="260" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.85098039219999999" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="defaultavatar.png" id="t7s-el-Tne" userLabel="avatar">
+                                        <rect key="frame" x="60" y="20" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" id="ky5-ue-d4n" userLabel="summary">
+                                        <rect key="frame" x="30" y="257" width="260" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="U3c-1R-CCL" id="TQF-PJ-ONc"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="oIp-FO-eGy"/>
                     <connections>
-                        <outlet property="avatar" destination="Ue1-mg-1k0" id="do9-bI-m0s"/>
-                        <outlet property="fullName" destination="lrH-tF-9Jy" id="gAz-jA-lb9"/>
-                        <outlet property="profileBg" destination="fkI-dy-CpZ" id="jKt-pV-iSa"/>
-                        <outlet property="summary" destination="nUn-Ul-Ohr" id="oi9-6A-02r"/>
+                        <outlet property="avatar" destination="t7s-el-Tne" id="fJe-zm-73G"/>
+                        <outlet property="fullName" destination="cz0-he-kZH" id="Zsa-KG-pxi"/>
+                        <outlet property="profileBg" destination="f6X-1I-gLi" id="HKi-UX-edj"/>
+                        <outlet property="profileScrollView" destination="1jF-nH-hna" id="4mv-1T-Waf"/>
+                        <outlet property="summary" destination="ky5-ue-d4n" id="dwc-Vy-M1A"/>
+                        <outlet property="view" destination="Tsm-RX-IGa" id="XsX-44-WZl"/>
                     </connections>
                 </viewController>
             </objects>
@@ -670,7 +691,7 @@
                 <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="fullName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="profileBg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="statsTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="profileScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="summary" candidateClass="UILabel"/>
             </relationships>
         </class>

@@ -70,15 +70,32 @@
             });
         });
         dispatch_release(downloadQueue);
+        
+        if (_refreshHeaderView == nil) {
+            
+            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
+            view.delegate = self;
+            view.backgroundColor = [UIColor clearColor];
+            [profileScrollView addSubview:view];
+            _refreshHeaderView = view;
+            
+        }
+        
+        //  update the last update date
+        [_refreshHeaderView refreshLastUpdatedDate];
+        
     } else {
         [summary setText:@""];
         [fullName setText:@""];
         [avatar setImage:Nil];
     }
+    
+    
 }
 
 -(void)reloadView
 {
+    _reloading = NO;
     [self viewDidLoad];
 }
 
@@ -99,6 +116,56 @@
         return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
     else
         return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)doneLoadingTableViewData{
+	
+	//  model should call this when its done loading
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:profileScrollView];
+	
+}
+
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
+	
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+	
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
+	
+    _reloading = YES;
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+	
+}
+
+- (BOOL) egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+	
+	return _reloading; // should return if data source model is reloading
+	
+}
+
+- (NSDate*) egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+	
+	return [NSDate date]; // should return date data source was last changed
+	
 }
 
 @end

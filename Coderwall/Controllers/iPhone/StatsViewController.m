@@ -43,7 +43,8 @@
     
     // Create endorsements dictionary
     NSArray *labels = [[NSArray alloc] initWithObjects:@"description", @"number",nil];
-    NSArray *values = [[NSArray alloc] initWithObjects:@"Endorsements", user.endorsements, nil];
+    NSNumber *numEndorsements = (user.endorsements != nil) ? user.endorsements : 0;
+    NSArray *values = [[NSArray alloc] initWithObjects:@"Endorsements", numEndorsements, nil];
     NSDictionary *endorsements = [[NSDictionary alloc] initWithObjects:values forKeys:labels];
     [stats addObject:endorsements];
     [data addObject:stats];
@@ -56,8 +57,31 @@
         
     statsData = [[NSArray alloc] initWithArray:data];
     sections = [[NSArray alloc] initWithArray:keys];
-            
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    
+    if (_refreshHeaderView == nil) {
+		
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+		view.delegate = self;
+        view.backgroundColor = [UIColor clearColor];
+		[self.tableView addSubview:view];
+		_refreshHeaderView = view;
+		
+	}
+	
+	//  update the last update date
+	[_refreshHeaderView refreshLastUpdatedDate];
+    
 }
+
+- (void)reloadTable
+{
+    [self viewDidLoad];
+    [self.tableView reloadData];
+    _reloading = NO;
+}
+
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -138,6 +162,57 @@
     
     return height;
     
+}
+
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)doneLoadingTableViewData{
+	
+	//  model should call this when its done loading
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+	
+}
+
+
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
+	
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+	
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+	
+}
+
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
+	
+    _reloading = YES;
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+	
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+	
+	return _reloading; // should return if data source model is reloading
+	
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+	
+	return [NSDate date]; // should return date data source was last changed
+	
 }
 
 @end
