@@ -37,7 +37,6 @@
     
     accomplishments = [[NSArray alloc] initWithArray:newAccomplishments];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
 }
 
 - (void)reloadTable

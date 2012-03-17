@@ -12,32 +12,32 @@
 {
     
     @private
-    NSString *userName;
-    NSString *name;
-    NSString *location;
-    NSString *title;
-    NSString *company;
-    NSString *thumbnail;
-    NSNumber *endorsements;
-    NSArray *badges;
-    NSArray *accomplishments;
-    NSArray *stats;
-    NSArray *specialities;
+    NSString *__strong userName;
+    NSString *__strong name;
+    NSString *__strong location;
+    NSString *__strong title;
+    NSString *__strong company;
+    NSString *__strong thumbnail;
+    NSNumber *__strong endorsements;
+    NSArray *__strong badges;
+    NSArray *__strong accomplishments;
+    NSArray *__strong stats;
+    NSArray *__strong specialities;
     NSMutableData *receivedData;
     
 }
 
-@property NSString *userName;
-@property NSString *name;
-@property NSString *location;
-@property NSString *title;
-@property NSString *company;
-@property NSString *thumbnail;
-@property NSNumber *endorsements;
-@property NSArray *badges;
-@property NSArray *accomplishments;
-@property NSArray *stats;
-@property NSArray *specialities;
+@property (strong) NSString *userName;
+@property (strong) NSString *name;
+@property (strong) NSString *location;
+@property (strong) NSString *title;
+@property (strong) NSString *company;
+@property (strong) NSString *thumbnail;
+@property (strong) NSNumber *endorsements;
+@property (strong) NSArray *badges;
+@property (strong) NSArray *accomplishments;
+@property (strong) NSArray *stats;
+@property (strong) NSArray *specialities;
 
 - (id) initWithUsername:(NSString *) userName;
 - (void) load:(NSString *) userName withCache:(BOOL) useCache;

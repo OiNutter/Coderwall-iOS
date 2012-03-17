@@ -22,12 +22,10 @@
 	return currentUser;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
+    self = [super initWithCoder:aDecoder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
     return self;
 }
 
@@ -36,7 +34,6 @@
     [super viewDidLoad];
     User *user = [self currentUser];
     accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
     
     if (_refreshHeaderView == nil) {
 		

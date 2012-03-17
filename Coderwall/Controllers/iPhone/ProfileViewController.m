@@ -23,9 +23,10 @@
 	return currentUser;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id) initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"UserChanged" object:nil];
     return self;
 }
 
@@ -34,7 +35,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [profileBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"UserChanged" object:nil];
     User *user = [self currentUser];
     if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
         [fullName setText:[NSString stringWithFormat:user.name]];
@@ -62,6 +62,7 @@
         
         [summary setText:summaryDetails];
         [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
+        [avatar setImage:nil];
         dispatch_queue_t downloadQueue = dispatch_queue_create("avatar downloader", NULL);
         dispatch_async(downloadQueue,^{
             UIImage *userAvatar = [user getAvatar];

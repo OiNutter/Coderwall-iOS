@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface BadgeCell : UITableViewCell{
-    IBOutlet UIImageView *badge;
-    IBOutlet UILabel *title;
-    IBOutlet UILabel *detail;
+    IBOutlet UIImageView *__weak badge;
+    IBOutlet UILabel *__weak title;
+    IBOutlet UILabel *__weak detail;
 }
 
-@property UIImageView *badge;
-@property UILabel *title;
-@property UILabel *detail;
+@property (weak) UIImageView *badge;
+@property (weak) UILabel *title;
+@property (weak) UILabel *detail;
 
 @end

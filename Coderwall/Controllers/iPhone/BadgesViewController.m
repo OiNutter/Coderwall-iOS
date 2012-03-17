@@ -26,12 +26,18 @@
 	return currentUser;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     User *user = [self currentUser];
     badges = [[NSArray alloc] initWithArray:user.badges];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
     
     if (_refreshHeaderView == nil) {
 		

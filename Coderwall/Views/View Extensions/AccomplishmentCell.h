@@ -10,8 +10,8 @@
 
 @interface AccomplishmentCell : UITableViewCell
 {
-    IBOutlet UILabel *detail;
+    IBOutlet UILabel *__weak detail;
 }
-@property UILabel *detail;
+@property (weak) UILabel *detail;
 
 @end

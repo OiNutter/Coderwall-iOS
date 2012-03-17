@@ -89,6 +89,7 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
     NSLog(@"Connection failed! Error - %@ %@",          
           [error localizedDescription],
           [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);

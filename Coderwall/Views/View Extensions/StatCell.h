@@ -10,12 +10,12 @@
 
 @interface StatCell : UITableViewCell
 {
-    IBOutlet UILabel *title;
-    IBOutlet UILabel *number;
+    IBOutlet UILabel *__weak title;
+    IBOutlet UILabel *__weak number;
 }
 
-@property UILabel *title;
-@property UILabel *number;
+@property (weak) UILabel *title;
+@property (weak) UILabel *number;
 
 -(void) setYPos:(CGFloat) yPos;
 

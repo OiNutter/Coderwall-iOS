@@ -28,6 +28,13 @@
 	return currentUser;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -91,7 +98,6 @@
             self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:user.userName];
         }
     }
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
     
     [self.tableView setBackgroundView:nil];
     
@@ -164,6 +170,7 @@
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
         cell.title.text = [item objectForKey:@"fullName"];
         cell.detail.text = [item objectForKey:@"summary"];
+        [cell.avatar setImage:nil];
         dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
         dispatch_async(downloadQueue, ^{
             typedef UIImage *(^imageGetter)();

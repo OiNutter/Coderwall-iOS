@@ -27,6 +27,13 @@
 	return currentUser;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,22 +50,19 @@
     
     // Create endorsements dictionary
     NSArray *labels = [[NSArray alloc] initWithObjects:@"description", @"number",nil];
-    NSNumber *numEndorsements = (user.endorsements != nil) ? user.endorsements : 0;
-    NSArray *values = [[NSArray alloc] initWithObjects:@"Endorsements", numEndorsements, nil];
+    NSArray *values = [[NSArray alloc] initWithObjects:@"Endorsements", (user.endorsements != nil) ? user.endorsements: [NSNumber numberWithInt:0], nil];
     NSDictionary *endorsements = [[NSDictionary alloc] initWithObjects:values forKeys:labels];
     [stats addObject:endorsements];
     [data addObject:stats];
     [keys addObject:@"Statistics"];
         
-    if(user.specialities != (id)[NSNull null]){
+    if(user.specialities != nil && user.specialities != (id)[NSNull null]){
         [data addObject:user.specialities];
         [keys addObject:@"Specialities"];
     }
         
     statsData = [[NSArray alloc] initWithArray:data];
     sections = [[NSArray alloc] initWithArray:keys];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
     
     if (_refreshHeaderView == nil) {
 		

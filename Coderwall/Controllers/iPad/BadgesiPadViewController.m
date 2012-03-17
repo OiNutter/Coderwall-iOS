@@ -37,7 +37,6 @@
     
     badges = [[NSArray alloc] initWithArray:newBadges];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
 }
 
 - (void)reloadTable
