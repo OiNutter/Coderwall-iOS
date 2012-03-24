@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
+		BE07C373151DDEC500CAE177 /* SDURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C372151DDEC500CAE177 /* SDURLCache.m */; };
 		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
 		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
@@ -102,6 +104,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE07C366151DC8CA00CAE177 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
+		BE07C367151DC8CA00CAE177 /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
+		BE07C370151DDEC500CAE177 /* SDURLCache_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDURLCache_Prefix.pch; sourceTree = "<group>"; };
+		BE07C371151DDEC500CAE177 /* SDURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDURLCache.h; sourceTree = "<group>"; };
+		BE07C372151DDEC500CAE177 /* SDURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDURLCache.m; sourceTree = "<group>"; };
 		BE19C3E915038F6200AAEE5E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BE19C3EA15038F6200AAEE5E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BE1C7F7814F137E800E460AC /* BadgesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesViewController.h; sourceTree = "<group>"; };
@@ -252,9 +259,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE07C36F151DDE5D00CAE177 /* SDURLCache */ = {
+			isa = PBXGroup;
+			children = (
+				BE07C370151DDEC500CAE177 /* SDURLCache_Prefix.pch */,
+				BE07C371151DDEC500CAE177 /* SDURLCache.h */,
+				BE07C372151DDEC500CAE177 /* SDURLCache.m */,
+			);
+			path = SDURLCache;
+			sourceTree = "<group>";
+		};
 		BE60B65A14EFA64000CF7151 = {
 			isa = PBXGroup;
 			children = (
+				BE07C36F151DDE5D00CAE177 /* SDURLCache */,
 				BEFC77581513BE2000C10939 /* EGOTableViewPullRefresh */,
 				BE935817150403AF0059A620 /* DejalActivityView */,
 				BE60B66F14EFA64100CF7151 /* Coderwall */,
@@ -336,6 +354,8 @@
 			children = (
 				BE60B6AA14EFB0FD00CF7151 /* User.h */,
 				BE60B6AB14EFB0FD00CF7151 /* User.m */,
+				BE07C366151DC8CA00CAE177 /* ImageLoader.h */,
+				BE07C367151DC8CA00CAE177 /* ImageLoader.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -752,6 +772,8 @@
 				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
 				BE93581A150403AF0059A620 /* DejalActivityView.m in Sources */,
 				BEFC77661513BE2000C10939 /* EGORefreshTableHeaderView.m in Sources */,
+				BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */,
+				BE07C373151DDEC500CAE177 /* SDURLCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

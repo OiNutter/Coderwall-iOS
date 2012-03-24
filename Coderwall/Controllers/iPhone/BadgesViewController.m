@@ -10,6 +10,7 @@
 #import "User.h"
 #import "AppDelegateProtocol.h"
 #import "BadgeCell.h"
+#import "ImageLoader.h"
 
 @interface BadgesViewController ()
 
@@ -102,15 +103,8 @@
         [cell.detail setText:descriptionText];
     
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
-        //dispatch_queue_t badgeQueue = dispatch_queue_create("badge queue", NULL);
-        //dispatch_async(badgeQueue,^{
-        //   UIImage *badge = ;
-        //        dispatch_async(dispatch_get_main_queue(),^{
-                    [cell.badge setImage:[UIImage imageWithData: [NSData dataWithContentsOfURL:url]]];
-                    //        });
-                    //});
-                    // dispatch_release(badgeQueue);
-    
+        [cell.badge setImage:[ImageLoader loadImageFromURL:url usingCache:YES]];
+        
         UIImageView *background;
         if(indexPath.row == 0)
             background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableTopBg.png"]];

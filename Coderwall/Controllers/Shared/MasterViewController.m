@@ -19,6 +19,13 @@
 	return currentUser;
 }
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUserName) name:@"UserChanged" object:nil];
+    return self;
+}
+
 -(void) viewDidLoad
 {
     [super viewDidLoad];
@@ -37,16 +44,14 @@
     
 }
 
--(void) viewWillAppear:(BOOL)animated
+-(void) setUserName
 {
-    [super viewWillAppear:animated];
-    // Get current User
+     // Get current User
     if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
         User *user = [self currentUser];
         if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0)
             self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
     }
-
 }
 
 - (void)showSearchResults

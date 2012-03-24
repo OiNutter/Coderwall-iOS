@@ -34,6 +34,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    if (_refreshHeaderView == nil) {
+        
+        EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
+        view.delegate = self;
+        view.backgroundColor = [UIColor clearColor];
+        [profileScrollView addSubview:view];
+        _refreshHeaderView = view;
+        
+    }
+    
+    //  update the last update date
+    [_refreshHeaderView refreshLastUpdatedDate];
+    
     [profileBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
     User *user = [self currentUser];
     if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
@@ -66,25 +79,12 @@
         dispatch_queue_t downloadQueue = dispatch_queue_create("avatar downloader", NULL);
         dispatch_async(downloadQueue,^{
             UIImage *userAvatar = [user getAvatar];
-            dispatch_async(dispatch_get_main_queue(), ^{
+           dispatch_async(dispatch_get_main_queue(), ^{
                 [avatar setImage:userAvatar];
             });
         });
         dispatch_release(downloadQueue);
-        
-        if (_refreshHeaderView == nil) {
-            
-            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
-            view.delegate = self;
-            view.backgroundColor = [UIColor clearColor];
-            [profileScrollView addSubview:view];
-            _refreshHeaderView = view;
-            
-        }
-        
-        //  update the last update date
-        [_refreshHeaderView refreshLastUpdatedDate];
-        
+                
     } else {
         [summary setText:@""];
         [fullName setText:@""];

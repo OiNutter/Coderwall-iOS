@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "DejalActivityView.h"
+#import "SDURLCache.h"
 
 @implementation AppDelegate
 
@@ -34,6 +35,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoadingOverlay) name:@"Loading" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeLoadingOverlay) name:@"LoadingFinished" object:nil];
     
+    //set cache
+    SDURLCache *urlCache = [[SDURLCache alloc] initWithMemoryCapacity:1024*1024   // 1MB mem cache
+                                                         diskCapacity:1024*1024*5 // 5MB disk cache
+                                                             diskPath:[SDURLCache defaultCachePath]];
+    [urlCache setMinCacheInterval:200];
+    [NSURLCache setSharedURLCache:urlCache];
+    
     //load
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *userName = [userDefaults stringForKey:@"UserName"];
@@ -41,6 +49,7 @@
         self.currentUser = [[User alloc] initWithUsername:userName];
     else 
         self.currentUser = Nil;
+    
     return YES;
 }
 

@@ -612,7 +612,7 @@
                     <navigationItem key="navigationItem" id="mY5-hD-U3p"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="2075" y="-3058"/>
+            <point key="canvasLocation" x="2067" y="-2658"/>
         </scene>
     </scenes>
     <resources>
@@ -631,11 +631,6 @@
         </class>
         <class className="BadgeCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="badge" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="BadgesViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BadgesViewController.h"/>
@@ -654,11 +649,6 @@
         </class>
         <class className="ProfileCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="avatar" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="SearchResultsViewController" superclassName="UITabBarController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchResultsViewController.h"/>
@@ -676,41 +666,15 @@
         </class>
         <class className="StatCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/StatCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="number" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="SummaryViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryViewController.h"/>
         </class>
         <class className="iPadAccomplishmentCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadAccomplishmentCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
-            </relationships>
         </class>
         <class className="iPadBadgeCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadBadgeCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="badge1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="badge2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="badge3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="bg3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="detail1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="detail3" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="title3" candidateClass="UILabel"/>
-            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

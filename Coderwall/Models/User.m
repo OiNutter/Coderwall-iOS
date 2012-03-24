@@ -8,6 +8,8 @@
 
 #import "User.h"
 #import "SBJson.h"
+#import "ImageLoader.h"
+#import "SDURLCache.h"
 
 @implementation User
 
@@ -58,6 +60,11 @@
 - (void) refresh
 {
     [self load:self.userName withCache:NO];
+    NSURL *avatarURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?s=200",self.thumbnail]];
+    NSURLRequest *avatarRequest = [NSURLRequest requestWithURL:avatarURL
+                                                cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                            timeoutInterval:60.0];
+    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:avatarRequest];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -90,9 +97,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
-    NSLog(@"Connection failed! Error - %@ %@",          
-          [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ConnectionError" object:connection];
 }
 
 - (void) setDetails:(NSDictionary *) details
@@ -116,7 +121,16 @@
 - (UIImage *) getAvatar
 {
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?s=200",self.thumbnail]];
-    return [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
+                                                cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                            timeoutInterval:60.0];
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    NSData *imageData = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&responseCode error:&error];
+    if(responseCode)
+        return [UIImage imageWithData:imageData];
+    else
+        return nil;
 }
 
 @end
