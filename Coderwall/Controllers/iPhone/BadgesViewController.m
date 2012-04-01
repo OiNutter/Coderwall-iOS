@@ -37,8 +37,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    User *user = [self currentUser];
-    badges = [[NSArray alloc] initWithArray:user.badges];
     
     if (_refreshHeaderView == nil) {
 		
@@ -55,9 +53,15 @@
 
 }
 
+- (void)loadData
+{
+    User *user = [self currentUser];
+    badges = [[NSArray alloc] initWithArray:user.badges];
+}
+
 - (void)reloadTable
 {
-    [self viewDidLoad];
+    [self loadData];
     [self.tableView reloadData];
     _reloading = NO;
 }

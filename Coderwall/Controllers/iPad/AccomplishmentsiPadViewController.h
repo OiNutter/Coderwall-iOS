@@ -10,4 +10,6 @@
 
 @interface AccomplishmentsiPadViewController : AccomplishmentsViewController
 
+- (void)loadData;
+
 @end

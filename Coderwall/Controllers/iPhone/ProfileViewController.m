@@ -47,6 +47,14 @@
     //  update the last update date
     [_refreshHeaderView refreshLastUpdatedDate];
     
+    [summary setText:@""];
+    [fullName setText:@""];
+    
+}
+
+- (void)loadData
+{
+    
     [profileBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
     User *user = [self currentUser];
     if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
@@ -97,18 +105,7 @@
 -(void)reloadView
 {
     _reloading = NO;
-    [self viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [self loadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

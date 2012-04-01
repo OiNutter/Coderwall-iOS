@@ -35,7 +35,7 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)loadData
 {
     [super viewDidLoad];
     
@@ -117,7 +117,7 @@
 
 - (void)reloadTable
 {
-    [self viewDidLoad];
+    [self loadData];
     [self.tableView reloadData];
     _reloading = NO;
 }

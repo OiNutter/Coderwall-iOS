@@ -17,6 +17,9 @@
 				<string>app-icon-retina.png</string>
 				<string>app-icon.png</string>
 				<string>app-icon-ipad.png</string>
+				<string>app-icon-ipad@2x.png</string>
+				<string>app-icon-iphone@2x.png</string>
+				<string>app-icon-iphone.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

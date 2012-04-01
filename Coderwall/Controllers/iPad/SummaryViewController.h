@@ -20,4 +20,6 @@
 @property NSArray *statsData;
 @property NSArray *sections;
 
+- (void)loadData;
+
 @end

@@ -18,6 +18,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)loadData
+{
+    [super loadData];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     NSMutableArray *newAccomplishments = [[NSMutableArray alloc] init ];
     
@@ -37,12 +43,6 @@
     
     accomplishments = [[NSArray alloc] initWithArray:newAccomplishments];
     
-}
-
-- (void)reloadTable
-{
-    [self viewDidLoad];
-    [self.tableView reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -18,4 +18,6 @@
 
 @property NSArray *badges;
 
+- (void)loadData;
+
 @end

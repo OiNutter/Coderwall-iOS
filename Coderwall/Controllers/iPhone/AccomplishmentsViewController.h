@@ -21,4 +21,6 @@
 
 @property NSArray *accomplishments;
 
+- (void)loadData;
+
 @end

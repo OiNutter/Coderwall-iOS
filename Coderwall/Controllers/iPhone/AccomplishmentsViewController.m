@@ -32,8 +32,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    User *user = [self currentUser];
-    accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];
     
     if (_refreshHeaderView == nil) {
 		
@@ -44,15 +42,18 @@
 		_refreshHeaderView = view;
 		
 	}
-	
-	//  update the last update date
-	[_refreshHeaderView refreshLastUpdatedDate];
-    
+
+}
+
+- (void)loadData
+{
+    User *user = [self currentUser];
+    accomplishments = [[NSArray alloc] initWithArray:user.accomplishments];   
 }
 
 - (void)reloadTable
 {
-    [self viewDidLoad];
+    [self loadData];
     [self.tableView reloadData];
     _reloading = NO;
 }

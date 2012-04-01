@@ -16,9 +16,9 @@
 
 @implementation BadgesiPadViewController
 
-- (void)viewDidLoad
+- (void)loadData
 {
-    [super viewDidLoad];
+    [super loadData];
 	// Do any additional setup after loading the view, typically from a nib.
     NSMutableArray *newBadges = [[NSMutableArray alloc] init ];
     
@@ -39,13 +39,6 @@
     badges = [[NSArray alloc] initWithArray:newBadges];
     
 }
-
-- (void)reloadTable
-{
-    [self viewDidLoad];
-    [self.tableView reloadData];
-}
-
 
 - (void)viewWillAppear:(BOOL)animated
 {

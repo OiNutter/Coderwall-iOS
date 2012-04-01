@@ -10,23 +10,23 @@
 
 @interface iPadAccomplishmentCell : UITableViewCell
 {
-    IBOutlet UILabel *__weak detail1;
-    IBOutlet UIImageView *__weak bg1;
+    IBOutlet UILabel *detail1;
+    IBOutlet UIImageView * bg1;
     
-    IBOutlet UILabel *__weak detail2;
-    IBOutlet UIImageView *__weak bg2;
+    IBOutlet UILabel *detail2;
+    IBOutlet UIImageView * bg2;
     
-    IBOutlet UILabel *__weak detail3;
-    IBOutlet UIImageView *__weak bg3;
+    IBOutlet UILabel *detail3;
+    IBOutlet UIImageView * bg3;
 }
 
-@property (weak) UILabel *detail1;
-@property (weak) UIImageView *bg1;
+@property  UILabel *detail1;
+@property  UIImageView *bg1;
 
-@property (weak) UILabel *detail2;
-@property (weak) UIImageView *bg2;
+@property  UILabel *detail2;
+@property  UIImageView *bg2;
 
-@property (weak) UILabel *detail3;
-@property (weak) UIImageView *bg3;
+@property  UILabel *detail3;
+@property  UIImageView *bg3;
 
 @end
