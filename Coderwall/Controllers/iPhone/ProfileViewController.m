@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "AppDelegateProtocol.h"
 #import "User.h"
+#import "DejalActivityView.h"
 
 @interface ProfileViewController ()
 
@@ -47,8 +48,13 @@
     //  update the last update date
     [_refreshHeaderView refreshLastUpdatedDate];
     
-    [summary setText:@""];
-    [fullName setText:@""];
+    if(summary.text == @"Summary") 
+        [summary setText:@""];
+    
+    if(fullName.text == @"Full Name")
+        [fullName setText:@""];
+    
+    [self loadData];
     
 }
 
@@ -61,13 +67,13 @@
         [fullName setText:[NSString stringWithFormat:user.name]];
         NSString *summaryDetails = [[NSString alloc] initWithString:@""];
         
-        if(user.title != (id)[NSNull null])
+        if(user.title != (id)[NSNull null] && user.title != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.title];
         
-        if(summaryDetails.length != 0 && user.company != (id)[NSNull null] && user.company.length != 0)
+        if(summaryDetails.length != 0 && user.company != (id)[NSNull null] && user.company != nil && user.company.length != 0)
             summaryDetails = [summaryDetails stringByAppendingString:@" at "];
         
-        if(user.company != (id)[NSNull null])
+        if(user.company != (id)[NSNull null] && user.company != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.company];
         
         if(summaryDetails.length != 0)
@@ -83,23 +89,32 @@
         
         [summary setText:summaryDetails];
         [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
-        [avatar setImage:nil];
-        dispatch_queue_t downloadQueue = dispatch_queue_create("avatar downloader", NULL);
-        dispatch_async(downloadQueue,^{
-            UIImage *userAvatar = [user getAvatar];
-           dispatch_async(dispatch_get_main_queue(), ^{
-                [avatar setImage:userAvatar];
+        
+        [avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
+        if(user.thumbnail != nil){
+            [DejalBezelActivityView activityViewForView:avatar];
+            dispatch_queue_t downloadQueue = dispatch_queue_create("avatar downloader", NULL);
+            dispatch_async(downloadQueue,^{
+                UIImage *userAvatar = [user getAvatar];
+                [self performSelectorOnMainThread:@selector(setUserAvatar:) 
+                                       withObject:userAvatar
+                                    waitUntilDone:YES];
             });
-        });
-        dispatch_release(downloadQueue);
-                
+            dispatch_release(downloadQueue);
+        }
     } else {
         [summary setText:@""];
         [fullName setText:@""];
-        [avatar setImage:Nil];
+        [avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
     }
     
     
+}
+
+- (void)setUserAvatar:(UIImage *)userAvatar
+{
+    [avatar setImage:userAvatar];
+    [DejalActivityView removeView];
 }
 
 -(void)reloadView

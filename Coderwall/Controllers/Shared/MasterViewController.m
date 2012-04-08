@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "User.h"
 #import "AppDelegateProtocol.h"
+#import "ImageLoader.h"
 
 @implementation MasterViewController
 
@@ -23,6 +24,7 @@
 {
     self = [super initWithCoder:coder];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUserName) name:@"UserChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preloadBadges) name:@"UserChanged" object:nil];
     return self;
 }
 
@@ -66,6 +68,17 @@
         return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
     else
         return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)preloadBadges
+{
+    NSDictionary* badge;
+    User *user = [self currentUser];
+    for (badge in user.badges)
+    {
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
+        [ImageLoader loadImageFromURL:url usingCache:YES];
+    }
 }
 
 @end

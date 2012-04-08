@@ -42,6 +42,8 @@
 		_refreshHeaderView = view;
 		
 	}
+    
+    [self loadData];
 
 }
 

@@ -50,6 +50,8 @@
 	
 	//  update the last update date
 	[_refreshHeaderView refreshLastUpdatedDate];
+    
+    [self loadData];
 
 }
 

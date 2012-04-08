@@ -51,6 +51,10 @@
 		BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
 		BE886C5114F95249003BC113 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
 		BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5414F953E0003BC113 /* ClearSearchBar.m */; };
+		BE8B757B152F22B700C4C348 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B757A152F22B700C4C348 /* Icon@2x.png */; };
+		BE8B757E152F22DA00C4C348 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B757D152F22DA00C4C348 /* Icon.png */; };
+		BE8B7580152F22EF00C4C348 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */; };
+		BE8B7582152F230E00C4C348 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B7581152F230E00C4C348 /* Icon-72.png */; };
 		BE93581A150403AF0059A620 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE935819150403AF0059A620 /* DejalActivityView.m */; };
 		BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
 		BE9E930014F5658500FC3704 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
@@ -192,6 +196,10 @@
 		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BE886C5314F953E0003BC113 /* ClearSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearSearchBar.h; sourceTree = "<group>"; };
 		BE886C5414F953E0003BC113 /* ClearSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearSearchBar.m; sourceTree = "<group>"; };
+		BE8B757A152F22B700C4C348 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BE8B757D152F22DA00C4C348 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		BE8B7581152F230E00C4C348 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		BE935818150403AF0059A620 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		BE935819150403AF0059A620 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -282,6 +290,10 @@
 		BE60B65A14EFA64000CF7151 = {
 			isa = PBXGroup;
 			children = (
+				BE8B7581152F230E00C4C348 /* Icon-72.png */,
+				BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */,
+				BE8B757D152F22DA00C4C348 /* Icon.png */,
+				BE8B757A152F22B700C4C348 /* Icon@2x.png */,
 				BE07C36F151DDE5D00CAE177 /* SDURLCache */,
 				BEFC77581513BE2000C10939 /* EGOTableViewPullRefresh */,
 				BE935817150403AF0059A620 /* DejalActivityView */,
@@ -722,6 +734,10 @@
 				BECA2CAE15285FB2006767DF /* TableMiddleBg@2x.png in Resources */,
 				BECA2CAF15285FB2006767DF /* TableTopBg.png in Resources */,
 				BECA2CB015285FB2006767DF /* TableTopBg@2x.png in Resources */,
+				BE8B757B152F22B700C4C348 /* Icon@2x.png in Resources */,
+				BE8B757E152F22DA00C4C348 /* Icon.png in Resources */,
+				BE8B7580152F22EF00C4C348 /* Icon-72@2x.png in Resources */,
+				BE8B7582152F230E00C4C348 /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -102,25 +102,35 @@
 
 - (void) setDetails:(NSDictionary *) details
 {
-    self.userName = [details objectForKey:@"username"];
-    self.name = [details objectForKey:@"name"];
-    self.location = [details objectForKey:@"location"];
-    self.title = [details objectForKey:@"title"];
-    self.company = [details objectForKey:@"company"];
-    self.thumbnail = [details objectForKey:@"thumbnail"];
-    self.endorsements = [details objectForKey:@"endorsements"];
-    self.badges = [details objectForKey:@"badges"];
-    self.accomplishments = [details objectForKey:@"accomplishments"];
-    self.stats = [details objectForKey:@"stats"];
-    self.specialities = [details objectForKey:@"specialities"];
+    @try{
+        self.userName = [details objectForKey:@"username"] ? [details objectForKey:@"username"] : @"";
+        self.name = [details objectForKey:@"name"] ? [details objectForKey:@"name"] : @"";
+        self.location = [details objectForKey:@"location"] ? [details objectForKey:@"location"]: nil;
+        self.title = [details objectForKey:@"title"] ? [details objectForKey:@"title"] : nil;
+        self.company = [details objectForKey:@"company"] ? [details objectForKey:@"company"] : nil;
+        self.thumbnail = [details objectForKey:@"thumbnail"] ? [details objectForKey:@"thumbnail"] : nil;
+        self.endorsements = [details objectForKey:@"endorsements"] ? [details objectForKey:@"endorsements"] : 0;
+        self.badges = [details objectForKey:@"badges"] ? [details objectForKey:@"badges"] : nil;
+        self.accomplishments = [details objectForKey:@"accomplishments"] ? [details objectForKey:@"accomplishments"] : nil;
+        self.stats = [details objectForKey:@"stats"] ? [details objectForKey:@"stats"] : nil;
+        self.specialities = [details objectForKey:@"specialities"] ? [details objectForKey:@"specialities"] : nil;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
+    } 
+    @catch(NSException *e)
+    {
+        NSLog(@"Exception: %@", e);
+    }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadingFinished" object:self];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
 }
 
 - (UIImage *) getAvatar
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?s=200",self.thumbnail]];
+    int size = 200;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && [[UIScreen mainScreen] scale] == 2)
+        size = 400;
+
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@?s=%d",self.thumbnail,size]];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url
                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy
                                             timeoutInterval:60.0];

@@ -11,6 +11,7 @@
 #import "StatCell.h"
 #import "User.h"
 #import "AppDelegateProtocol.h"
+#import "DejalActivityView.h"
 
 @interface SummaryViewController ()
 
@@ -48,23 +49,31 @@
     
         NSString *summaryDetails = [[NSString alloc] initWithString:@""];
     
-        if(user.title != (id)[NSNull null])
+        if(user.title != (id)[NSNull null] && user.title != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.title];
     
-        if(summaryDetails.length != 0 && user.company != (id)[NSNull null] && user.company.length != 0)
+        if(summaryDetails.length != 0 && user.company != (id)[NSNull null] && user.company != nil && user.company.length != 0)
             summaryDetails = [summaryDetails stringByAppendingString:@" at "];
     
-        if(user.company != (id)[NSNull null])
+        if(user.company != (id)[NSNull null] && user.company != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.company];
     
         if(summaryDetails.length != 0)
             summaryDetails = [summaryDetails stringByAppendingString:@"\n"];
     
         summaryDetails = [summaryDetails stringByAppendingString:user.location];
-        UIImage *(^imageGetter)() = ^{return [user getAvatar];};
-    
-        NSArray *profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,imageGetter,nil];
-        NSArray *profileKeys = [[NSArray alloc] initWithObjects:@"fullName",@"summary",@"avatar", nil];
+        
+        NSArray *profileData = [[NSArray alloc] init];
+        NSArray *profileKeys = [[NSArray alloc] init];
+        
+        if(user.thumbnail != nil){
+            UIImage *(^imageGetter)() = ^{return [user getAvatar];};
+            profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,imageGetter,nil];
+            profileKeys = [[NSArray alloc] initWithObjects:@"fullName",@"summary",@"avatar", nil];
+        } else {
+            profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,nil];
+            profileKeys = [[NSArray alloc] initWithObjects:@"fullName",@"summary", nil];
+        }
         NSDictionary *userProfile = [[NSDictionary alloc] initWithObjects:profileData forKeys: profileKeys];
     
         [data addObject:[[NSArray alloc] initWithObjects:userProfile,nil]];
@@ -83,7 +92,7 @@
         [data addObject:stats];
         [keys addObject:@"Statistics"];
     
-        if(user.specialities != (id)[NSNull null]){
+        if(user.specialities != (id)[NSNull null] && user.specialities != nil){
             [data addObject:user.specialities];
             [keys addObject:@"Specialities"];
         }
@@ -120,6 +129,12 @@
     [self loadData];
     [self.tableView reloadData];
     _reloading = NO;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self loadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -170,16 +185,19 @@
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
         cell.title.text = [item objectForKey:@"fullName"];
         cell.detail.text = [item objectForKey:@"summary"];
-        [cell.avatar setImage:nil];
-        dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
-        dispatch_async(downloadQueue, ^{
-            typedef UIImage *(^imageGetter)();
-            UIImage *userAvatar = ((imageGetter)[item objectForKey:@"avatar"])();
-            dispatch_async(dispatch_get_main_queue(),^{
-                [cell.avatar setImage:userAvatar];
+        [cell.avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
+        if([item objectForKey:@"avatar"]){
+            [DejalBezelActivityView activityViewForView:cell.avatar];
+            dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
+            dispatch_async(downloadQueue, ^{
+                typedef UIImage *(^imageGetter)();
+                UIImage *userAvatar = ((imageGetter)[item objectForKey:@"avatar"])();
+                NSArray * objs = [NSArray arrayWithObjects:cell.avatar,userAvatar, nil];
+                [self performSelectorOnMainThread:@selector(setUserAvatar:) 
+                                       withObject:objs
+                                    waitUntilDone:YES];
             });
-        });
-        
+        }
         cell.backgroundView = background;
         return cell;
     } else if((NSString *)[sections objectAtIndex:indexPath.section] == @"Specialities"){
@@ -216,6 +234,12 @@
     
     
 
+}
+
+- (void)setUserAvatar:(NSArray *)objs
+{
+    [[objs objectAtIndex:0] setImage:[objs objectAtIndex:1]];
+    [DejalActivityView removeView];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
