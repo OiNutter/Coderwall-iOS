@@ -1,7 +1,7 @@
 Coderwall-iOS
 =============
 
-![iPhone Screenshots](/iPhones.png)
+![iPhone Screenshots](https://github.com/OiNutter/Coderwall-iOS/raw/master/iPhones.png)
 
 The App
 -------
