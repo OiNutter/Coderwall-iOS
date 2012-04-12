@@ -111,14 +111,6 @@
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
         [cell.badge setImage:[ImageLoader loadImageFromURL:url usingCache:YES]];
         
-        UIImageView *background;
-        if(indexPath.row == 0)
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableTopBg.png"]];
-        else if(indexPath.row == self.badges.count-1)
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableBottomBg.png"]];
-        else
-            background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TableMiddleBg.png"]];
-    
         if(indexPath.row == 0){
             cell.badge.frame = CGRectMake(15, 20, 80, 80);
             cell.title.frame = CGRectMake(105, 20, 190, 21);
@@ -128,21 +120,39 @@
             cell.title.frame = CGRectMake(105, 10, 190, 21);
             cell.detail.frame = CGRectMake(105, 30, 190, descriptionStringSize.height);
         }
+        
+        UIImageView *background;
+        if(indexPath.row==0 && self.badges.count==1)
+            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
+        else if(indexPath.row == 0)
+            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableTopBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 1, 0)]];
+        else if(indexPath.row == self.badges.count-1)
+            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableBottomBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 15, 0)]];
+        else
+            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableMiddleBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 1, 0)]];
     
-        [background setContentMode:UIViewContentModeTop];
+        [background setContentMode:UIViewAutoresizingFlexibleHeight];
+        [background setClipsToBounds:true];
         cell.backgroundView = background;
+        
         return cell;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int height = 100;
-    
-    if((indexPath.row == 0 || indexPath.row == self.badges.count-1) && self.badges.count>0)
-        height = 110;
-    
-    return height;
+    if([badges count]==0){
+        return 100; 
+    } else {
+        int height = 100;
+        if(indexPath.row == 0)
+            height += 10;
+        
+        if(indexPath.row == self.badges.count-1)
+            height+=10; 
+        
+        return height;
+    }
 }
 
 #pragma mark -
