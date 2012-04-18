@@ -89,6 +89,8 @@
 		BECA2CAE15285FB2006767DF /* TableMiddleBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BECA2C8F15285FB1006767DF /* TableMiddleBg@2x.png */; };
 		BECA2CAF15285FB2006767DF /* TableTopBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BECA2C9015285FB1006767DF /* TableTopBg.png */; };
 		BECA2CB015285FB2006767DF /* TableTopBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BECA2C9115285FB1006767DF /* TableTopBg@2x.png */; };
+		BED43CA1153D7512005AEDDB /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43C9F153D7512005AEDDB /* iTunesArtwork.png */; };
+		BED43CA2153D7512005AEDDB /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */; };
 		BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
 		BEFC77571513BCEC00C10939 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
 		BEFC77661513BE2000C10939 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFC775C1513BE2000C10939 /* EGORefreshTableHeaderView.m */; };
@@ -237,6 +239,8 @@
 		BECA2C8F15285FB1006767DF /* TableMiddleBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableMiddleBg@2x.png"; sourceTree = "<group>"; };
 		BECA2C9015285FB1006767DF /* TableTopBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableTopBg.png; sourceTree = "<group>"; };
 		BECA2C9115285FB1006767DF /* TableTopBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableTopBg@2x.png"; sourceTree = "<group>"; };
+		BED43C9F153D7512005AEDDB /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "Icons/App Icon [Rounded]/iTunesArtwork.png"; sourceTree = "<group>"; };
+		BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Icons/App Icon [Rounded]/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		BEFC77541513BCDC00C10939 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -290,6 +294,8 @@
 		BE60B65A14EFA64000CF7151 = {
 			isa = PBXGroup;
 			children = (
+				BED43C9F153D7512005AEDDB /* iTunesArtwork.png */,
+				BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */,
 				BE8B7581152F230E00C4C348 /* Icon-72.png */,
 				BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */,
 				BE8B757D152F22DA00C4C348 /* Icon.png */,
@@ -738,6 +744,8 @@
 				BE8B757E152F22DA00C4C348 /* Icon.png in Resources */,
 				BE8B7580152F22EF00C4C348 /* Icon-72@2x.png in Resources */,
 				BE8B7582152F230E00C4C348 /* Icon-72.png in Resources */,
+				BED43CA1153D7512005AEDDB /* iTunesArtwork.png in Resources */,
+				BED43CA2153D7512005AEDDB /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,11 +927,13 @@
 		BE60B69F14EFA64100CF7151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Will McKenzie (5LFP9E2J8D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "616BC59C-BE34-4C02-8350-B01B7668B050";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -931,11 +941,13 @@
 		BE60B6A014EFA64100CF7151 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Will McKenzie";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9F829CA9-C859-4530-B2CA-4A2DD4647813";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
