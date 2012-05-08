@@ -28,6 +28,8 @@
 {
     self = [super initWithCoder:aDecoder];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadView) name:@"UserChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ConnectionError" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ResponseError" object:nil];
     return self;
 }
 
@@ -121,6 +123,12 @@
 {
     _reloading = NO;
     [self loadData];
+}
+
+-(void)resetReloading
+{
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    _reloading = NO;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

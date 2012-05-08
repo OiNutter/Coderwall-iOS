@@ -26,6 +26,8 @@
 {
     self = [super initWithCoder:aDecoder];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ConnectionError" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ResponseError" object:nil];
     return self;
 }
 
@@ -57,6 +59,12 @@
 {
     [self loadData];
     [self.tableView reloadData];
+    _reloading = NO;
+}
+
+-(void)resetReloading
+{
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
     _reloading = NO;
 }
 

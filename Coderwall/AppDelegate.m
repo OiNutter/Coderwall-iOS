@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "DejalActivityView.h"
-#import "SDURLCache.h"
 #import "ImageLoader.h"
 
 @implementation AppDelegate
@@ -31,17 +30,16 @@
         splitViewController.delegate = (id)navigationController.topViewController;
     }
     
+    //Add Crittercism debugging
+    /*[Crittercism initWithAppID: @"4fa9501fb093150f4300004c"
+                       andKey:@"ne780aghaohlirxlkzxwjbyusitf"
+                     andSecret:@"sbhf5kotnxxwscgapu39ddriz6ijvmpe"
+         andMainViewController:self.window.rootViewController];*/
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showConnectionError:) name:@"ConnectionError" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHTTPResponseError:) name:@"ResponseError" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoadingOverlay) name:@"Loading" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeLoadingOverlay) name:@"LoadingFinished" object:nil];
-    
-    //set cache
-    SDURLCache *urlCache = [[SDURLCache alloc] initWithMemoryCapacity:1024*1024   // 1MB mem cache
-                                                         diskCapacity:1024*1024*5 // 5MB disk cache
-                                                             diskPath:[SDURLCache defaultCachePath]];
-    [urlCache setMinCacheInterval:200];
-    [NSURLCache setSharedURLCache:urlCache];
     
     //load
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -49,7 +47,7 @@
     if(userName != (id)[NSNull null] && userName.length > 0)
         self.currentUser = [[User alloc] initWithUsername:userName];
     else 
-        self.currentUser = Nil;
+        self.currentUser = Nil;    
     
     return YES;
 }

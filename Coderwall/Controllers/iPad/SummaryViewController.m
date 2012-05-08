@@ -33,6 +33,8 @@
 {
     self = [super initWithCoder:aDecoder];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"UserChanged" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ConnectionError" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetReloading) name:@"ResponseError" object:nil];
     return self;
 }
 
@@ -67,8 +69,7 @@
         NSArray *profileKeys = [[NSArray alloc] init];
         
         if(user.thumbnail != nil){
-            UIImage *(^imageGetter)() = ^{return [user getAvatar];};
-            profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,imageGetter,nil];
+            profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,user.thumbnail,nil];
             profileKeys = [[NSArray alloc] initWithObjects:@"fullName",@"summary",@"avatar", nil];
         } else {
             profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,nil];
@@ -137,6 +138,12 @@
     [self loadData];
 }
 
+-(void)resetReloading
+{
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    _reloading = NO;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -190,8 +197,8 @@
             [DejalBezelActivityView activityViewForView:cell.avatar];
             dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
             dispatch_async(downloadQueue, ^{
-                typedef UIImage *(^imageGetter)();
-                UIImage *userAvatar = ((imageGetter)[item objectForKey:@"avatar"])();
+                User *user = [self currentUser];
+                UIImage *userAvatar = [user getAvatar];
                 NSArray * objs = [NSArray arrayWithObjects:cell.avatar,userAvatar, nil];
                 [self performSelectorOnMainThread:@selector(setUserAvatar:) 
                                        withObject:objs

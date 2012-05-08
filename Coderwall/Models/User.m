@@ -9,7 +9,6 @@
 #import "User.h"
 #import "SBJson.h"
 #import "ImageLoader.h"
-#import "SDURLCache.h"
 
 @implementation User
 
@@ -60,11 +59,6 @@
 - (void) refresh
 {
     [self load:self.userName withCache:NO];
-    NSURL *avatarURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@?s=200",self.thumbnail]];
-    NSURLRequest *avatarRequest = [NSURLRequest requestWithURL:avatarURL
-                                                cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                            timeoutInterval:60.0];
-    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:avatarRequest];
 }
 
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -140,7 +134,7 @@
     if(responseCode)
         return [UIImage imageWithData:imageData];
     else
-        return nil;
+        return [UIImage imageNamed:@"defaultavatar.png"];
 }
 
 @end
