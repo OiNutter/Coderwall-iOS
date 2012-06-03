@@ -11,6 +11,9 @@ Coderwall-iOS is an app for iPhone and iPad that lets you browse your
 badges, your accomplishments and your stats and specialities, and even
 search for other users.
 
+Find it on the [App
+Store](http://itunes.apple.com/us/app/coderwall/id520035280?ls=1&mt=8)
+
 Why is it Open Source?
 ----------------------
 
@@ -60,7 +63,6 @@ The following third party libraries where used in the app:
 * [DejalActivityView](http://www.dejal.com/developer/#dejalactivityview)
 * [EgoTableViewPullRefresh](https://github.com/enormego/EGOTableViewPullRefresh)
 * [SBJson](http://stig.github.com/json-framework/)
-* [SDURLCache](https://github.com/rs/SDURLCache)
 
 I've also used [App Icon Template
 2.0](http://http://appicontemplate.com/) by Michael Flarup at
