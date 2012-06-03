@@ -115,7 +115,10 @@
 
 - (void)setUserAvatar:(UIImage *)userAvatar
 {
-    [avatar setImage:userAvatar];
+    if(userAvatar)
+        [avatar setImage:userAvatar];
+    else
+        [avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
     [DejalActivityView removeView];
 }
 

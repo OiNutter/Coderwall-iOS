@@ -245,7 +245,10 @@
 
 - (void)setUserAvatar:(NSArray *)objs
 {
-    [[objs objectAtIndex:0] setImage:[objs objectAtIndex:1]];
+    if([objs count]>1)
+        [[objs objectAtIndex:0] setImage:[objs objectAtIndex:1]];
+    else 
+        [[objs objectAtIndex:0] setImage:[UIImage imageNamed:@"defaultavatar.png"]];
     [DejalActivityView removeView];
 }
 
