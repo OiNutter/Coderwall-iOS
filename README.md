@@ -6,12 +6,12 @@ Coderwall-iOS
 The App
 -------
 
-Coderwall-iOS is an app for iPhone and iPad that lets you browse your
-[Coderwall](http://coderwall.com) profile. You can browse you list of
-badges, your accomplishments and your stats and specialities, and even
+Coderwall-iOS is an app for the iPhone and iPad that lets you browse your
+[Coderwall](http://coderwall.com) profile. You can browse your list of
+badges, accomplishments, stats, and specialities, and even
 search for other users.
 
-Find it on the [App
+Available free on the [App
 Store](http://itunes.apple.com/us/app/coderwall/id520035280?ls=1&mt=8)
 
 Why is it Open Source?
@@ -50,7 +50,7 @@ Coming Soon
 
 At the moment the app is read only and doesn't take advantage of some of
 the new features Coderwall has been adding, such as Teams and Network.
-This is because I'm limited to what is available in their current api.
+This is because I'm limited to what is available in their current API.
 However I have been talking to the guys at Coderwall and I know they
 have plans to add a lot more functionality that myself and other guys
 working with the api will be able to take advantage of.
@@ -58,7 +58,7 @@ working with the api will be able to take advantage of.
 Libraries
 ---------
 
-The following third party libraries where used in the app:
+The following third party libraries were used in the app:
 
 * [DejalActivityView](http://www.dejal.com/developer/#dejalactivityview)
 * [EgoTableViewPullRefresh](https://github.com/enormego/EGOTableViewPullRefresh)
