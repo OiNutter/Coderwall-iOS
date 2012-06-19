@@ -65,7 +65,7 @@ The following third party libraries where used in the app:
 * [SBJson](http://stig.github.com/json-framework/)
 
 I've also used [App Icon Template
-2.0](http://http://appicontemplate.com/) by Michael Flarup at
+2.0](http://appicontemplate.com/) by Michael Flarup at
 [Pixelresort](http://pixelresort.com)
 
 License
