@@ -63,10 +63,21 @@ The following third party libraries were used in the app:
 * [DejalActivityView](http://www.dejal.com/developer/#dejalactivityview)
 * [EgoTableViewPullRefresh](https://github.com/enormego/EGOTableViewPullRefresh)
 * [SBJson](http://stig.github.com/json-framework/)
+* [Kiwi](https://github.com/allending/Kiwi)
+* [ILTesting](https://github.com/InfiniteLoopDK/ILTesting)
 
 I've also used [App Icon Template
 2.0](http://appicontemplate.com/) by Michael Flarup at
 [Pixelresort](http://pixelresort.com)
+
+Development
+-----------
+
+* Third party libraries are primarily managed via
+  [CocoaPods](https://github.com/CocoaPods/CocoaPods).
+* Libraries without podspecs are added as submodules, housed in the
+  `Vendor` directory. Make sure to run `git submodule init && git submodule update`
+  from the project root directory after cloning the repository.
 
 License
 -------

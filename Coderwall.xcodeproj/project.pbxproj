@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CA58264F3F44085B91C4F48 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6E7CF697D54B3B9BC70AB5 /* libPods.a */; };
 		B89AFBB8A81D4BD7AF69C5BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6E7CF697D54B3B9BC70AB5 /* libPods.a */; };
 		BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
 		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
@@ -33,7 +32,6 @@
 		BE60B68F14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
 		BE60B69014EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
 		BE60B69814EFA64100CF7151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE60B69614EFA64100CF7151 /* InfoPlist.strings */; };
-		BE60B69B14EFA64100CF7151 /* CoderwallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B69A14EFA64100CF7151 /* CoderwallTests.m */; };
 		BE60B6A614EFB09100CF7151 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6A514EFB09100CF7151 /* ProfileViewController.m */; };
 		BE60B6AC14EFB0FD00CF7151 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6AB14EFB0FD00CF7151 /* User.m */; };
 		BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
@@ -81,6 +79,14 @@
 		BED43CA2153D7512005AEDDB /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */; };
 		BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
 		BEFC77571513BCEC00C10939 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
+		DA319784159ABB8D0027A608 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
+		DA319786159ABBA70027A608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
+		DA319789159ABC4E0027A608 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319788159ABC4E0027A608 /* UserSpec.m */; };
+		DA3197D6159BE9830027A608 /* ILCannedURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA3197D7159BE9830027A608 /* ILCannedURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DA3197DC159BE9830027A608 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
+		DA3197DD159BE9830027A608 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
+		DA3197E2159BF8900027A608 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA3197E1159BF8900027A608 /* libPods-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,8 +141,6 @@
 		BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE60B69514EFA64100CF7151 /* CoderwallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoderwallTests-Info.plist"; sourceTree = "<group>"; };
 		BE60B69714EFA64100CF7151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BE60B69914EFA64100CF7151 /* CoderwallTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoderwallTests.h; sourceTree = "<group>"; };
-		BE60B69A14EFA64100CF7151 /* CoderwallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoderwallTests.m; sourceTree = "<group>"; };
 		BE60B6A414EFB09100CF7151 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		BE60B6A514EFB09100CF7151 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		BE60B6AA14EFB0FD00CF7151 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -195,6 +199,14 @@
 		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		BEFC77541513BCDC00C10939 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D56FB123D143438FB77AA2AB /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DA319788159ABC4E0027A608 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
+		DA3197D0159BE9830027A608 /* ILCannedURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILCannedURLProtocol.h; sourceTree = "<group>"; };
+		DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILCannedURLProtocol.m; sourceTree = "<group>"; };
+		DA3197D2159BE9830027A608 /* ILProfilerCompat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ILProfilerCompat.c; sourceTree = "<group>"; };
+		DA3197D3159BE9830027A608 /* ILTestImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTestImage.h; sourceTree = "<group>"; };
+		DA3197D4159BE9830027A608 /* ILTestImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTestImage.m; sourceTree = "<group>"; };
+		DA3197D5159BE9830027A608 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
+		DA3197E1159BF8900027A608 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,10 +226,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3197E2159BF8900027A608 /* libPods-test.a in Frameworks */,
+				DA319786159ABBA70027A608 /* CoreGraphics.framework in Frameworks */,
+				DA319784159ABB8D0027A608 /* QuartzCore.framework in Frameworks */,
 				BE60B68E14EFA64100CF7151 /* SenTestingKit.framework in Frameworks */,
 				BE60B68F14EFA64100CF7151 /* UIKit.framework in Frameworks */,
 				BE60B69014EFA64100CF7151 /* Foundation.framework in Frameworks */,
-				4CA58264F3F44085B91C4F48 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +251,7 @@
 				BE60B69314EFA64100CF7151 /* CoderwallTests */,
 				BE60B66814EFA64100CF7151 /* Frameworks */,
 				BE60B66614EFA64100CF7151 /* Products */,
+				DA3197CE159BE9830027A608 /* Vendor */,
 				D56FB123D143438FB77AA2AB /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -253,12 +268,13 @@
 		BE60B66814EFA64100CF7151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD6E7CF697D54B3B9BC70AB5 /* libPods.a */,
+				DA3197E1159BF8900027A608 /* libPods-test.a */,
 				BEFC77541513BCDC00C10939 /* QuartzCore.framework */,
 				BE60B66914EFA64100CF7151 /* UIKit.framework */,
 				BE60B66B14EFA64100CF7151 /* Foundation.framework */,
 				BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */,
 				BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */,
-				BD6E7CF697D54B3B9BC70AB5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,8 +308,7 @@
 		BE60B69314EFA64100CF7151 /* CoderwallTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE60B69914EFA64100CF7151 /* CoderwallTests.h */,
-				BE60B69A14EFA64100CF7151 /* CoderwallTests.m */,
+				DA319787159ABC270027A608 /* Models */,
 				BE60B69414EFA64100CF7151 /* Supporting Files */,
 			);
 			path = CoderwallTests;
@@ -476,6 +491,35 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		DA319787159ABC270027A608 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA319788159ABC4E0027A608 /* UserSpec.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA3197CE159BE9830027A608 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DA3197CF159BE9830027A608 /* ILTesting */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DA3197CF159BE9830027A608 /* ILTesting */ = {
+			isa = PBXGroup;
+			children = (
+				DA3197D0159BE9830027A608 /* ILCannedURLProtocol.h */,
+				DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */,
+				DA3197D2159BE9830027A608 /* ILProfilerCompat.c */,
+				DA3197D3159BE9830027A608 /* ILTestImage.h */,
+				DA3197D4159BE9830027A608 /* ILTestImage.m */,
+				DA3197D5159BE9830027A608 /* README.mdown */,
+			);
+			path = ILTesting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +633,7 @@
 				BE8B7582152F230E00C4C348 /* Icon-72.png in Resources */,
 				BED43CA1153D7512005AEDDB /* iTunesArtwork.png in Resources */,
 				BED43CA2153D7512005AEDDB /* iTunesArtwork@2x.png in Resources */,
+				DA3197DC159BE9830027A608 /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE60B69814EFA64100CF7151 /* InfoPlist.strings in Resources */,
+				DA3197DD159BE9830027A608 /* README.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +706,7 @@
 				BE546A761502E96700B9A200 /* AccomplishmentsiPadViewController.m in Sources */,
 				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
 				BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */,
+				DA3197D6159BE9830027A608 /* ILCannedURLProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,7 +714,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE60B69B14EFA64100CF7151 /* CoderwallTests.m in Sources */,
+				DA319789159ABC4E0027A608 /* UserSpec.m in Sources */,
+				DA3197D7159BE9830027A608 /* ILCannedURLProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +770,6 @@
 		BE60B69C14EFA64100CF7151 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -739,6 +786,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/Vendor/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -748,7 +799,6 @@
 		BE60B69D14EFA64100CF7151 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -758,6 +808,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/Vendor/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -825,10 +879,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/Headers\"",
+					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
+					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
+					"\"$(PODS_ROOT)/Headers/SBJson\"",
+					"$(PODS_ROOT)/Kiwi/Kiwi/",
+				);
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -846,10 +909,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/Headers\"",
+					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
+					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
+					"\"$(PODS_ROOT)/Headers/SBJson\"",
+					"$(PODS_ROOT)/Kiwi/Kiwi/",
+				);
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
