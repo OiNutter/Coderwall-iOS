@@ -1,9 +1,13 @@
 PODS:
   - DejalActivityView (1.0)
   - EGOTableViewPullRefresh (0.1.0)
+  - KIF (0.0.1)
+  - Kiwi (1.0.0)
   - SBJson (3.1)
 
 DEPENDENCIES:
   - DejalActivityView (>= 1.0)
   - EGOTableViewPullRefresh (>= 0.1)
+  - KIF (>= 0.0.1)
+  - Kiwi (>= 1.0.0)
   - SBJson (>= 3.1)

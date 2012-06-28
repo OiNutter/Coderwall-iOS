@@ -39,6 +39,7 @@
     }
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    backButton.accessibilityLabel = @"Back";
     self.navigationItem.backBarButtonItem = backButton;
     User *user = [self currentUser];
     if(user == Nil)
