@@ -65,6 +65,7 @@ The following third party libraries were used in the app:
 * [SBJson](http://stig.github.com/json-framework/)
 * [Kiwi](https://github.com/allending/Kiwi)
 * [ILTesting](https://github.com/InfiniteLoopDK/ILTesting)
+* [KIF](https://github.com/square/KIF/)
 
 I've also used [App Icon Template
 2.0](http://appicontemplate.com/) by Michael Flarup at

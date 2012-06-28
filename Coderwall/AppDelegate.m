@@ -11,6 +11,10 @@
 #import "DejalActivityView.h"
 #import "ImageLoader.h"
 
+#if RUN_KIF_TESTS
+#import "CoderwallTestController.h"
+#endif
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -50,6 +54,16 @@
         self.currentUser = Nil;    
     
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+#if RUN_KIF_TESTS
+    [[CoderwallTestController sharedInstance] startTestingWithCompletionBlock:^{
+        // Exit after the tests complete so that CI knows we're done
+        exit([[CoderwallTestController sharedInstance] failureCount]);
+    }];
+#endif
 }
 
 - (void)showConnectionError:(NSNotification *)notification
