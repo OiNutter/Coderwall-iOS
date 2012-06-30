@@ -10,7 +10,7 @@
 #import "ProfileCell.h"
 #import "StatCell.h"
 #import "User.h"
-#import "AppDelegateProtocol.h"
+#import "UIViewController+appDelegateUser.h"
 #import "DejalActivityView.h"
 
 @interface SummaryViewController ()
@@ -21,13 +21,6 @@
 
 @synthesize statsData;
 @synthesize sections;
-
-- (User*) currentUser;
-{
-	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	User* currentUser = (User*) theDelegate.currentUser;
-	return currentUser;
-}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

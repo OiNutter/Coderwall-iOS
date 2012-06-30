@@ -6,8 +6,12 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
+
 @interface MasterViewController : UITabBarController
--(void)showSearchResults;
+
+- (void)showSearchResults;
+
 @end
