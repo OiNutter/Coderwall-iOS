@@ -3,8 +3,9 @@
 //  Coderwall
 //
 //  Created by Will on 18/02/2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 Bearded Apps. All rights reserved.
 //
+
 
 #import "AppDelegate.h"
 #import "User.h"
@@ -15,43 +16,43 @@
 #import "CoderwallTestController.h"
 #endif
 
+
+@interface AppDelegate ()
+- (void)registerForNetworkNotifications;
+- (void)showConnectionError:(NSNotification *)notification;
+- (void)showHTTPResponseError:(NSNotification *)notification;
+- (void)showLoadingOverlay;
+- (void)removeLoadingOverlay;
+- (void)loadCurrentUser;
+@end
+
+
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize currentUser;
+@synthesize currentUser = _currentUser;
 
-- (id) init;
-{
-	return [super init];
-}
+
+#pragma mark - UIApplicationDelegate Protocol Methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
+        UISplitViewController *svc = (UISplitViewController *)self.window.rootViewController;
+        UINavigationController *navigationController = [svc.viewControllers lastObject];
+        svc.delegate = (id)navigationController.topViewController;
     }
     
-    //Add Crittercism debugging
-    /*[Crittercism initWithAppID: @"4fa9501fb093150f4300004c"
-                       andKey:@"ne780aghaohlirxlkzxwjbyusitf"
+    /*
+    // Add Crittercism debugging
+    [Crittercism initWithAppID: @"4fa9501fb093150f4300004c"
+                        andKey:@"ne780aghaohlirxlkzxwjbyusitf"
                      andSecret:@"sbhf5kotnxxwscgapu39ddriz6ijvmpe"
-         andMainViewController:self.window.rootViewController];*/
+         andMainViewController:self.window.rootViewController];
+    */
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showConnectionError:) name:@"ConnectionError" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHTTPResponseError:) name:@"ResponseError" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoadingOverlay) name:@"Loading" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeLoadingOverlay) name:@"LoadingFinished" object:nil];
-    
-    //load
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *userName = [userDefaults stringForKey:@"UserName"];
-    if(userName != (id)[NSNull null] && userName.length > 0)
-        self.currentUser = [[User alloc] initWithUsername:userName];
-    else 
-        self.currentUser = Nil;    
+    [self registerForNetworkNotifications];
+    [self loadCurrentUser];
     
     return YES;
 }
@@ -60,16 +61,40 @@
 {
 #if RUN_KIF_TESTS
     [[CoderwallTestController sharedInstance] startTestingWithCompletionBlock:^{
-        // Exit after the tests complete so that CI knows we're done
         exit([[CoderwallTestController sharedInstance] failureCount]);
     }];
 #endif
 }
 
+
+#pragma mark - Internal Methods
+
+- (void)registerForNetworkNotifications
+{
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    
+    [notificationCenter addObserver:self
+                           selector:@selector(showConnectionError:)
+                               name:@"ConnectionError"
+                             object:nil];
+    [notificationCenter addObserver:self
+                           selector:@selector(showHTTPResponseError:)
+                               name:@"ResponseError"
+                             object:nil];
+    [notificationCenter addObserver:self
+                           selector:@selector(showLoadingOverlay)
+                               name:@"Loading"
+                             object:nil];
+    [notificationCenter addObserver:self
+                           selector:@selector(removeLoadingOverlay)
+                               name:@"LoadingFinished"
+                             object:nil];
+}
+
 - (void)showConnectionError:(NSNotification *)notification
 {
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error connecting to server, please try again in a few moments"
+    NSString *title = @"Error connecting to server, please try again in a few moments";
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                     message:nil
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
@@ -80,15 +105,17 @@
 - (void)showHTTPResponseError:(NSNotification *)notification
 {
     NSString *message;
-    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)notification.object;
-    int code = [httpResponse statusCode];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)notification.object;
+    NSInteger code = [httpResponse statusCode];
     
     switch (code) {
         case 404:
-            message = [[NSString alloc] initWithString:@"Sorry, there seems to be a problem finding the requested user. Please check you typed the username correctly and that the user exists"];
+            message = @"Sorry, there seems to be a problem finding the requested user. Please "
+                      @"check you typed the username correctly and that the user exists.";
             break;            
         default:
-            message = [[NSString alloc] initWithString:@"Sorry, we seem to be having problems loading the requested user. Please try again in a few minutes"];
+            message = @"Sorry, we seem to be having problems loading the requested user. "
+                      @"Please try again in a few minutes.";
             break;
     }
     
@@ -108,6 +135,19 @@
 - (void)removeLoadingOverlay
 {
     [DejalBezelActivityView removeView];
+}
+
+- (void)loadCurrentUser
+{
+    // Load current user from NSUserDefaults
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [userDefaults stringForKey:@"UserName"];
+
+    if (userName != (id)[NSNull null] && userName.length > 0) {
+        self.currentUser = [[User alloc] initWithUsername:userName];
+    } else {
+        self.currentUser = nil;
+    }
 }
 
 @end
