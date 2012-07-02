@@ -8,26 +8,13 @@
 
 #import "SearchResultsViewController.h"
 #import "User.h"
-#import "AppDelegateProtocol.h"
+#import "UIViewController+appDelegateUser.h"
 
 @interface SearchResultsViewController ()
 
 @end
 
 @implementation SearchResultsViewController
-
-- (User*) currentUser;
-{
-	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	User* currentUser = (User*) theDelegate.currentUser;
-	return currentUser;
-}
-
-- (void) setCurrentUser:(User *) currentUser
-{
-    id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-    [theDelegate setCurrentUser:currentUser];
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

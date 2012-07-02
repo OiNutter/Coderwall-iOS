@@ -79,6 +79,7 @@
 		BED43CA2153D7512005AEDDB /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */; };
 		BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
 		BEFC77571513BCEC00C10939 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
+		DA14F8BF159F91AA005EF7AA /* KIFTestStep+displayMasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */; };
 		DA319784159ABB8D0027A608 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
 		DA319786159ABBA70027A608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
 		DA319789159ABC4E0027A608 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319788159ABC4E0027A608 /* UserSpec.m */; };
@@ -86,29 +87,6 @@
 		DA3197D7159BE9830027A608 /* ILCannedURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA3197DC159BE9830027A608 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
 		DA3197DD159BE9830027A608 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
-		DA584DA9159C037200173134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67514EFA64100CF7151 /* main.m */; };
-		DA584DAA159C037200173134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67914EFA64100CF7151 /* AppDelegate.m */; };
-		DA584DAB159C037200173134 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6A514EFB09100CF7151 /* ProfileViewController.m */; };
-		DA584DAC159C037200173134 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6AB14EFB0FD00CF7151 /* User.m */; };
-		DA584DAD159C037200173134 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
-		DA584DAE159C037200173134 /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
-		DA584DAF159C037200173134 /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
-		DA584DB0159C037200173134 /* AccomplishmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */; };
-		DA584DB1159C037200173134 /* AccomplishmentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */; };
-		DA584DB2159C037200173134 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
-		DA584DB3159C037200173134 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
-		DA584DB4159C037200173134 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
-		DA584DB5159C037200173134 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
-		DA584DB6159C037200173134 /* ClearSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5414F953E0003BC113 /* ClearSearchBar.m */; };
-		DA584DB7159C037200173134 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
-		DA584DB8159C037200173134 /* BadgesiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A621501967800B9A200 /* BadgesiPadViewController.m */; };
-		DA584DB9159C037200173134 /* iPadBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */; };
-		DA584DBA159C037200173134 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6C15028AE900B9A200 /* SummaryViewController.m */; };
-		DA584DBB159C037200173134 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6F15028B7800B9A200 /* ProfileCell.m */; };
-		DA584DBC159C037200173134 /* iPadAccomplishmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */; };
-		DA584DBD159C037200173134 /* AccomplishmentsiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */; };
-		DA584DBE159C037200173134 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
-		DA584DBF159C037200173134 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
 		DA584DC2159C037200173134 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
 		DA584DC3159C037200173134 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
 		DA584DC4159C037200173134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
@@ -155,10 +133,34 @@
 		DA584DEF159C037200173134 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BED43CA0153D7512005AEDDB /* iTunesArtwork@2x.png */; };
 		DA584DF0159C037200173134 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
 		DA584E2A159C049400173134 /* CoderwallTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA584E29159C049400173134 /* CoderwallTestController.m */; };
-		DA584E2F159C054400173134 /* ILCannedURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DA584E39159C087800173134 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA584E38159C087800173134 /* libPods-test.a */; };
 		DA67EF21159C08D500F7500A /* libPods-integration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA67EF20159C08D500F7500A /* libPods-integration.a */; };
-		DAB000ED159C0C8800F773A2 /* KIFTestScenario+displayMasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB000EC159C0C8800F773A2 /* KIFTestScenario+displayMasterView.m */; };
+		DAB000ED159C0C8800F773A2 /* KIFTestScenario+masterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */; };
+		DAB00113159F88CD00F773A2 /* UIViewController+appDelegateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */; };
+		DAB00116159F8D3C00F773A2 /* UIViewController+appDelegateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */; };
+		DAB00117159F8D3C00F773A2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6AB14EFB0FD00CF7151 /* User.m */; };
+		DAB00118159F8D3C00F773A2 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
+		DAB00119159F8D3C00F773A2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6A514EFB09100CF7151 /* ProfileViewController.m */; };
+		DAB0011A159F8D3C00F773A2 /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
+		DAB0011B159F8D3C00F773A2 /* AccomplishmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */; };
+		DAB0011C159F8D3C00F773A2 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
+		DAB0011D159F8D3C00F773A2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
+		DAB0011E159F8D3C00F773A2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
+		DAB0011F159F8D3C00F773A2 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
+		DAB00120159F8D3C00F773A2 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
+		DAB00121159F8D3C00F773A2 /* BadgesiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A621501967800B9A200 /* BadgesiPadViewController.m */; };
+		DAB00122159F8D3C00F773A2 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6C15028AE900B9A200 /* SummaryViewController.m */; };
+		DAB00123159F8D3C00F773A2 /* AccomplishmentsiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */; };
+		DAB00124159F8D3C00F773A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
+		DAB00125159F8D3C00F773A2 /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
+		DAB00126159F8D3C00F773A2 /* AccomplishmentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */; };
+		DAB00127159F8D3C00F773A2 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
+		DAB00128159F8D3C00F773A2 /* ClearSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5414F953E0003BC113 /* ClearSearchBar.m */; };
+		DAB00129159F8D3C00F773A2 /* iPadBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */; };
+		DAB0012A159F8D3C00F773A2 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6F15028B7800B9A200 /* ProfileCell.m */; };
+		DAB0012B159F8D3C00F773A2 /* iPadAccomplishmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */; };
+		DAB0012C159F8D3C00F773A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67914EFA64100CF7151 /* AppDelegate.m */; };
+		DAB0012D159F8D3C00F773A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B67514EFA64100CF7151 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,7 +223,6 @@
 		BE60B75514EFC4D500CF7151 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		BE73BA1414F8FFAB00220316 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		BE73BA1514F8FFAB00220316 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateProtocol.h; sourceTree = "<group>"; };
 		BE886C4F14F95249003BC113 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		BE886C5014F95249003BC113 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BE886C5314F953E0003BC113 /* ClearSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearSearchBar.h; sourceTree = "<group>"; };
@@ -271,6 +272,8 @@
 		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		BEFC77541513BCDC00C10939 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D56FB123D143438FB77AA2AB /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		DA14F8BD159F91AA005EF7AA /* KIFTestStep+displayMasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+displayMasterView.h"; sourceTree = "<group>"; };
+		DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+displayMasterView.m"; sourceTree = "<group>"; };
 		DA319788159ABC4E0027A608 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
 		DA3197D0159BE9830027A608 /* ILCannedURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILCannedURLProtocol.h; sourceTree = "<group>"; };
 		DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILCannedURLProtocol.m; sourceTree = "<group>"; };
@@ -284,8 +287,10 @@
 		DA584E29159C049400173134 /* CoderwallTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoderwallTestController.m; sourceTree = "<group>"; };
 		DA584E38159C087800173134 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
 		DA67EF20159C08D500F7500A /* libPods-integration.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-integration.a"; path = "Pods/build/Release-iphoneos/libPods-integration.a"; sourceTree = "<group>"; };
-		DAB000EB159C0C8800F773A2 /* KIFTestScenario+displayMasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+displayMasterView.h"; sourceTree = "<group>"; };
-		DAB000EC159C0C8800F773A2 /* KIFTestScenario+displayMasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+displayMasterView.m"; sourceTree = "<group>"; };
+		DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "KIFTestScenario+masterView.h"; sourceTree = "<group>"; };
+		DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+masterView.m"; sourceTree = "<group>"; };
+		DAB00111159F88CD00F773A2 /* UIViewController+appDelegateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+appDelegateUser.h"; sourceTree = "<group>"; };
+		DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+appDelegateUser.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,8 +382,8 @@
 		BE60B66F14EFA64100CF7151 /* Coderwall */ = {
 			isa = PBXGroup;
 			children = (
+				DAB00110159F88A200F773A2 /* Categories */,
 				BECA2C6F15285FB1006767DF /* Resources */,
-				BE60B75E14F05DE700CF7151 /* Protocols */,
 				BE60B6A714EFB09700CF7151 /* Models */,
 				BE60B6A814EFB0A000CF7151 /* Controllers */,
 				BE60B6A914EFB0AF00CF7151 /* Views */,
@@ -447,14 +452,6 @@
 				BE60B67E14EFA64100CF7151 /* MainStoryboard_iPad.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		BE60B75E14F05DE700CF7151 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				BE74BFBA150385FE00433091 /* AppDelegateProtocol.h */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		BE60B76014F0615600CF7151 /* ViewExtensions */ = {
@@ -621,6 +618,7 @@
 				DA584E28159C049400173134 /* CoderwallTestController.h */,
 				DA584E29159C049400173134 /* CoderwallTestController.m */,
 				DAB000E9159C097B00F773A2 /* Scenarios */,
+				DAB0012E159F90C300F773A2 /* Steps */,
 			);
 			path = IntegrationTests;
 			sourceTree = "<group>";
@@ -628,10 +626,28 @@
 		DAB000E9159C097B00F773A2 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
-				DAB000EB159C0C8800F773A2 /* KIFTestScenario+displayMasterView.h */,
-				DAB000EC159C0C8800F773A2 /* KIFTestScenario+displayMasterView.m */,
+				DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */,
+				DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */,
 			);
 			path = Scenarios;
+			sourceTree = "<group>";
+		};
+		DAB00110159F88A200F773A2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DAB00111159F88CD00F773A2 /* UIViewController+appDelegateUser.h */,
+				DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		DAB0012E159F90C300F773A2 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				DA14F8BD159F91AA005EF7AA /* KIFTestStep+displayMasterView.h */,
+				DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */,
+			);
+			path = Steps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -902,6 +918,7 @@
 				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
 				BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */,
 				DA3197D6159BE9830027A608 /* ILCannedURLProtocol.m in Sources */,
+				DAB00113159F88CD00F773A2 /* UIViewController+appDelegateUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,32 +935,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA584E2F159C054400173134 /* ILCannedURLProtocol.m in Sources */,
-				DA584DA9159C037200173134 /* main.m in Sources */,
-				DA584DAA159C037200173134 /* AppDelegate.m in Sources */,
-				DA584DAB159C037200173134 /* ProfileViewController.m in Sources */,
-				DA584DAC159C037200173134 /* User.m in Sources */,
-				DA584DAD159C037200173134 /* MasterViewController.m in Sources */,
-				DA584DAE159C037200173134 /* BadgesViewController.m in Sources */,
-				DA584DAF159C037200173134 /* BadgeCell.m in Sources */,
-				DA584DB0159C037200173134 /* AccomplishmentsViewController.m in Sources */,
-				DA584DB1159C037200173134 /* AccomplishmentsCell.m in Sources */,
-				DA584DB2159C037200173134 /* StatsViewController.m in Sources */,
-				DA584DB3159C037200173134 /* StatCell.m in Sources */,
-				DA584DB4159C037200173134 /* SettingsViewController.m in Sources */,
-				DA584DB5159C037200173134 /* SearchViewController.m in Sources */,
-				DA584DB6159C037200173134 /* ClearSearchBar.m in Sources */,
-				DA584DB7159C037200173134 /* SearchResultsViewController.m in Sources */,
-				DA584DB8159C037200173134 /* BadgesiPadViewController.m in Sources */,
-				DA584DB9159C037200173134 /* iPadBadgeCell.m in Sources */,
-				DA584DBA159C037200173134 /* SummaryViewController.m in Sources */,
-				DA584DBB159C037200173134 /* ProfileCell.m in Sources */,
-				DA584DBC159C037200173134 /* iPadAccomplishmentCell.m in Sources */,
-				DA584DBD159C037200173134 /* AccomplishmentsiPadViewController.m in Sources */,
-				DA584DBE159C037200173134 /* DetailViewController.m in Sources */,
-				DA584DBF159C037200173134 /* ImageLoader.m in Sources */,
+				DAB00116159F8D3C00F773A2 /* UIViewController+appDelegateUser.m in Sources */,
+				DAB00117159F8D3C00F773A2 /* User.m in Sources */,
+				DAB00118159F8D3C00F773A2 /* ImageLoader.m in Sources */,
+				DAB00119159F8D3C00F773A2 /* ProfileViewController.m in Sources */,
+				DAB0011A159F8D3C00F773A2 /* BadgesViewController.m in Sources */,
+				DAB0011B159F8D3C00F773A2 /* AccomplishmentsViewController.m in Sources */,
+				DAB0011C159F8D3C00F773A2 /* StatsViewController.m in Sources */,
+				DAB0011D159F8D3C00F773A2 /* MasterViewController.m in Sources */,
+				DAB0011E159F8D3C00F773A2 /* SettingsViewController.m in Sources */,
+				DAB0011F159F8D3C00F773A2 /* SearchViewController.m in Sources */,
+				DAB00120159F8D3C00F773A2 /* SearchResultsViewController.m in Sources */,
+				DAB00121159F8D3C00F773A2 /* BadgesiPadViewController.m in Sources */,
+				DAB00122159F8D3C00F773A2 /* SummaryViewController.m in Sources */,
+				DAB00123159F8D3C00F773A2 /* AccomplishmentsiPadViewController.m in Sources */,
+				DAB00124159F8D3C00F773A2 /* DetailViewController.m in Sources */,
+				DAB00125159F8D3C00F773A2 /* BadgeCell.m in Sources */,
+				DAB00126159F8D3C00F773A2 /* AccomplishmentsCell.m in Sources */,
+				DAB00127159F8D3C00F773A2 /* StatCell.m in Sources */,
+				DAB00128159F8D3C00F773A2 /* ClearSearchBar.m in Sources */,
+				DAB00129159F8D3C00F773A2 /* iPadBadgeCell.m in Sources */,
+				DAB0012A159F8D3C00F773A2 /* ProfileCell.m in Sources */,
+				DAB0012B159F8D3C00F773A2 /* iPadAccomplishmentCell.m in Sources */,
+				DAB0012C159F8D3C00F773A2 /* AppDelegate.m in Sources */,
+				DAB0012D159F8D3C00F773A2 /* main.m in Sources */,
 				DA584E2A159C049400173134 /* CoderwallTestController.m in Sources */,
-				DAB000ED159C0C8800F773A2 /* KIFTestScenario+displayMasterView.m in Sources */,
+				DAB000ED159C0C8800F773A2 /* KIFTestScenario+masterView.m in Sources */,
+				DA14F8BF159F91AA005EF7AA /* KIFTestStep+displayMasterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

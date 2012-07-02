@@ -7,7 +7,7 @@
 //
 
 #import "StatsViewController.h"
-#import "AppDelegateProtocol.h"
+#import "UIViewController+appDelegateUser.h"
 #import "User.h"
 #import "StatCell.h"
 
@@ -19,13 +19,6 @@
 
 @synthesize statsData;
 @synthesize sections;
-
-- (User*) currentUser;
-{
-	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	User* currentUser = (User*) theDelegate.currentUser;
-	return currentUser;
-}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

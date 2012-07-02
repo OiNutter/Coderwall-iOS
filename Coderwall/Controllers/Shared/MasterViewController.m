@@ -6,56 +6,85 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+
 #import "MasterViewController.h"
 #import "User.h"
-#import "AppDelegateProtocol.h"
+#import "UIViewController+appDelegateUser.h"
 #import "ImageLoader.h"
+
+
+@interface MasterViewController ()
+- (void)setUserName;
+- (void)preloadBadges;
+@end
+
 
 @implementation MasterViewController
 
-- (User*) currentUser;
-{
-	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	User* currentUser = (User*) theDelegate.currentUser;
-	return currentUser;
-}
+#pragma mark - Object Lifecycle
 
 - (id)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setUserName) name:@"UserChanged" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preloadBadges) name:@"UserChanged" object:nil];
+    if (self) {
+        NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+        [notificationCenter addObserver:self
+                               selector:@selector(setUserName)
+                                   name:@"UserChanged"
+                                 object:nil];
+        [notificationCenter addObserver:self
+                               selector:@selector(preloadBadges)
+                                   name:@"UserChanged"
+                                 object:nil];
+    }
     return self;
 }
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+#pragma mark - UITabBarController Overrides
 
 -(void) viewDidLoad
 {
     [super viewDidLoad];
+
     // Add Coderwall logo to navigation bar
     if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
-        UIButton* fakeButton = (UIButton *) [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"inset-logo.png"]];
-        UIBarButtonItem *fakeButtonItem = [[UIBarButtonItem alloc] initWithCustomView:fakeButton];
-        self.navigationItem.leftBarButtonItem = fakeButtonItem;
+        UIImage *image = [UIImage imageNamed:@"inset-logo.png"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        UIBarButtonItem *logoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:imageView];
+        self.navigationItem.leftBarButtonItem = logoButtonItem;
+
+        self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Settings";
     }
-    
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:nil
+                                                                  action:nil];
     backButton.accessibilityLabel = @"Back";
     self.navigationItem.backBarButtonItem = backButton;
-    User *user = [self currentUser];
-    if(user == Nil)
-        [self performSegueWithIdentifier:@"ShowSettings" sender:self];
-    
-}
 
--(void) setUserName
-{
-     // Get current User
-    if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
-        User *user = [self currentUser];
-        if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0)
-            self.navigationItem.title = [[NSString alloc] initWithString:user.userName];
+    if(!self.currentUser) {
+        [self performSegueWithIdentifier:@"ShowSettings" sender:self];
     }
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+    } else {
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
+}
+
+
+#pragma mark - Public Interface
 
 - (void)showSearchResults
 {
@@ -63,21 +92,23 @@
 }
 
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+#pragma mark - Internal Methods
+
+- (void)setUserName
 {
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-    else
-        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // Get current User
+    if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
+        User *user = self.currentUser;
+        if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0) {
+            self.navigationItem.title = user.userName;
+        }
+    }
 }
 
 - (void)preloadBadges
 {
-    NSDictionary* badge;
-    User *user = [self currentUser];
-    for (badge in user.badges)
-    {
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
+    for (NSDictionary *badge in self.currentUser.badges) {
+        NSURL *url = [NSURL URLWithString:[badge objectForKey:@"badge"]];
         [ImageLoader loadImageFromURL:url usingCache:YES];
     }
 }

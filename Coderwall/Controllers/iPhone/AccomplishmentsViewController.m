@@ -8,19 +8,12 @@
 
 #import "AccomplishmentsViewController.h"
 #import "User.h"
-#import "AppDelegateProtocol.h"
+#import "UIViewController+appDelegateUser.h"
 #import "AccomplishmentCell.h"
 
 @implementation AccomplishmentsViewController
 
 @synthesize accomplishments;
-
-- (User*) currentUser;
-{
-	id<AppDelegateProtocol> theDelegate = (id<AppDelegateProtocol>) [UIApplication sharedApplication].delegate;
-	User* currentUser = (User*) theDelegate.currentUser;
-	return currentUser;
-}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
