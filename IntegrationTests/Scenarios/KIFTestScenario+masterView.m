@@ -1,5 +1,5 @@
 //
-//  KIFTestScenario+displayMasterView.m
+//  KIFTestScenario+masterView.m
 //  Coderwall
 //
 //  Created by modocache on 27/06/2012.
@@ -8,14 +8,16 @@
 
 
 #import "KIFTestScenario+masterView.h"
+
+#import "AppDelegate.h"
 #import "KIFTestController.h"
 #import "KIFTestStep.h"
 #import "KIFTestStep+displayMasterView.h"
 #import "UIView-KIFAdditions.h"
-#import "AppDelegate.h"
 
 
 @implementation KIFTestScenario (masterView)
+
 
 #pragma mark - Public Interface
 
@@ -56,14 +58,6 @@
     KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:
                                  @"User can segue to search view from master view."];
     [scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Search"]];
-    return scenario;
-}
-
-+ (id)scenarioToDisplaySettingsView
-{
-    KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:
-                                 @"User can segue to settings view from master view."];
-    [scenario addStep:[KIFTestStep stepToTapViewWithAccessibilityLabel:@"Settings"]];
     return scenario;
 }
 

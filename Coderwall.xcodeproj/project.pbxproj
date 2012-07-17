@@ -80,6 +80,8 @@
 		BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
 		BEFC77571513BCEC00C10939 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
 		DA14F8BF159F91AA005EF7AA /* KIFTestStep+displayMasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */; };
+		DA1B555615B50E1F00F1D675 /* KIFTestScenario+settingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B555515B50E1F00F1D675 /* KIFTestScenario+settingsView.m */; };
+		DA1B555A15B50FFE00F1D675 /* KIFTestStep+updateSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1B555915B50FFE00F1D675 /* KIFTestStep+updateSettings.m */; };
 		DA319784159ABB8D0027A608 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFC77541513BCDC00C10939 /* QuartzCore.framework */; };
 		DA319786159ABBA70027A608 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */; };
 		DA319789159ABC4E0027A608 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DA319788159ABC4E0027A608 /* UserSpec.m */; };
@@ -274,6 +276,10 @@
 		D56FB123D143438FB77AA2AB /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		DA14F8BD159F91AA005EF7AA /* KIFTestStep+displayMasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+displayMasterView.h"; sourceTree = "<group>"; };
 		DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+displayMasterView.m"; sourceTree = "<group>"; };
+		DA1B555415B50E1F00F1D675 /* KIFTestScenario+settingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+settingsView.h"; sourceTree = "<group>"; };
+		DA1B555515B50E1F00F1D675 /* KIFTestScenario+settingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+settingsView.m"; sourceTree = "<group>"; };
+		DA1B555815B50FFE00F1D675 /* KIFTestStep+updateSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+updateSettings.h"; sourceTree = "<group>"; };
+		DA1B555915B50FFE00F1D675 /* KIFTestStep+updateSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+updateSettings.m"; sourceTree = "<group>"; };
 		DA319788159ABC4E0027A608 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
 		DA3197D0159BE9830027A608 /* ILCannedURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILCannedURLProtocol.h; sourceTree = "<group>"; };
 		DA3197D1159BE9830027A608 /* ILCannedURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILCannedURLProtocol.m; sourceTree = "<group>"; };
@@ -287,7 +293,7 @@
 		DA584E29159C049400173134 /* CoderwallTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoderwallTestController.m; sourceTree = "<group>"; };
 		DA584E38159C087800173134 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
 		DA67EF20159C08D500F7500A /* libPods-integration.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-integration.a"; path = "Pods/build/Release-iphoneos/libPods-integration.a"; sourceTree = "<group>"; };
-		DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "KIFTestScenario+masterView.h"; sourceTree = "<group>"; };
+		DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+masterView.h"; sourceTree = "<group>"; };
 		DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestScenario+masterView.m"; sourceTree = "<group>"; };
 		DAB00111159F88CD00F773A2 /* UIViewController+appDelegateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+appDelegateUser.h"; sourceTree = "<group>"; };
 		DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+appDelegateUser.m"; sourceTree = "<group>"; };
@@ -628,6 +634,8 @@
 			children = (
 				DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */,
 				DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */,
+				DA1B555415B50E1F00F1D675 /* KIFTestScenario+settingsView.h */,
+				DA1B555515B50E1F00F1D675 /* KIFTestScenario+settingsView.m */,
 			);
 			path = Scenarios;
 			sourceTree = "<group>";
@@ -646,6 +654,8 @@
 			children = (
 				DA14F8BD159F91AA005EF7AA /* KIFTestStep+displayMasterView.h */,
 				DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */,
+				DA1B555815B50FFE00F1D675 /* KIFTestStep+updateSettings.h */,
+				DA1B555915B50FFE00F1D675 /* KIFTestStep+updateSettings.m */,
 			);
 			path = Steps;
 			sourceTree = "<group>";
@@ -962,6 +972,8 @@
 				DA584E2A159C049400173134 /* CoderwallTestController.m in Sources */,
 				DAB000ED159C0C8800F773A2 /* KIFTestScenario+masterView.m in Sources */,
 				DA14F8BF159F91AA005EF7AA /* KIFTestStep+displayMasterView.m in Sources */,
+				DA1B555615B50E1F00F1D675 /* KIFTestScenario+settingsView.m in Sources */,
+				DA1B555A15B50FFE00F1D675 /* KIFTestStep+updateSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

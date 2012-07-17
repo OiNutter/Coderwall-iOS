@@ -8,9 +8,10 @@
 
 
 #import "MasterViewController.h"
-#import "User.h"
-#import "UIViewController+appDelegateUser.h"
+
 #import "ImageLoader.h"
+#import "UIViewController+appDelegateUser.h"
+#import "User.h"
 
 
 @interface MasterViewController ()
@@ -20,6 +21,7 @@
 
 
 @implementation MasterViewController
+
 
 #pragma mark - Object Lifecycle
 
