@@ -1,5 +1,5 @@
 //
-//  KIFTestScenario+displayMasterView.h
+//  KIFTestScenario+masterView.h
 //  Coderwall
 //
 //  Created by modocache on 27/06/2012.
@@ -17,6 +17,5 @@
 + (id)scenarioToDisplayAccomplishmentsView;
 + (id)scenarioToDisplayStatsView;
 + (id)scenarioToDisplaySearchView;
-+ (id)scenarioToDisplaySettingsView;
 
 @end

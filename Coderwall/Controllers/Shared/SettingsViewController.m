@@ -6,36 +6,30 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+
 #import "SettingsViewController.h"
-#import "User.h"
+
 #import "UIViewController+appDelegateUser.h"
+#import "User.h"
+
 
 @interface SettingsViewController ()
-
+- (IBAction)userNameChanged:(id)sender;
 @end
+
 
 @implementation SettingsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
+#pragma mark - UIViewController Overrides
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [settingsBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)]];
-}
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    UIImage *backgroundImage = [UIImage imageNamed:@"PanelBg.png"];
+    backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)];
+    [settingsBg setImage:backgroundImage];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,32 +38,41 @@
     [userNameInput setText:[userDefaults stringForKey:@"UserName"]];
 }
 
--(void) userNameChanged:(id) sender
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if(self->userNameInput.text.length >0){
-        
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setValue:self->userNameInput.text forKey:@"UserName"];
-        [userDefaults synchronize];
-        [self setCurrentUser:[[User alloc] initWithUsername:self->userNameInput.text]];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
-        
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
-														message:nil
-													   delegate:nil
-                                              cancelButtonTitle:@"OK"
-											  otherButtonTitles:nil];
-		[alert show];
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+
+#pragma mark - Public Interface
+
+- (IBAction)userNameChanged:(id) sender
 {
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-    else
-        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (userNameInput.text.length > 0) {
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setValue:userNameInput.text forKey:@"UserName"];
+        [userDefaults synchronize];
+
+        [self setCurrentUser:[[User alloc] initWithUsername:userNameInput.text]];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
+        
+    } else {
+        NSString *title = NSLocalizedString(@"You must enter a username!",
+                                            @"Alert title for invalid settings view input.");
+        NSString *cancelTitle = NSLocalizedString(@"OK",
+                                                  @"Cancel button for invalid settings view input.");
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:cancelTitle
+                                              otherButtonTitles:nil];
+		[alert show];
+    }
 }
 
 @end

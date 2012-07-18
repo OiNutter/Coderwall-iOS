@@ -13,6 +13,7 @@
 
 @implementation KIFTestStep (displayMasterView)
 
+
 #pragma mark - Public Interface
 
 + (id)stepToPopToMasterView
