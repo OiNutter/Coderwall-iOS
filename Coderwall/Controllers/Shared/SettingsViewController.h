@@ -11,9 +11,5 @@
 
 
 @interface SettingsViewController : UIViewController
-{
-    IBOutlet UIImageView *settingsBg;   
-    IBOutlet UITextField *userNameInput;
-}
 
 @end

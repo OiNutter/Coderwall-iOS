@@ -14,11 +14,19 @@
 
 
 @interface SettingsViewController ()
+
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic, strong) IBOutlet UITextField *usernameField;
+
 - (IBAction)userNameChanged:(id)sender;
+
 @end
 
 
 @implementation SettingsViewController
+
+@synthesize backgroundImageView = _backgroundImageView;
+@synthesize usernameField = _usernameField;
 
 
 #pragma mark - UIViewController Overrides
@@ -29,13 +37,13 @@
 
     UIImage *backgroundImage = [UIImage imageNamed:@"PanelBg.png"];
     backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)];
-    [settingsBg setImage:backgroundImage];
+    self.backgroundImageView.image = backgroundImage;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userNameInput setText:[userDefaults stringForKey:@"UserName"]];
+    NSString *username = [[NSUserDefaults standardUserDefaults] stringForKey:@"UserName"];
+    self.usernameField.text = username;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -48,16 +56,16 @@
 }
 
 
-#pragma mark - Public Interface
+#pragma mark - Internal Methods
 
 - (IBAction)userNameChanged:(id) sender
 {
-    if (userNameInput.text.length > 0) {
+    if (self.usernameField.text.length > 0) {
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setValue:userNameInput.text forKey:@"UserName"];
+        [userDefaults setValue:self.usernameField.text forKey:@"UserName"];
         [userDefaults synchronize];
 
-        [self setCurrentUser:[[User alloc] initWithUsername:userNameInput.text]];
+        [self setCurrentUser:[[User alloc] initWithUsername:self.usernameField.text]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
         
     } else {

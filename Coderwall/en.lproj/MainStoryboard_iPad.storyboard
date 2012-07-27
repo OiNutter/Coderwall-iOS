@@ -222,8 +222,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="EcN-ix-cKA"/>
                     <connections>
-                        <outlet property="settingsBg" destination="4bj-rY-Rki" id="pzu-V9-Etv"/>
-                        <outlet property="userNameInput" destination="KVE-ZB-EQC" id="TDd-oW-aao"/>
+                        <outlet property="backgroundImageView" destination="4bj-rY-Rki" id="wxr-oQ-8L3"/>
+                        <outlet property="usernameField" destination="KVE-ZB-EQC" id="Chu-UD-h9z"/>
                     </connections>
                 </viewController>
             </objects>
@@ -662,8 +662,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="userNameChanged:"/>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="StatCell" superclassName="UITableViewCell">
