@@ -105,6 +105,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JbS-EY-7rp" userLabel="fullName">
                                             <rect key="frame" x="20" y="228" width="260" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <accessibility key="accessibilityConfiguration" label="Full Name"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.74117647060000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -583,6 +584,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pVL-QB-pWi" userLabel="fullName">
                                             <rect key="frame" x="20" y="228" width="260" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <accessibility key="accessibilityConfiguration" label="Full Name"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.74117647060000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -663,8 +665,6 @@
             <relationships>
                 <relationship kind="action" name="userNameChanged:"/>
                 <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>

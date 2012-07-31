@@ -6,8 +6,10 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController <UISearchBarDelegate>
+
+@interface SearchViewController : UIViewController
 
 @end

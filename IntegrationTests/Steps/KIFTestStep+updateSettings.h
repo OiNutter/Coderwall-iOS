@@ -14,6 +14,5 @@
 
 + (NSArray *)stepsToUpdateUsername:(NSString *)username;
 + (id)stepToClearUserDefaults;
-+ (id)stepToClearUsernameTextField;
 
 @end

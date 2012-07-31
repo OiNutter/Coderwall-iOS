@@ -11,11 +11,11 @@
 
 @implementation ClearSearchBar
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
+        self.accessibilityLabel = @"Search for username";
     }
     return self;
 }
@@ -29,7 +29,6 @@
     [super drawRect:rect];
     [[self.subviews objectAtIndex:0] removeFromSuperview];
     [self setBackgroundColor:[UIColor clearColor]];
-
 }
 
 

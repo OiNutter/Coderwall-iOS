@@ -9,16 +9,7 @@
 
 #import "KIFTestStep+updateSettings.h"
 
-#import "UIAccessibilityElement-KIFAdditions.h"
-
-
-@interface KIFTestStep (InternalAPI)
-+ (UIAccessibilityElement *)_accessibilityElementWithLabel:(NSString *)label
-                                        accessibilityValue:(NSString *)value
-                                                  tappable:(BOOL)mustBeTappable
-                                                    traits:(UIAccessibilityTraits)traits
-                                                     error:(out NSError **)error;
-@end
+#import "KIFTestStep+textField.h"
 
 
 @implementation KIFTestStep (updateSettings)
@@ -31,12 +22,11 @@
     NSMutableArray *steps = [NSMutableArray array];
     __block NSString *newUsername = username;
 
-    [steps addObject:[KIFTestStep stepToClearUsernameTextField]];
+    [steps addObject:[KIFTestStep stepToClearTextFieldWithLabel:@"Username"]];
     [steps addObject:[KIFTestStep stepToEnterText:newUsername
                    intoViewWithAccessibilityLabel:@"Username"]];
 
     return steps;
-    
 }
 
 + (id)stepToClearUserDefaults
@@ -47,34 +37,6 @@
                 NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 [defaults removeObjectForKey:@"UserName"];
                 [defaults synchronize];
-
-                return KIFTestStepResultSuccess;
-            }];
-}
-
-+ (id)stepToClearUsernameTextField
-{
-    return [KIFTestStep stepWithDescription:@"Clear username"
-                             executionBlock:
-            ^KIFTestStepResult(KIFTestStep *step, NSError *__autoreleasing *error) {
-                NSString *usernameTextFieldLabel = @"Username";
-
-                // Clear previous text
-                UIAccessibilityElement *element =
-                    [self _accessibilityElementWithLabel:usernameTextFieldLabel
-                                      accessibilityValue:nil
-                                                tappable:YES
-                                                  traits:UIAccessibilityTraitNone
-                                                   error:error];
-
-                if (!element) {
-                    return KIFTestStepResultFailure;
-                }
-
-                UITextField *textField =
-                    (UITextField *)[UIAccessibilityElement viewContainingAccessibilityElement:element];
-
-                textField.text = @"";
 
                 return KIFTestStepResultSuccess;
             }];
