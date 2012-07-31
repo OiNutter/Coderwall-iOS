@@ -38,12 +38,13 @@
     return scenario;
 }
 
-+ (id)scenarioToSetSettingsUsername
++ (id)scenarioToSetSettingsUsername:(NSString *)username
 {
     KIFTestScenario *scenario = [KIFTestScenario scenarioWithDescription:
                                  @"User can update username value in settings view."];
     
-    [scenario addStepsFromArray:[KIFTestStep stepsToUpdateUsername:@"modocache\n"]];
+    NSString *input = [NSString stringWithFormat:@"%@\n", username];
+    [scenario addStepsFromArray:[KIFTestStep stepsToUpdateUsername:input]];
     
     // Update should be successful, which means no alert view is displayed.
     [scenario addStep:[KIFTestStep stepToWaitForAbsenceOfViewWithAccessibilityLabel:@"OK"]];

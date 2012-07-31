@@ -55,14 +55,14 @@
     [super viewDidLoad];
 
     // Add Coderwall logo to navigation bar
-    if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
         UIImage *image = [UIImage imageNamed:@"inset-logo.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         UIBarButtonItem *logoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:imageView];
         self.navigationItem.leftBarButtonItem = logoButtonItem;
-
-        self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Settings";
     }
+    
+    self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Settings";
 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                                    style:UIBarButtonItemStylePlain

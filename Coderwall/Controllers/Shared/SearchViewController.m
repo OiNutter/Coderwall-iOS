@@ -6,53 +6,47 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+
 #import "SearchViewController.h"
 #import "User.h"
 #import "UIViewController+appDelegateUser.h"
 #import "MasterViewController.h"
 
-@interface SearchViewController ()
+
+@interface SearchViewController () <UISearchBarDelegate>
+
+- (void)loadResultsView;
 
 @end
 
+
 @implementation SearchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
+#pragma mark - UIViewController Overrides
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
-    else
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+    } else {
         return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
 }
+
+
+#pragma mark - UISearchBarDelegate Protocol Methods
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    if(searchBar.text.length >0){
+    if(searchBar.text.length > 0){
         User *user = [[User alloc] initWithUsername:searchBar.text];
         [self setCurrentUser:user];
         [searchBar resignFirstResponder];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadResultsView) name:@"UserChanged" object:nil];        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(loadResultsView)
+                                                     name:@"UserChanged"
+                                                   object:nil];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You must enter a username!"
 														message:nil
@@ -63,15 +57,18 @@
     }
 }
 
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+
+#pragma mark - Internal Methods
+
 - (void)loadResultsView
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"UserChanged" object:nil];
     [(MasterViewController *)self.parentViewController showSearchResults];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
-{
-    [searchBar resignFirstResponder];
 }
 
 @end

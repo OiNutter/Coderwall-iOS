@@ -14,7 +14,7 @@
 
 + (id)scenarioToClearUserDefaults;
 + (id)scenarioToDisplaySettingsView;
-+ (id)scenarioToSetSettingsUsername;
++ (id)scenarioToSetSettingsUsername:(NSString *)username;
 + (id)scenarioToSetInvalidSettingsUsername;
 + (id)scenarioToSetNonexistentSettingsUsername;
 

@@ -105,6 +105,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JbS-EY-7rp" userLabel="fullName">
                                             <rect key="frame" x="20" y="228" width="260" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <accessibility key="accessibilityConfiguration" label="Full Name"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.74117647060000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -222,8 +223,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="EcN-ix-cKA"/>
                     <connections>
-                        <outlet property="settingsBg" destination="4bj-rY-Rki" id="pzu-V9-Etv"/>
-                        <outlet property="userNameInput" destination="KVE-ZB-EQC" id="TDd-oW-aao"/>
+                        <outlet property="backgroundImageView" destination="4bj-rY-Rki" id="wxr-oQ-8L3"/>
+                        <outlet property="usernameField" destination="KVE-ZB-EQC" id="Chu-UD-h9z"/>
                     </connections>
                 </viewController>
             </objects>
@@ -583,6 +584,7 @@
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="pVL-QB-pWi" userLabel="fullName">
                                             <rect key="frame" x="20" y="228" width="260" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <accessibility key="accessibilityConfiguration" label="Full Name"/>
                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.74117647060000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -662,8 +664,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
                 <relationship kind="action" name="userNameChanged:"/>
-                <relationship kind="outlet" name="settingsBg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="userNameInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="backgroundImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="StatCell" superclassName="UITableViewCell">
