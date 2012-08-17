@@ -58,7 +58,7 @@ working with the api will be able to take advantage of.
 Libraries
 ---------
 
-The following third party libraries were used in the app:
+The following third party libraries were used in development of the app:
 
 * [DejalActivityView](http://www.dejal.com/developer/#dejalactivityview)
 * [EgoTableViewPullRefresh](https://github.com/enormego/EGOTableViewPullRefresh)
@@ -66,6 +66,7 @@ The following third party libraries were used in the app:
 * [Kiwi](https://github.com/allending/Kiwi)
 * [ILTesting](https://github.com/InfiniteLoopDK/ILTesting)
 * [KIF](https://github.com/square/KIF/)
+* [ios-sim](https://github.com/phonegap/ios-sim)
 
 I've also used [App Icon Template
 2.0](http://appicontemplate.com/) by Michael Flarup at
@@ -79,6 +80,8 @@ Development
 * Libraries without podspecs are added as submodules, housed in the
   `Vendor` directory. Make sure to run `git submodule init && git submodule update`
   from the project root directory after cloning the repository.
+* You can run the same tests as the CI environment by running `./Scripts/jenkinsBuild.sh 0`.
+  You must have ios-sim on your PATH (`brew install ios-sim`).
 
 License
 -------
