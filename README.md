@@ -80,8 +80,13 @@ Development
 * Libraries without podspecs are added as submodules, housed in the
   `Vendor` directory. Make sure to run `git submodule init && git submodule update`
   from the project root directory after cloning the repository.
-* You can run the same tests as the CI environment by running `./Scripts/jenkinsBuild.sh 0`.
-  You must have ios-sim on your PATH (`brew install ios-sim`).
+
+Testing
+-------
+
+* You can run the same tests as the CI environment by running `rake test`--this will run
+  build the app and run the unit and integration test suite. Note that you must have
+  `ios-sim` on your PATH (`brew install ios-sim`) in order to run the suite.
 
 License
 -------

@@ -170,7 +170,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */ = {
+		DA7A2A2115E281E400422453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE60B65C14EFA64000CF7151 /* Project object */;
 			proxyType = 1;
@@ -708,13 +708,13 @@
 				BE60B68714EFA64100CF7151 /* Sources */,
 				BE60B68814EFA64100CF7151 /* Frameworks */,
 				BE60B68914EFA64100CF7151 /* Resources */,
-				BE60B68A14EFA64100CF7151 /* ShellScript */,
 				1F3514AF4CE1426DA5FE4609 /* Copy Pods Resources */,
+				BE60B68A14EFA64100CF7151 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE60B69214EFA64100CF7151 /* PBXTargetDependency */,
+				DA7A2A2215E281E400422453 /* PBXTargetDependency */,
 			);
 			name = CoderwallTests;
 			productName = CoderwallTests;
@@ -901,7 +901,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "# Run the unit tests in this test bundle.\n\"${PROJECT_DIR}/Scripts/RunPlatformUnitTests\"\n";
+			showEnvVarsInLog = 0;
 		};
 		DA584DF1159C037200173134 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1004,10 +1005,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BE60B69214EFA64100CF7151 /* PBXTargetDependency */ = {
+		DA7A2A2215E281E400422453 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE60B66414EFA64100CF7151 /* Coderwall */;
-			targetProxy = BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */;
+			targetProxy = DA7A2A2115E281E400422453 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1154,6 +1155,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1163,17 +1165,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PODS_ROOT)/Headers\"",
-					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
-					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
-					"\"$(PODS_ROOT)/Headers/SBJson\"",
-					"\"$(PODS_ROOT)/Kiwi/Kiwi/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Kiwi/Kiwi/\"";
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					UIKit,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
@@ -1184,6 +1188,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1193,17 +1198,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PODS_ROOT)/Headers\"",
-					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
-					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
-					"\"$(PODS_ROOT)/Headers/SBJson\"",
-					"\"$(PODS_ROOT)/Kiwi/Kiwi/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Kiwi/Kiwi/\"";
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					UIKit,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;

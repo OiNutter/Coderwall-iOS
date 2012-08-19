@@ -72,15 +72,21 @@ build_and_package()
 }
 
 
+kill_simulator()
+{
+    if [[ $(ps axo pid,command | grep "[i]Phone Simulator") ]]; then
+        killall "iPhone Simulator"
+    fi
+}
+
+
 run_integration_tests()
 {
     echo "### RUN INTEGRATION TESTS"
     BUILD_DIR="$SYMROOT/Debug-iphonesimulator"
     xcodebuild -workspace Coderwall.xcworkspace -scheme "Integration Tests" -configuration Debug -sdk iphonesimulator -xcconfig="Pods/Pods-integration.xcconfig" CONFIGURATION_BUILD_DIR="$BUILD_DIR" SYMROOT="$SYMROOT" clean build
 
-    if [[ $(ps axo pid,command | grep "[i]Phone Simulator") ]]; then
-        killall "iPhone Simulator"
-    fi
+    kill_simulator
 
     OUTPUT_FILE="$DIST_DIR/kif_results_$BUILD_NUMBER.txt"
     ios-sim launch "$BUILD_DIR/Coderwall (Integration Tests).app" --stdout "$OUTPUT_FILE" --stderr "$OUTPUT_FILE"
@@ -89,6 +95,19 @@ run_integration_tests()
 }
 
 
+run_unit_tests()
+{
+    OUTPUT_FILE="$DIST_DIR/kiwi_results_$BUILD_NUMBER.txt"
+
+    echo "### RUN UNIT TESTS"
+    kill_simulator
+    xcodebuild -workspace Coderwall.xcworkspace/ -scheme "Unit Tests" -sdk iphonesimulator TEST_AFTER_BUILD=YES clean build > "$OUTPUT_FILE"
+    cat "$OUTPUT_FILE"
+    exit `grep -c "FAILED" "$OUTPUT_FILE"`
+}
+
+
 build_and_package Debug
 build_and_package Release
 run_integration_tests
+run_unit_tests

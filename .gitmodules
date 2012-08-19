@@ -1,6 +1,3 @@
 [submodule "Vendor/ILTesting"]
 	path = Vendor/ILTesting
 	url = git://github.com/InfiniteLoopDK/ILTesting.git
-[submodule "Vendor/WaxSim"]
-	path = Vendor/WaxSim
-	url = git://github.com/jonathanpenn/WaxSim.git
