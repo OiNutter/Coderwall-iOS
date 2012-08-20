@@ -1,5 +1,5 @@
-Coderwall-iOS
-=============
+Coderwall-iOS [![Build Status](https://modocache-oss.ci.cloudbees.com/job/Coderwall-iOS/badge/icon)](https://modocache-oss.ci.cloudbees.com/job/Coderwall-iOS/)
+===============================================================================================================================================================
 
 ![iPhone Screenshots](https://github.com/OiNutter/Coderwall-iOS/raw/master/iPhones.png)
 
