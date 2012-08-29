@@ -136,7 +136,7 @@
 		DA584DF0159C037200173134 /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = DA3197D5159BE9830027A608 /* README.mdown */; };
 		DA584E2A159C049400173134 /* CoderwallTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA584E29159C049400173134 /* CoderwallTestController.m */; };
 		DA584E39159C087800173134 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA584E38159C087800173134 /* libPods-test.a */; };
-		DA67EF21159C08D500F7500A /* libPods-integration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA67EF20159C08D500F7500A /* libPods-integration.a */; };
+		DA95C7F215DE0E8F0019961E /* libPods-integration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA95C7F115DE0E8F0019961E /* libPods-integration.a */; };
 		DA97709415C38EA70033B741 /* KIFTestStep+textField.m in Sources */ = {isa = PBXBuildFile; fileRef = DA97709315C38EA70033B741 /* KIFTestStep+textField.m */; };
 		DAB000ED159C0C8800F773A2 /* KIFTestScenario+masterView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB000EC159C0C8800F773A2 /* KIFTestScenario+masterView.m */; };
 		DAB00113159F88CD00F773A2 /* UIViewController+appDelegateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB00112159F88CD00F773A2 /* UIViewController+appDelegateUser.m */; };
@@ -170,7 +170,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */ = {
+		DA7A2A2115E281E400422453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE60B65C14EFA64000CF7151 /* Project object */;
 			proxyType = 1;
@@ -296,7 +296,7 @@
 		DA584E28159C049400173134 /* CoderwallTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoderwallTestController.h; sourceTree = "<group>"; };
 		DA584E29159C049400173134 /* CoderwallTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoderwallTestController.m; sourceTree = "<group>"; };
 		DA584E38159C087800173134 /* libPods-test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-test.a"; path = "Pods/build/Release-iphoneos/libPods-test.a"; sourceTree = "<group>"; };
-		DA67EF20159C08D500F7500A /* libPods-integration.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-integration.a"; path = "Pods/build/Release-iphoneos/libPods-integration.a"; sourceTree = "<group>"; };
+		DA95C7F115DE0E8F0019961E /* libPods-integration.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-integration.a"; path = "../../../../Library/Developer/Xcode/DerivedData/Coderwall-delofgfcuyplymdxwfqqzgcqfoby/Build/Products/Debug-iphoneos/libPods-integration.a"; sourceTree = "<group>"; };
 		DA97709215C38EA70033B741 /* KIFTestStep+textField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+textField.h"; sourceTree = "<group>"; };
 		DA97709315C38EA70033B741 /* KIFTestStep+textField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+textField.m"; sourceTree = "<group>"; };
 		DAB000EB159C0C8800F773A2 /* KIFTestScenario+masterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestScenario+masterView.h"; sourceTree = "<group>"; };
@@ -341,7 +341,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA67EF21159C08D500F7500A /* libPods-integration.a in Frameworks */,
+				DA95C7F215DE0E8F0019961E /* libPods-integration.a in Frameworks */,
 				DA584DC2159C037200173134 /* QuartzCore.framework in Frameworks */,
 				DA584DC3159C037200173134 /* UIKit.framework in Frameworks */,
 				DA584DC4159C037200173134 /* Foundation.framework in Frameworks */,
@@ -386,8 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				BD6E7CF697D54B3B9BC70AB5 /* libPods.a */,
+				DA95C7F115DE0E8F0019961E /* libPods-integration.a */,
 				DA584E38159C087800173134 /* libPods-test.a */,
-				DA67EF20159C08D500F7500A /* libPods-integration.a */,
 				BEFC77541513BCDC00C10939 /* QuartzCore.framework */,
 				BE60B66914EFA64100CF7151 /* UIKit.framework */,
 				BE60B66B14EFA64100CF7151 /* Foundation.framework */,
@@ -516,8 +516,8 @@
 				BE60B6A514EFB09100CF7151 /* ProfileViewController.m */,
 				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
 				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
-				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
 				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
+				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
 				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 			);
@@ -708,13 +708,13 @@
 				BE60B68714EFA64100CF7151 /* Sources */,
 				BE60B68814EFA64100CF7151 /* Frameworks */,
 				BE60B68914EFA64100CF7151 /* Resources */,
-				BE60B68A14EFA64100CF7151 /* ShellScript */,
 				1F3514AF4CE1426DA5FE4609 /* Copy Pods Resources */,
+				BE60B68A14EFA64100CF7151 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE60B69214EFA64100CF7151 /* PBXTargetDependency */,
+				DA7A2A2215E281E400422453 /* PBXTargetDependency */,
 			);
 			name = CoderwallTests;
 			productName = CoderwallTests;
@@ -901,7 +901,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "# Run the unit tests in this test bundle.\n\"${PROJECT_DIR}/Scripts/RunPlatformUnitTests\"\n";
+			showEnvVarsInLog = 0;
 		};
 		DA584DF1159C037200173134 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1004,10 +1005,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BE60B69214EFA64100CF7151 /* PBXTargetDependency */ = {
+		DA7A2A2215E281E400422453 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE60B66414EFA64100CF7151 /* Coderwall */;
-			targetProxy = BE60B69114EFA64100CF7151 /* PBXContainerItemProxy */;
+			targetProxy = DA7A2A2115E281E400422453 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1106,7 +1107,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Will McKenzie (5LFP9E2J8D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
@@ -1119,7 +1120,7 @@
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "616BC59C-BE34-4C02-8350-B01B7668B050";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1129,7 +1130,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Will McKenzie";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
@@ -1142,7 +1144,8 @@
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9F829CA9-C859-4530-B2CA-4A2DD4647813";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1152,6 +1155,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1161,17 +1165,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PODS_ROOT)/Headers\"",
-					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
-					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
-					"\"$(PODS_ROOT)/Headers/SBJson\"",
-					"\"$(PODS_ROOT)/Kiwi/Kiwi/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Kiwi/Kiwi/\"";
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					UIKit,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
@@ -1182,6 +1188,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
 				DSTROOT = /tmp/xcodeproj.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1191,17 +1198,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(PODS_ROOT)/Headers\"",
-					"\"$(PODS_ROOT)/Headers/DejalActivityView\"",
-					"\"$(PODS_ROOT)/Headers/EGOTableViewPullRefresh\"",
-					"\"$(PODS_ROOT)/Headers/SBJson\"",
-					"\"$(PODS_ROOT)/Kiwi/Kiwi/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"$(PODS_ROOT)/Kiwi/Kiwi/\"";
 				INFOPLIST_FILE = "CoderwallTests/CoderwallTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-framework",
+					UIKit,
+					"-framework",
+					QuartzCore,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = octest;
@@ -1212,7 +1221,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Will McKenzie (5LFP9E2J8D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
@@ -1236,9 +1245,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismSDK\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/Coderwall-delofgfcuyplymdxwfqqzgcqfoby/Build/Products/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = "Coderwall (Integration Tests)";
-				PROVISIONING_PROFILE = "616BC59C-BE34-4C02-8350-B01B7668B050";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;
@@ -1249,7 +1259,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Will McKenzie";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
@@ -1273,9 +1283,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismSDK\"",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/Coderwall-delofgfcuyplymdxwfqqzgcqfoby/Build/Products/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = "Coderwall (Integration Tests)";
-				PROVISIONING_PROFILE = "9F829CA9-C859-4530-B2CA-4A2DD4647813";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;

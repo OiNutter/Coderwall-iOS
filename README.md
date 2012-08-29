@@ -1,5 +1,5 @@
-Coderwall-iOS
-=============
+Coderwall-iOS [![Build Status](https://modocache-oss.ci.cloudbees.com/job/Coderwall-iOS/badge/icon)](https://modocache-oss.ci.cloudbees.com/job/Coderwall-iOS/)
+===============================================================================================================================================================
 
 ![iPhone Screenshots](https://github.com/OiNutter/Coderwall-iOS/raw/master/iPhones.png)
 
@@ -58,7 +58,7 @@ working with the api will be able to take advantage of.
 Libraries
 ---------
 
-The following third party libraries were used in the app:
+The following third party libraries were used in development of the app:
 
 * [DejalActivityView](http://www.dejal.com/developer/#dejalactivityview)
 * [EgoTableViewPullRefresh](https://github.com/enormego/EGOTableViewPullRefresh)
@@ -66,6 +66,7 @@ The following third party libraries were used in the app:
 * [Kiwi](https://github.com/allending/Kiwi)
 * [ILTesting](https://github.com/InfiniteLoopDK/ILTesting)
 * [KIF](https://github.com/square/KIF/)
+* [ios-sim](https://github.com/phonegap/ios-sim)
 
 I've also used [App Icon Template
 2.0](http://appicontemplate.com/) by Michael Flarup at
@@ -79,6 +80,13 @@ Development
 * Libraries without podspecs are added as submodules, housed in the
   `Vendor` directory. Make sure to run `git submodule init && git submodule update`
   from the project root directory after cloning the repository.
+
+Testing
+-------
+
+* You can run the same tests as the CI environment by running `rake test`--this will run
+  build the app and run the unit and integration test suite. Note that you must have
+  `ios-sim` on your PATH (`brew install ios-sim`) in order to run the suite.
 
 License
 -------
