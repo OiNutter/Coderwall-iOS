@@ -53,14 +53,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:@"Accomplishments"];
+    self.parentViewController.navigationItem.title = @"Accomplishments";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if([self.accomplishments count]==0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        cell.textLabel.text = [[NSString alloc] initWithString:@"No Accomplishments Entered Yet"];
+        cell.textLabel.text = @"No Accomplishments Entered Yet";
         return cell;
     } else {
         iPadAccomplishmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"accomplishmentsCell"];

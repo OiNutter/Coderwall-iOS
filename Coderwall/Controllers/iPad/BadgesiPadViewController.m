@@ -43,7 +43,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.parentViewController.navigationItem.title = [[NSString alloc] initWithString:@"Badges"];
+    self.parentViewController.navigationItem.title = @"Badges";
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -55,7 +55,7 @@
 {
     if([self.badges count] == 0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        cell.textLabel.text = [[NSString alloc] initWithString:@"No Badges Awarded Yet"];
+        cell.textLabel.text = @"No Badges Awarded Yet";
         return cell;
     } else {
         iPadBadgeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"badgeCell"];

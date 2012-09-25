@@ -35,19 +35,30 @@
     
     if (_refreshHeaderView == nil) {
 		
-		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		view.delegate = self;
-        view.backgroundColor = [UIColor clearColor];
-		[self.tableView addSubview:view];
-		_refreshHeaderView = view;
+        /*
+         EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+         view.delegate = self;
+         view.backgroundColor = [UIColor clearColor];
+         [self.tableView addSubview:view];
+         _refreshHeaderView = view;
+         */
+        
+        _refreshHeaderView = [[UIRefreshControl alloc]init];
+        [_refreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
+        self.refreshControl = _refreshHeaderView;
 		
 	}
 	
-	//  update the last update date
-	[_refreshHeaderView refreshLastUpdatedDate];
-    
     [self loadData];
 
+}
+
+-(void)refreshTable:(UIRefreshControl *)sender
+{
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
 }
 
 - (void)loadData
@@ -91,7 +102,7 @@
 {
     if([self.badges count] == 0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        cell.textLabel.text = [[NSString alloc] initWithString:@"No Badges Awarded Yet"];
+        cell.textLabel.text = @"No Badges Awarded Yet";
         return cell;
     } else {
         BadgeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"badgeCell"];
@@ -159,50 +170,13 @@
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
-- (void)doneLoadingTableViewData{
+- (void) doneLoadingTableViewData{
+	
+
 	//  model should call this when its done loading
-	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];	
-}
-
-
-#pragma mark -
-#pragma mark UIScrollViewDelegate Methods
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
-	
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
-    
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-	
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+	[_refreshHeaderView endRefreshing];
 	
 }
 
-
-#pragma mark -
-#pragma mark EGORefreshTableHeaderDelegate Methods
-
-- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
-	
-    _reloading = YES;
-	User *user = [self currentUser];
-    [user refresh];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
-	
-}
-
-- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
-	
-	return _reloading; // should return if data source model is reloading
-	
-}
-
-- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
-	
-	return [NSDate date]; // should return date data source was last changed
-	
-}
 
 @end

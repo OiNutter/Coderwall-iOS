@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 
-@interface AccomplishmentsViewController : UITableViewController <EGORefreshTableHeaderDelegate>
+@interface AccomplishmentsViewController : UITableViewController 
 {
     NSArray *accomplishments;
-    EGORefreshTableHeaderView *_refreshHeaderView;
+    UIRefreshControl *_refreshHeaderView;
 	
 	//  Reloading var should really be your tableviews datasource
 	//  Putting it here for demo purposes 

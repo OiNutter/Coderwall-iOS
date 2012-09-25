@@ -42,7 +42,7 @@
         NSMutableArray *keys = [[NSMutableArray alloc] init];
         NSMutableArray *stats;
     
-        NSString *summaryDetails = [[NSString alloc] initWithString:@""];
+        NSString *summaryDetails = @"";
     
         if(user.title != (id)[NSNull null] && user.title != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.title];
