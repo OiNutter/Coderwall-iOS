@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 
+@interface BadgesViewController : UITableViewController
 {
     NSArray *badges;
     UIRefreshControl *_refreshHeaderView;
