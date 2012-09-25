@@ -31,17 +31,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     if (_refreshHeaderView == nil) {
+		
+        /*
+         EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+         view.delegate = self;
+         view.backgroundColor = [UIColor clearColor];
+         [self.tableView addSubview:view];
+         _refreshHeaderView = view;
+         */
         
-        EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
-        view.delegate = self;
-        view.backgroundColor = [UIColor clearColor];
-        [profileScrollView addSubview:view];
-        _refreshHeaderView = view;
-        
-    }
-    
-    //  update the last update date
-    [_refreshHeaderView refreshLastUpdatedDate];
+        _refreshHeaderView = [[UIRefreshControl alloc]init];
+        [_refreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
+        [profileScrollView addSubview:_refreshHeaderView];
+		
+	}
     
     if(summary.text == @"Summary") 
         [summary setText:@""];
@@ -53,14 +56,21 @@
     
 }
 
+-(void)refreshTable:(UIRefreshControl *)sender
+{
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+}
+
 - (void)loadData
 {
     
     [profileBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
     User *user = [self currentUser];
     if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
-        [fullName setText:[NSString stringWithFormat:user.name]];
-        NSString *summaryDetails = [[NSString alloc] initWithString:@""];
+        [fullName setText:user.name];
+        NSString *summaryDetails = @"";
         
         if(user.title != (id)[NSNull null] && user.title != nil)
             summaryDetails = [summaryDetails stringByAppendingString:user.title];
@@ -141,7 +151,7 @@
 - (void)doneLoadingTableViewData{
 	
 	//  model should call this when its done loading
-	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:profileScrollView];
+	[_refreshHeaderView endRefreshing];
 	
 }
 
@@ -151,38 +161,14 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
 	
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+	
     
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
 	
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
-}
-
-
-#pragma mark -
-#pragma mark EGORefreshTableHeaderDelegate Methods
-
-- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
-	
-    _reloading = YES;
-	User *user = [self currentUser];
-    [user refresh];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
-	
-}
-
-- (BOOL) egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
-	
-	return _reloading; // should return if data source model is reloading
-	
-}
-
-- (NSDate*) egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
-	
-	return [NSDate date]; // should return date data source was last changed
-	
+	[_refreshHeaderView beginRefreshing];
+    [self refreshTable:_refreshHeaderView];
 }
 
 @end

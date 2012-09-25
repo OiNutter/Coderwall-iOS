@@ -30,11 +30,17 @@
     
     if (_refreshHeaderView == nil) {
 		
+        /*
 		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
 		view.delegate = self;
         view.backgroundColor = [UIColor clearColor];
 		[self.tableView addSubview:view];
 		_refreshHeaderView = view;
+         */
+        
+        _refreshHeaderView = [[UIRefreshControl alloc]init];
+        [_refreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
+        self.refreshControl = _refreshHeaderView;
 		
 	}
     
@@ -42,6 +48,12 @@
 
 }
 
+-(void)refreshTable:(UIRefreshControl *)sender
+{
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+}
 - (void)loadData
 {
     User *user = [self currentUser];
@@ -54,6 +66,7 @@
     [self.tableView reloadData];
     _reloading = NO;
 }
+
 
 -(void)resetReloading
 {
@@ -84,7 +97,7 @@
 {
     if([accomplishments count]==0){
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        cell.textLabel.text = [[NSString alloc] initWithString:@"No Accomplishments Entered Yet"];
+        cell.textLabel.text = @"No Accomplishments Entered Yet";
         return cell;
     } else {
         AccomplishmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"accomplishmentCell"];
@@ -147,48 +160,7 @@
 - (void) doneLoadingTableViewData{
 	
 	//  model should call this when its done loading
-	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
-	
-}
-
-
-#pragma mark -
-#pragma mark UIScrollViewDelegate Methods
-
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView{	
-	
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
-    
-}
-
-- (void) scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-	
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
-	
-}
-
-
-#pragma mark -
-#pragma mark EGORefreshTableHeaderDelegate Methods
-
-- (void) egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
-	
-    _reloading = YES;
-	User *user = [self currentUser];
-    [user refresh];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
-	
-}
-
-- (BOOL) egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
-	
-	return _reloading; // should return if data source model is reloading
-	
-}
-
-- (NSDate*) egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
-	
-	return [NSDate date]; // should return date data source was last changed
+	[_refreshHeaderView endRefreshing];
 	
 }
 
