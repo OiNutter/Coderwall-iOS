@@ -35,22 +35,25 @@
     
     if (_refreshHeaderView == nil) {
 		
-        /*
-		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
-		view.delegate = self;
-        view.backgroundColor = [UIColor clearColor];
-		[self.tableView addSubview:view];
-		_refreshHeaderView = view;
-		
-	
-	//  update the last update date
-	[_refreshHeaderView refreshLastUpdatedDate];
-         */
+        if (![UIRefreshControl class])
+        {
+            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+            view.delegate = self;
+            view.backgroundColor = [UIColor clearColor];
+            [self.tableView addSubview:view];
+            _refreshHeaderView = view;
+            
+            [_refreshHeaderView refreshLastUpdatedDate];
+        }
         
-        _refreshHeaderView = [[UIRefreshControl alloc]init];
-        self.refreshControl = _refreshHeaderView;
-        [self.refreshControl addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
-    }
+        else
+        {
+            _ios6RefreshHeaderView = [[UIRefreshControl alloc]init];
+            [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
+            self.refreshControl = _ios6RefreshHeaderView;
+		}
+	}
+
     [self loadData];
 }
 
@@ -194,9 +197,61 @@
 - (void)doneLoadingTableViewData{
 	
 	//  model should call this when its done loading
-	[self.refreshControl endRefreshing];
+    if (_refreshHeaderView != nil)
+    {
+        [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+    }
+    else
+    {
+        [_ios6RefreshHeaderView endRefreshing];
+    }
 	
 }
 
+#pragma mark -
+#pragma mark UIScrollViewDelegate Methods
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+	
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+	
+    if (_ios6RefreshHeaderView != nil)
+    {
+        [_ios6RefreshHeaderView beginRefreshing];
+        [self refreshTable:_ios6RefreshHeaderView];
+    }
+    else
+    {
+        [_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+    }
+}
+
+#pragma mark -
+#pragma mark EGORefreshTableHeaderDelegate Methods
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
+    
+    _reloading = YES;
+	User *user = [self currentUser];
+    [user refresh];
+    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    
+}
+
+- (BOOL) egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
+    
+	return _reloading; // should return if data source model is reloading
+    
+}
+
+- (NSDate*) egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
+    
+	return [NSDate date]; // should return date data source was last changed
+    
+}
 
 @end

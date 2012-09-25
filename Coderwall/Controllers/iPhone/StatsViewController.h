@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 
-@interface StatsViewController : UITableViewController 
+@interface StatsViewController : UITableViewController <EGORefreshTableHeaderDelegate>
 {
     NSArray *statsData;
     NSArray *sections;
-    UIRefreshControl *_refreshHeaderView;
-	
-	//  Reloading var should really be your tableviews datasource
+    UIRefreshControl *_ios6RefreshHeaderView;
+    
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    //  Reloading var should really be your tableviews datasource
 	//  Putting it here for demo purposes 
 	BOOL _reloading;
 }
