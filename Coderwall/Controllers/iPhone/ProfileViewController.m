@@ -53,10 +53,10 @@
 		
 	}
     
-    if(summary.text == @"Summary") 
+    if([summary.text isEqual: @"Summary"])
         [summary setText:@""];
     
-    if(fullName.text == @"Full Name")
+    if([fullName.text isEqual: @"Full Name"])
         [fullName setText:@""];
     
     [self loadData];
@@ -73,9 +73,8 @@
 - (void)loadData
 {
     
-    [profileBg setImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
     User *user = [self currentUser];
-    if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
+    if(user != (id)[NSNull null] && ![user.userName isEqual: @""] && user.userName.length != 0){
         [fullName setText:user.name];
         NSString *summaryDetails = @"";
         
@@ -112,7 +111,6 @@
                                        withObject:userAvatar
                                     waitUntilDone:YES];
             });
-            dispatch_release(downloadQueue);
         }
     } else {
         [summary setText:@""];
@@ -129,7 +127,12 @@
         [avatar setImage:userAvatar];
     else
         [avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
+    
+    [avatar setContentMode:UIViewContentModeScaleAspectFill];
+    [avatar setClipsToBounds:YES];
+    
     [DejalActivityView removeView];
+    
 }
 
 -(void)reloadView

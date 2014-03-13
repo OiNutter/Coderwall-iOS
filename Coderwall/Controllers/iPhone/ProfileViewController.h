@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
+#import "AvatarView.h"
 
 @interface ProfileViewController : UIViewController <UIScrollViewDelegate, EGORefreshTableHeaderDelegate>
 {
     IBOutlet UILabel *fullName;
     IBOutlet UILabel *summary;
-    IBOutlet UIImageView *avatar;
-    IBOutlet UIImageView *profileBg;
+    IBOutlet AvatarView *avatar;
     IBOutlet UIScrollView *profileScrollView;
     
     UIRefreshControl *_ios6RefreshHeaderView;

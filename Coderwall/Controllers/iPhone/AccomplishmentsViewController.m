@@ -107,37 +107,12 @@
         AccomplishmentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"accomplishmentCell"];
         NSString *accomplishment = [accomplishments objectAtIndex:indexPath.row];
     
-        CGSize maximumSize = CGSizeMake(280, 9999);
-        UIFont *descriptionFont = [UIFont fontWithName:@"Helvetica" size:12];
-        CGSize descriptionStringSize = [accomplishment sizeWithFont:descriptionFont 
-                                               constrainedToSize:maximumSize 
-                                                   lineBreakMode:cell.detail.lineBreakMode];
-    
-        UIImageView *background;
-    
-        if(indexPath.row==0 && self.accomplishments.count==1)
-            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
-        else if(indexPath.row == 0)
-            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableTopBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 1, 0)]];
-        else if(indexPath.row == self.accomplishments.count-1)
-            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableBottomBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 15, 0)]];
-        else
-            background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableMiddleBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 1, 0)]];
-        
-                
-        [background setContentMode:UIViewAutoresizingFlexibleHeight];
-        [background setClipsToBounds:true];
-    
-        if(indexPath.row == 0 && self.accomplishments.count == 1)
-            cell.detail.frame = CGRectMake(20, 16, 280, descriptionStringSize.height);
-        else if(indexPath.row ==0)
-            cell.detail.frame = CGRectMake(20, 21, 280, descriptionStringSize.height);
-        else
-            cell.detail.frame = CGRectMake(20, 11, 280, descriptionStringSize.height);
-    
         // Configure the cell...
-        cell.backgroundView = background;
         cell.detail.text = accomplishment;
+        
+        CGSize sizeThatShouldFitTheContent = [cell.detail sizeThatFits:cell.detail.frame.size];
+        cell.textHeight.constant = sizeThatShouldFitTheContent.height;
+        
         return cell;
     }
 }
@@ -148,12 +123,8 @@
         return 100; 
     } else {
         AccomplishmentCell *cell = (AccomplishmentCell *)[self tableView:self.tableView cellForRowAtIndexPath:indexPath];
-        int height = cell.detail.frame.size.height + 22;
-        if(indexPath.row == 0)
-            height += 10;
-    
-        if(indexPath.row == self.accomplishments.count-1)
-            height+=10; 
+        int height = (int)cell.textHeight.constant + 22;   
+
     
         return height;
     }

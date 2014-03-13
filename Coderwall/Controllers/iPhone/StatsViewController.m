@@ -138,8 +138,7 @@
 {
 
     StatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statCell"];
-    NSInteger numRows = [self tableView:self.tableView numberOfRowsInSection:indexPath.section];
-    if((NSString *)[sections objectAtIndex:indexPath.section] == @"Specialities"){
+    if([(NSString *)[sections objectAtIndex:indexPath.section] isEqual: @"Specialities"]){
         NSString *item = (NSString *)[(NSArray *)[statsData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
         cell.title.text = item;
         cell.number.text = @"";
@@ -149,25 +148,6 @@
         cell.title.text = [item objectForKey:@"description"];
         cell.number.text = [(NSNumber *)[item objectForKey:@"number"] stringValue];
     }
-    
-    UIImageView *background;
-    if(indexPath.row==0 && numRows==1)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
-    else if(indexPath.row == 0)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableTopBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 1, 0)]];
-    else if(indexPath.row == numRows-1)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableBottomBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 15, 0)]];
-    else
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableMiddleBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 1, 0)]];    
-        
-    [background setContentMode:UIViewAutoresizingFlexibleHeight];
-    [background setClipsToBounds:true];
-    cell.backgroundView = background;
-    
-    if(indexPath.row ==0)
-        [cell setYPos:21];
-    else
-        [cell setYPos:11];
     
     return cell;
 }
@@ -179,16 +159,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = 44;
-    
-    if(indexPath.row == 0)
-        height += 10;
-    
-    if(indexPath.row == [self tableView:self.tableView numberOfRowsInSection:indexPath.section]-1)
-        height+=10; 
-    
-    return height;
-    
+    return 45;
 }
 
 #pragma mark -

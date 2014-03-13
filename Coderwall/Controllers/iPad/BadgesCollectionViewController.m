@@ -1,22 +1,23 @@
 //
-//  BadgesViewController.m
+//  BadgesCollectionViewController.m
 //  Coderwall
 //
-//  Created by Will on 19/02/2012.
-//  Copyright (c) 2012 Bearded Apps. All rights reserved.
+//  Created by Will Mckenzie on 12/03/2014.
+//  Copyright (c) 2014 Bearded Apps. All rights reserved.
 //
 
-#import "BadgesViewController.h"
-#import "User.h"
-#import "UIViewController+appDelegateUser.h"
-#import "BadgeCell.h"
-#import "ImageLoader.h"
+#import "BadgesCollectionViewController.h"
+#import <BadgeCollectionViewCell.h>
+#import <EmptyCollectionViewCell.h>
+#import <User.h>
+#import <UIViewController+appDelegateUser.h>
+#import <ImageLoader.h>
 
-@interface BadgesViewController ()
+@interface BadgesCollectionViewController ()
 
 @end
 
-@implementation BadgesViewController
+@implementation BadgesCollectionViewController
 
 @synthesize badges;
 
@@ -35,34 +36,41 @@
     
     if (_refreshHeaderView == nil) {
 		
-        if (![UIRefreshControl class]) {
-
-            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+        //if (![UIRefreshControl class]) {
+            
+            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.collectionView.bounds.size.height, self.view.frame.size.width, self.collectionView.bounds.size.height)];
             view.delegate = self;
             view.backgroundColor = [UIColor clearColor];
-            [self.tableView addSubview:view];
+            [self.collectionView addSubview:view];
             _refreshHeaderView = view;
             
             [_refreshHeaderView refreshLastUpdatedDate];
             
-        } else {
+        /*} else {
             
             _ios6RefreshHeaderView = [[UIRefreshControl alloc]init];
-            [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
-            self.refreshControl = _ios6RefreshHeaderView;
+            [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged UIControlEventValueChanged];
+            [self.collectionView addSubview:_ios6RefreshHeaderView];
             
-		}
+		}*/
 	}
-	
+    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+        self.navigationController.navigationBar.tintColor = cwDarkGreyColor;
+    else
+        self.navigationController.navigationBar.barTintColor = cwDarkGreyColor;
+    
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     [self loadData];
-
 }
 
 -(void)refreshTable:(UIRefreshControl *)sender
 {
 	User *user = [self currentUser];
     [user refresh];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    [self performSelector:@selector(doneLoadingCollectionViewData) withObject:nil afterDelay:0];
 }
 
 - (void)loadData
@@ -74,13 +82,13 @@
 - (void)reloadTable
 {
     [self loadData];
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
     _reloading = NO;
 }
 
 -(void)resetReloading
 {
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    [self performSelector:@selector(doneLoadingCollectionViewData) withObject:nil afterDelay:0];
     _reloading = NO;
 }
 
@@ -91,71 +99,48 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    // Return the number of sections.
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.badges count] > 0 ? [self.badges count] : 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if([self.badges count] == 0){
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"emptyCell"];
-        cell.textLabel.text = @"No Badges Awarded Yet";
+        EmptyCollectionViewCell *cell = (EmptyCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"emptyCell" forIndexPath:indexPath];
+        [cell.title setText:@"No Badges Awarded Yet"];
         return cell;
     } else {
-        BadgeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"badgeCell"];
+        BadgeCollectionViewCell *cell = (BadgeCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"badgeCell" forIndexPath:indexPath];
+        NSDictionary *badge = [self.badges objectAtIndex:indexPath.item];
     
-        // Configure the cell...
-        NSDictionary *badge = [self.badges objectAtIndex:indexPath.row];
-        [cell.title setText:[badge objectForKey:@"name"]];
-    
-        CGSize maximumSize = CGSizeMake(190, 60);
         NSString *descriptionText = [badge objectForKey:@"description"];
-        UIFont *descriptionFont = [UIFont fontWithName:@"Helvetica" size:11];
-        CGSize descriptionStringSize = [descriptionText sizeWithFont:descriptionFont 
-                                                   constrainedToSize:maximumSize 
-                                                       lineBreakMode:cell.detail.lineBreakMode];
-    
+        
+        [cell.title setText:[badge objectForKey:@"name"]];
         [cell.detail setText:descriptionText];
-    
+        
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];
         [cell.badge setImage:[ImageLoader loadImageFromURL:url usingCache:YES]];
-        
+    
         return cell;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([badges count]==0){
-        return 100; 
-    } else {
-        int height = 100;
-        if(indexPath.row == 0)
-            height += 10;
-        
-        if(indexPath.row == self.badges.count-1)
-            height+=10; 
-        
-        return height;
     }
 }
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
-- (void)doneLoadingTableViewData{
+- (void)doneLoadingCollectionViewData{
 	
 	//  model should call this when its done loading
     if (_refreshHeaderView != nil)
     {
-        [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+        [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.collectionView];
     }
     else
     {
@@ -194,7 +179,7 @@
     _reloading = YES;
 	User *user = [self currentUser];
     [user refresh];
-    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];
+    [self performSelector:@selector(doneLoadingCollectionViewData) withObject:nil afterDelay:0];
     
 }
 

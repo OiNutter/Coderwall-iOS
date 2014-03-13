@@ -61,6 +61,7 @@
 - (IBAction)userNameChanged:(id) sender
 {
     if (self.usernameField.text.length > 0) {
+        [self.navigationController popViewControllerAnimated:YES];
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setValue:self.usernameField.text forKey:@"UserName"];
         [userDefaults synchronize];

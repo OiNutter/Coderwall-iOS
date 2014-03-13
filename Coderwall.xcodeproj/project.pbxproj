@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A3C807C1611A84100C42B8A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C807B1611A84100C42B8A /* Default-568h@2x.png */; };
+		6D729B358A2140D4BD3BB7BF /* libPods-CoderwallTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE6FFAC1B664BBD80FE8E5D /* libPods-CoderwallTests.a */; };
+		9FC5BBE4830E41E8AF27C74A /* libPods-Integration Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FDF00A1367428BBD07FFFA /* libPods-Integration Tests.a */; };
 		B89AFBB8A81D4BD7AF69C5BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6E7CF697D54B3B9BC70AB5 /* libPods.a */; };
 		BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
 		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
@@ -43,6 +45,11 @@
 		BE8B757E152F22DA00C4C348 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B757D152F22DA00C4C348 /* Icon.png */; };
 		BE8B7580152F22EF00C4C348 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */; };
 		BE8B7582152F230E00C4C348 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BE8B7581152F230E00C4C348 /* Icon-72.png */; };
+		BE9AEADE18CFDE7D00D8C6F7 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9AEADD18CFDE7D00D8C6F7 /* AvatarView.m */; };
+		BE9AEAE018CFEE6100D8C6F7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9AEADF18CFEE6100D8C6F7 /* Images.xcassets */; };
+		BE9AEAE318D1145B00D8C6F7 /* BadgesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9AEAE218D1145B00D8C6F7 /* BadgesCollectionViewController.m */; };
+		BE9AEAE618D1167000D8C6F7 /* BadgeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9AEAE518D1167000D8C6F7 /* BadgeCollectionViewCell.m */; };
+		BE9AEAE918D1254500D8C6F7 /* EmptyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9AEAE818D1254500D8C6F7 /* EmptyCollectionViewCell.m */; };
 		BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
 		BE9E930014F5658500FC3704 /* StatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FF14F5658400FC3704 /* StatCell.m */; };
 		BECA2C9215285FB2006767DF /* app-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BECA2C7115285FB1006767DF /* app-icon-ipad.png */; };
@@ -181,7 +188,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FE6FFAC1B664BBD80FE8E5D /* libPods-CoderwallTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoderwallTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3C807B1611A84100C42B8A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		31FDF00A1367428BBD07FFFA /* libPods-Integration Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Integration Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B396B7359D4147B7ADD95EFC /* Pods-Integration Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Integration Tests.xcconfig"; path = "Pods/Pods-Integration Tests.xcconfig"; sourceTree = "<group>"; };
 		BD6E7CF697D54B3B9BC70AB5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE07C366151DC8CA00CAE177 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoader.h; sourceTree = "<group>"; };
 		BE07C367151DC8CA00CAE177 /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLoader.m; sourceTree = "<group>"; };
@@ -239,6 +249,16 @@
 		BE8B757D152F22DA00C4C348 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BE8B757F152F22EF00C4C348 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		BE8B7581152F230E00C4C348 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		BE9AEADC18CFDE7D00D8C6F7 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
+		BE9AEADD18CFDE7D00D8C6F7 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
+		BE9AEADF18CFEE6100D8C6F7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE9AEAE118D1145B00D8C6F7 /* BadgesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesCollectionViewController.h; sourceTree = "<group>"; };
+		BE9AEAE218D1145B00D8C6F7 /* BadgesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesCollectionViewController.m; sourceTree = "<group>"; };
+		BE9AEAE418D1167000D8C6F7 /* BadgeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCollectionViewCell.h; sourceTree = "<group>"; };
+		BE9AEAE518D1167000D8C6F7 /* BadgeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCollectionViewCell.m; sourceTree = "<group>"; };
+		BE9AEAE718D1254500D8C6F7 /* EmptyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyCollectionViewCell.h; sourceTree = "<group>"; };
+		BE9AEAE818D1254500D8C6F7 /* EmptyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyCollectionViewCell.m; sourceTree = "<group>"; };
+		BE9B908418CF4C4E00849ADA /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
 		BE9E92FB14F463AF00FC3704 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		BE9E92FC14F463AF00FC3704 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 		BE9E92FE14F5658400FC3704 /* StatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatCell.h; sourceTree = "<group>"; };
@@ -279,6 +299,7 @@
 		BEDD01CF15005369006C4C29 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		BEDD01D015005369006C4C29 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		BEFC77541513BCDC00C10939 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C064312C91C34276AA8658A2 /* Pods-CoderwallTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoderwallTests.xcconfig"; path = "Pods/Pods-CoderwallTests.xcconfig"; sourceTree = "<group>"; };
 		D56FB123D143438FB77AA2AB /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		DA14F8BD159F91AA005EF7AA /* KIFTestStep+displayMasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFTestStep+displayMasterView.h"; sourceTree = "<group>"; };
 		DA14F8BE159F91AA005EF7AA /* KIFTestStep+displayMasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFTestStep+displayMasterView.m"; sourceTree = "<group>"; };
@@ -336,6 +357,7 @@
 				BE60B68E14EFA64100CF7151 /* SenTestingKit.framework in Frameworks */,
 				BE60B68F14EFA64100CF7151 /* UIKit.framework in Frameworks */,
 				BE60B69014EFA64100CF7151 /* Foundation.framework in Frameworks */,
+				6D729B358A2140D4BD3BB7BF /* libPods-CoderwallTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +370,7 @@
 				DA584DC3159C037200173134 /* UIKit.framework in Frameworks */,
 				DA584DC4159C037200173134 /* Foundation.framework in Frameworks */,
 				DA584DC5159C037200173134 /* CoreGraphics.framework in Frameworks */,
+				9FC5BBE4830E41E8AF27C74A /* libPods-Integration Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +395,8 @@
 				DA3197CE159BE9830027A608 /* Vendor */,
 				D56FB123D143438FB77AA2AB /* Pods.xcconfig */,
 				DA584DF7159C037200173134 /* Coderwall copy-Info.plist */,
+				C064312C91C34276AA8658A2 /* Pods-CoderwallTests.xcconfig */,
+				B396B7359D4147B7ADD95EFC /* Pods-Integration Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -396,6 +421,8 @@
 				BE60B66B14EFA64100CF7151 /* Foundation.framework */,
 				BE60B66D14EFA64100CF7151 /* CoreGraphics.framework */,
 				BE60B68D14EFA64100CF7151 /* SenTestingKit.framework */,
+				0FE6FFAC1B664BBD80FE8E5D /* libPods-CoderwallTests.a */,
+				31FDF00A1367428BBD07FFFA /* libPods-Integration Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -411,6 +438,8 @@
 				BE60B67814EFA64100CF7151 /* AppDelegate.h */,
 				BE60B67914EFA64100CF7151 /* AppDelegate.m */,
 				BE60B67014EFA64100CF7151 /* Supporting Files */,
+				BE9B908418CF4C4E00849ADA /* Colours.h */,
+				BE9AEADF18CFEE6100D8C6F7 /* Images.xcassets */,
 			);
 			path = Coderwall;
 			sourceTree = "<group>";
@@ -492,6 +521,12 @@
 				BE546A6F15028B7800B9A200 /* ProfileCell.m */,
 				BE546A711502E81500B9A200 /* iPadAccomplishmentCell.h */,
 				BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */,
+				BE9AEADC18CFDE7D00D8C6F7 /* AvatarView.h */,
+				BE9AEADD18CFDE7D00D8C6F7 /* AvatarView.m */,
+				BE9AEAE418D1167000D8C6F7 /* BadgeCollectionViewCell.h */,
+				BE9AEAE518D1167000D8C6F7 /* BadgeCollectionViewCell.m */,
+				BE9AEAE718D1254500D8C6F7 /* EmptyCollectionViewCell.h */,
+				BE9AEAE818D1254500D8C6F7 /* EmptyCollectionViewCell.m */,
 			);
 			name = ViewExtensions;
 			path = "View Extensions";
@@ -508,6 +543,8 @@
 				BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */,
 				BE19C3E915038F6200AAEE5E /* DetailViewController.h */,
 				BE19C3EA15038F6200AAEE5E /* DetailViewController.m */,
+				BE9AEAE118D1145B00D8C6F7 /* BadgesCollectionViewController.h */,
+				BE9AEAE218D1145B00D8C6F7 /* BadgesCollectionViewController.m */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -519,8 +556,8 @@
 				BE60B6A514EFB09100CF7151 /* ProfileViewController.m */,
 				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
 				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
-				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
 				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
+				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
 				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 			);
@@ -708,6 +745,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE60B6A114EFA64100CF7151 /* Build configuration list for PBXNativeTarget "CoderwallTests" */;
 			buildPhases = (
+				A88BAFAD4286452ABE41FBD6 /* Check Pods Manifest.lock */,
 				BE60B68714EFA64100CF7151 /* Sources */,
 				BE60B68814EFA64100CF7151 /* Frameworks */,
 				BE60B68914EFA64100CF7151 /* Resources */,
@@ -728,6 +766,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA584DF2159C037200173134 /* Build configuration list for PBXNativeTarget "Integration Tests" */;
 			buildPhases = (
+				BF4E4170A7BE45A1A9A3509C /* Check Pods Manifest.lock */,
 				DA584DA8159C037200173134 /* Sources */,
 				DA584DC1159C037200173134 /* Frameworks */,
 				DA584DC7159C037200173134 /* Resources */,
@@ -799,6 +838,7 @@
 				BECA2CA415285FB2006767DF /* profile@2x.png in Resources */,
 				BECA2CA515285FB2006767DF /* search.png in Resources */,
 				BECA2CA615285FB2006767DF /* search@2x.png in Resources */,
+				BE9AEAE018CFEE6100D8C6F7 /* Images.xcassets in Resources */,
 				BECA2CA715285FB2006767DF /* settings.png in Resources */,
 				BECA2CA815285FB2006767DF /* settings@2x.png in Resources */,
 				BECA2CA915285FB2006767DF /* stats.png in Resources */,
@@ -892,7 +932,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-CoderwallTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A88BAFAD4286452ABE41FBD6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		BE60B68A14EFA64100CF7151 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -908,6 +964,21 @@
 			shellScript = "# Run the unit tests in this test bundle.\n\"${PROJECT_DIR}/Scripts/RunPlatformUnitTests\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BF4E4170A7BE45A1A9A3509C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		DA584DF1159C037200173134 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -920,7 +991,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Integration Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -935,7 +1007,9 @@
 				BE60B6AC14EFB0FD00CF7151 /* User.m in Sources */,
 				BE60B75614EFC4D500CF7151 /* MasterViewController.m in Sources */,
 				BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */,
+				BE9AEAE618D1167000D8C6F7 /* BadgeCollectionViewCell.m in Sources */,
 				BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */,
+				BE9AEADE18CFDE7D00D8C6F7 /* AvatarView.m in Sources */,
 				BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */,
 				BE5663EA14F2E856002BC157 /* AccomplishmentsCell.m in Sources */,
 				BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */,
@@ -943,6 +1017,7 @@
 				BE73BA1614F8FFAB00220316 /* SettingsViewController.m in Sources */,
 				BE886C5114F95249003BC113 /* SearchViewController.m in Sources */,
 				BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */,
+				BE9AEAE918D1254500D8C6F7 /* EmptyCollectionViewCell.m in Sources */,
 				BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */,
 				BE546A631501967900B9A200 /* BadgesiPadViewController.m in Sources */,
 				BE546A6615019A3D00B9A200 /* iPadBadgeCell.m in Sources */,
@@ -954,6 +1029,7 @@
 				BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */,
 				DA3197D6159BE9830027A608 /* ILCannedURLProtocol.m in Sources */,
 				DAB00113159F88CD00F773A2 /* UIViewController+appDelegateUser.m in Sources */,
+				BE9AEAE318D1145B00D8C6F7 /* BadgesCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,13 +1187,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
@@ -1125,6 +1203,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders; $(inherited)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1134,6 +1213,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1141,7 +1222,7 @@
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
@@ -1150,6 +1231,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SHARED_PRECOMPS_DIR = "$(CACHE_ROOT)/SharedPrecompiledHeaders; $(inherited)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1157,7 +1239,7 @@
 		};
 		BE60B6A214EFA64100CF7151 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
+			baseConfigurationReference = C064312C91C34276AA8658A2 /* Pods-CoderwallTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
@@ -1190,7 +1272,7 @@
 		};
 		BE60B6A314EFA64100CF7151 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
+			baseConfigurationReference = C064312C91C34276AA8658A2 /* Pods-CoderwallTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Coderwall.app/Coderwall";
@@ -1223,7 +1305,7 @@
 		};
 		DA584DF3159C037200173134 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
+			baseConfigurationReference = B396B7359D4147B7ADD95EFC /* Pods-Integration Tests.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1261,7 +1343,7 @@
 		};
 		DA584DF4159C037200173134 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D56FB123D143438FB77AA2AB /* Pods.xcconfig */;
+			baseConfigurationReference = B396B7359D4147B7ADD95EFC /* Pods-Integration Tests.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DSTROOT = /tmp/xcodeproj.dst;

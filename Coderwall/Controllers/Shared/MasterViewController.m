@@ -62,6 +62,14 @@
         self.navigationItem.leftBarButtonItem = logoButtonItem;
     }
     
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+        self.navigationController.navigationBar.tintColor = cwDarkGreyColor;
+    else
+        self.navigationController.navigationBar.barTintColor = cwDarkGreyColor;
+    
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     self.navigationItem.rightBarButtonItem.accessibilityLabel = @"Settings";
 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
@@ -74,6 +82,8 @@
     if(!self.currentUser) {
         [self performSegueWithIdentifier:@"ShowSettings" sender:self];
     }
+    
+    self.tabBar.tintColor = cwBlueColor;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -101,7 +111,7 @@
     // Get current User
     if ([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad) {
         User *user = self.currentUser;
-        if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0) {
+        if(user != (id)[NSNull null] && ![user.userName  isEqual: @""] && user.userName.length != 0) {
             self.navigationItem.title = user.userName;
         }
     }

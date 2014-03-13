@@ -7,7 +7,7 @@
 //
 
 #import "User.h"
-#import "SBJson.h"
+#import "SBJson4.h"
 #import "ImageLoader.h"
 
 @implementation User
@@ -85,7 +85,8 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSString *response = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-    [self setDetails:[response JSONValue]];
+    NSData *data = [response dataUsingEncoding:NSUTF8StringEncoding];
+    [self setDetails:[NSJSONSerialization JSONObjectWithData:data options:0 error:nil]];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

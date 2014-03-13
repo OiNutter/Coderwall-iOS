@@ -1,14 +1,14 @@
 //
-//  BadgeViewCell.h
+//  BadgeCollectionViewCell.h
 //  Coderwall
 //
-//  Created by Will on 19/02/2012.
-//  Copyright (c) 2012 Bearded Apps. All rights reserved.
+//  Created by Will Mckenzie on 12/03/2014.
+//  Copyright (c) 2014 Bearded Apps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BadgeCell : UITableViewCell
+@interface BadgeCollectionViewCell : UICollectionViewCell
 {
     IBOutlet UIImageView *__weak badge;
     IBOutlet UILabel *__weak title;

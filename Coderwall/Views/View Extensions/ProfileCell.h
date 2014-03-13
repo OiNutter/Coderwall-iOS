@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AvatarView.h"
 
 @interface ProfileCell : UITableViewCell
 {
-    IBOutlet UIImageView *__weak avatar;
+    IBOutlet AvatarView *__weak avatar;
     IBOutlet UILabel *__weak title;
     IBOutlet UILabel *__weak detail;
 }
 
-@property (weak) UIImageView *avatar;
+@property (weak) AvatarView *avatar;
 @property (weak) UILabel *title;
 @property (weak) UILabel *detail;
 

@@ -11,7 +11,9 @@
 @interface AccomplishmentCell : UITableViewCell
 {
     IBOutlet UILabel *__weak detail;
+    IBOutlet NSLayoutConstraint *__weak textHeight;
 }
 @property (weak) UILabel *detail;
+@property (weak) NSLayoutConstraint *textHeight;
 
 @end

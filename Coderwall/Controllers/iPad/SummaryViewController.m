@@ -37,7 +37,7 @@
     
     User *user = [self currentUser];
     
-    if(user != (id)[NSNull null] && user.userName != @"" && user.userName.length != 0){
+    if(user != (id)[NSNull null] && ![user.userName isEqual: @""] && user.userName.length != 0){
         NSMutableArray *data = [[NSMutableArray alloc] init];
         NSMutableArray *keys = [[NSMutableArray alloc] init];
         NSMutableArray *stats;
@@ -166,20 +166,7 @@
     
     NSInteger numRows = [self tableView:self.tableView numberOfRowsInSection:indexPath.section];
     
-    UIImageView *background;
-    if(indexPath.row==0 && numRows==1)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"PanelBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 15, 0)]];
-    else if(indexPath.row == 0)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableTopBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 0, 1, 0)]];
-    else if(indexPath.row == numRows-1)
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableBottomBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 15, 0)]];
-    else
-        background = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"TableMiddleBg.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 1, 0)]];
-
-    [background setContentMode:UIViewAutoresizingFlexibleHeight];
-    [background setClipsToBounds:true];
-    
-    if((NSString *)[sections objectAtIndex:indexPath.section] == @"Profile"){
+    if([(NSString *)[sections objectAtIndex:indexPath.section]  isEqual: @"Profile"]){
         ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell"];
         NSArray *section = (NSArray *)[statsData objectAtIndex:indexPath.section];
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
@@ -198,20 +185,12 @@
                                     waitUntilDone:YES];
             });
         }
-        cell.backgroundView = background;
         return cell;
-    } else if((NSString *)[sections objectAtIndex:indexPath.section] == @"Specialities"){
+    } else if([(NSString *)[sections objectAtIndex:indexPath.section]  isEqual: @"Specialities"]){
         StatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statCell"];
         NSString *item = (NSString *)[(NSArray *)[statsData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
         cell.title.text = item;
         cell.number.text = @"";
-        
-        cell.backgroundView = background;
-        
-        if(indexPath.row ==0)
-            [(StatCell *)cell setYPos:21];
-        else
-            [(StatCell *)cell setYPos:11];        
         
         return cell;
         
@@ -221,13 +200,6 @@
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
         cell.title.text = [item objectForKey:@"description"];
         cell.number.text = [(NSNumber *)[item objectForKey:@"number"] stringValue];
-        
-        cell.backgroundView = background;
-        
-        if(indexPath.row ==0)
-            [(StatCell *)cell setYPos:21];
-        else
-            [(StatCell *)cell setYPos:11];        
         
         return cell;
     }
@@ -252,17 +224,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if((NSString *)[sections objectAtIndex:indexPath.section] == @"Profile"){
+    if([(NSString *)[sections objectAtIndex:indexPath.section]  isEqual: @"Profile"]){
         return 325;
     } else {
         
-        CGFloat height = 44;
-    
-        if(indexPath.row == 0)
-            height += 10;
-    
-        if(indexPath.row == [self tableView:self.tableView numberOfRowsInSection:indexPath.section]-1)
-            height+=10; 
+        CGFloat height = 45;
     
         return height;
         

@@ -10,7 +10,7 @@
 
 @implementation AccomplishmentCell
 
-@synthesize detail;
+@synthesize detail, textHeight;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
