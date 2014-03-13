@@ -14,6 +14,37 @@
 MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
 
 
+@interface UITouch () {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
+    // ivars declarations removed in 6.0
+    NSTimeInterval  _timestamp;
+    UITouchPhase    _phase;
+    UITouchPhase    _savedPhase;
+    NSUInteger      _tapCount;
+    
+    UIWindow        *_window;
+    UIView          *_view;
+    UIView          *_warpedIntoView;
+    NSMutableArray  *_gestureRecognizers;
+    NSMutableArray  *_forwardingRecord;
+    
+    CGPoint         _locationInWindow;
+    CGPoint         _previousLocationInWindow;
+    UInt8           _pathIndex;
+    UInt8           _pathIdentity;
+    float           _pathMajorRadius;
+    struct {
+        unsigned int _firstTouchForView:1;
+        unsigned int _isTap:1;
+        unsigned int _isDelayed:1;
+        unsigned int _sentTouchesEnded:1;
+        unsigned int _abandonForwardingRecord:1;
+    } _touchFlags;
+#endif
+}
+- (void)setGestureView:(UIView *)view;
+@end
+
 @implementation UITouch (KIFAdditions)
 
 - (id)initInView:(UIView *)view;
@@ -39,11 +70,13 @@ MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
     
     _window = [window retain];
     _view = [hitTestView retain];
-    _gestureView = [hitTestView retain];
+    if ([self respondsToSelector:@selector(setGestureView:)]) {
+        [self setGestureView:hitTestView];
+    }
     _phase = UITouchPhaseBegan;
     _touchFlags._firstTouchForView = 1;
     _touchFlags._isTap = 1;
-    _timestamp = [NSDate timeIntervalSinceReferenceDate];
+    _timestamp = [[NSProcessInfo processInfo] systemUptime];
 
 	return self;
 }
@@ -56,7 +89,7 @@ MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
 - (void)setPhase:(UITouchPhase)phase;
 {
 	_phase = phase;
-	_timestamp = [NSDate timeIntervalSinceReferenceDate];
+	_timestamp = [[NSProcessInfo processInfo] systemUptime];
 }
 
 //
@@ -68,7 +101,7 @@ MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
 {
 	_previousLocationInWindow = _locationInWindow;
 	_locationInWindow = location;
-	_timestamp = [NSDate timeIntervalSinceReferenceDate];
+	_timestamp = [[NSProcessInfo processInfo] systemUptime];
 }
 
 @end
