@@ -32,24 +32,23 @@
 	// Do any additional setup after loading the view, typically from a nib.
     if (_refreshHeaderView == nil) {
 		
-        if (![UIRefreshControl class])
-        {
-            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
-            view.delegate = self;
-            view.backgroundColor = [UIColor clearColor];
-            [profileScrollView addSubview:view];
-            _refreshHeaderView = view;
-            
-            //  update the last update date
-            [_refreshHeaderView refreshLastUpdatedDate];
-         
-        }
+        //if (![UIRefreshControl class]) {
+        EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - profileScrollView.bounds.size.height, profileScrollView.frame.size.width, profileScrollView.bounds.size.height)];
+        view.delegate = self;
+        view.backgroundColor = [UIColor clearColor];
+        [profileScrollView addSubview:view];
+        _refreshHeaderView = view;
+        
+        //  update the last update date
+        [_refreshHeaderView refreshLastUpdatedDate];
+     
+        /*}
         else
         {
         _ios6RefreshHeaderView = [[UIRefreshControl alloc]init];
         [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
         [profileScrollView addSubview:_ios6RefreshHeaderView];
-        }
+        }*/
 		
 	}
     

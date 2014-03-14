@@ -22,6 +22,12 @@
 
 #pragma mark - UIViewController Overrides
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tabBar.tintColor = cwBlueColor;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

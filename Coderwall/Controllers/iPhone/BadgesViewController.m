@@ -35,23 +35,23 @@
     
     if (_refreshHeaderView == nil) {
 		
-        if (![UIRefreshControl class]) {
+        //if (![UIRefreshControl class]) {
 
-            EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
-            view.delegate = self;
-            view.backgroundColor = [UIColor clearColor];
-            [self.tableView addSubview:view];
-            _refreshHeaderView = view;
+        EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+        view.delegate = self;
+        view.backgroundColor = [UIColor clearColor];
+        [self.tableView addSubview:view];
+        _refreshHeaderView = view;
+        [_refreshHeaderView refreshLastUpdatedDate];
+        
+        /*} else {
             
-            [_refreshHeaderView refreshLastUpdatedDate];
+        _ios6RefreshHeaderView = [[UIRefreshControl alloc]init];
+        [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
+        [_ios6RefreshHeaderView setTintColor: cwDarkGreyColor];
+        self.refreshControl = _ios6RefreshHeaderView;
             
-        } else {
-            
-            _ios6RefreshHeaderView = [[UIRefreshControl alloc]init];
-            [_ios6RefreshHeaderView addTarget:self action:@selector(refreshTable:) forControlEvents:UIControlEventValueChanged];
-            self.refreshControl = _ios6RefreshHeaderView;
-            
-		}
+		}*/
 	}
 	
     [self loadData];
@@ -60,6 +60,7 @@
 
 -(void)refreshTable:(UIRefreshControl *)sender
 {
+    NSLog(@"Refresh Table");
 	User *user = [self currentUser];
     [user refresh];
     [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:0];

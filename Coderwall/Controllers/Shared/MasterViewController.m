@@ -62,10 +62,12 @@
         self.navigationItem.leftBarButtonItem = logoButtonItem;
     }
     
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         self.navigationController.navigationBar.tintColor = cwDarkGreyColor;
-    else
+    } else {
         self.navigationController.navigationBar.barTintColor = cwDarkGreyColor;
+        self.navigationController.navigationBar.tintColor = cwBlueColor;
+    }
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
@@ -78,10 +80,9 @@
                                                                   action:nil];
     backButton.accessibilityLabel = @"Back";
     self.navigationItem.backBarButtonItem = backButton;
-
-    if(!self.currentUser) {
+    
+    if(!self.currentUser)
         [self performSegueWithIdentifier:@"ShowSettings" sender:self];
-    }
     
     self.tabBar.tintColor = cwBlueColor;
 }

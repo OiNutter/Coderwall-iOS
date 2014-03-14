@@ -164,15 +164,15 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSInteger numRows = [self tableView:self.tableView numberOfRowsInSection:indexPath.section];
-    
     if([(NSString *)[sections objectAtIndex:indexPath.section]  isEqual: @"Profile"]){
+        
         ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"profileCell"];
         NSArray *section = (NSArray *)[statsData objectAtIndex:indexPath.section];
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
         cell.title.text = [item objectForKey:@"fullName"];
         cell.detail.text = [item objectForKey:@"summary"];
         [cell.avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
+        
         if([item objectForKey:@"avatar"]){
             [DejalBezelActivityView activityViewForView:cell.avatar];
             dispatch_queue_t downloadQueue = dispatch_queue_create("download queue", NULL);
@@ -186,7 +186,9 @@
             });
         }
         return cell;
+        
     } else if([(NSString *)[sections objectAtIndex:indexPath.section]  isEqual: @"Specialities"]){
+        
         StatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statCell"];
         NSString *item = (NSString *)[(NSArray *)[statsData objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
         cell.title.text = item;
@@ -195,6 +197,7 @@
         return cell;
         
     } else {
+        
         StatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"statCell"];
         NSArray *section = (NSArray *)[statsData objectAtIndex:indexPath.section];
         NSDictionary *item = (NSDictionary *)[section objectAtIndex:indexPath.row];
@@ -202,9 +205,8 @@
         cell.number.text = [(NSNumber *)[item objectForKey:@"number"] stringValue];
         
         return cell;
+        
     }
-    
-    
 
 }
 

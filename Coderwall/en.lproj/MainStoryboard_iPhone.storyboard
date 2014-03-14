@@ -116,7 +116,6 @@
         <!--Badges View Controller - Badges-->
         <scene sceneID="xtG-Nw-ZGc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bbB-Z9-mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Badges" id="S6q-OQ-aD7" customClass="BadgesViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4pU-w5-0yO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -184,6 +183,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Badges" image="badges.png" id="OUA-Iw-Iee"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbB-Z9-mzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="-502"/>
         </scene>
@@ -206,21 +206,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="I5F-ah-xVM" userLabel="detail">
-                                            <rect key="frame" x="20" y="14" width="280" height="16"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="31" translatesAutoresizingMaskIntoConstraints="NO" id="I5F-ah-xVM" userLabel="detail">
+                                            <rect key="frame" x="-47" y="23" width="31" height="16"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="16" id="YeI-BG-Vzu"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.20392156862745098" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I5F-ah-xVM" firstAttribute="top" secondItem="QnW-4v-Qqi" secondAttribute="top" constant="23" id="3QS-KD-0qy"/>
+                                        <constraint firstItem="I5F-ah-xVM" firstAttribute="leading" secondItem="QnW-4v-Qqi" secondAttribute="leading" constant="-47" id="ifm-QL-zWx"/>
+                                        <constraint firstAttribute="bottom" secondItem="I5F-ah-xVM" secondAttribute="bottom" constant="4" id="qk5-fH-Oiz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="detail" destination="I5F-ah-xVM" id="N9f-UL-1A4"/>
-                                    <outlet property="textHeight" destination="YeI-BG-Vzu" id="uUK-qk-Hmk"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="heb-aF-XM5">
@@ -353,7 +354,6 @@
         <!--Settings View Controller - Settings-->
         <scene sceneID="itH-f4-lyv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAg-JD-KSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Settings" id="SbM-Z6-PLT" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h5d-Qv-BJ7"/>
@@ -383,12 +383,14 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.22352941179999999" green="0.54901960780000003" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Kco-JP-MdT"/>
                     <connections>
                         <outlet property="usernameField" destination="dly-6m-07d" id="9qu-FU-nvC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAg-JD-KSH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1068" y="443"/>
         </scene>
