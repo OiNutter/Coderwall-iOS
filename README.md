@@ -3,13 +3,15 @@ Coderwall-iOS [![Build Status](https://modocache-oss.ci.cloudbees.com/job/Coderw
 
 ![iPhone Screenshots](https://github.com/OiNutter/Coderwall-iOS/raw/master/iPhones.png)
 
-NOTE
-----
+COMING SOON
+-----------
 
-For anyone wondering about an iOS6/iPhone 5 update, I'm talking to the guys at Coderwall 
-about getting some new stuff into their API so I can add all their new features to the app.
-Due to the work it looks like it's going to take to support iPhone 5 and 4s layouts, I feel it 
-makes more sense to wait and do this as part of the big update. Will update when I have more info.
+I'm currently in the midst of updating the App for iOS7 and iPhone5. It
+will only support iOS6 from now on, but will continue to support both
+iPhone and iPad, and will work on both iPhone screen sizes. I'm still
+wanting to add support for some of Coderwall's newer features once we
+can get them added to the API, but for now at least the app has got a
+bit of a facelift.
 
 The App
 -------
