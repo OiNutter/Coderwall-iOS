@@ -62,12 +62,11 @@
         self.navigationItem.leftBarButtonItem = logoButtonItem;
     }
     
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        self.navigationController.navigationBar.tintColor = cwDarkGreyColor;
-    } else {
-        self.navigationController.navigationBar.barTintColor = cwDarkGreyColor;
-        self.navigationController.navigationBar.tintColor = cwBlueColor;
-    }
+    self.navigationController.navigationBar.barTintColor = cwDarkGreyColor;
+    self.navigationController.navigationBar.tintColor = cwBlueColor;
+    self.tabBar.translucent = NO;
+    self.tabBar.barTintColor = cwLightGreyColor;
+    self.tabBar.tintColor = cwBlueColor;
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
@@ -84,7 +83,6 @@
     if(!self.currentUser)
         [self performSegueWithIdentifier:@"ShowSettings" sender:self];
     
-    self.tabBar.tintColor = cwBlueColor;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

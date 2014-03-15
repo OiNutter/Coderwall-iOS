@@ -10,6 +10,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <UITextFieldDelegate>
 
 @end

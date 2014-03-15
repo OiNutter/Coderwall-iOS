@@ -1,4 +1,4 @@
-//
+		//
 //  SettingsViewController.m
 //  Coderwall
 //
@@ -38,6 +38,7 @@
     UIImage *backgroundImage = [UIImage imageNamed:@"PanelBg.png"];
     backgroundImage = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(10, 0, 15, 0)];
     self.backgroundImageView.image = backgroundImage;
+    self.usernameField.clearButtonMode = UITextFieldViewModeWhileEditing;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,16 +59,16 @@
 
 #pragma mark - Internal Methods
 
-- (IBAction)userNameChanged:(id) sender
+- (IBAction)userNameChanged:(id)sender
 {
     if (self.usernameField.text.length > 0) {
-        [self.navigationController popViewControllerAnimated:YES];
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setValue:self.usernameField.text forKey:@"UserName"];
         [userDefaults synchronize];
 
         [self setCurrentUser:[[User alloc] initWithUsername:self.usernameField.text]];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UserChanged" object:self];
+        [self.navigationController popViewControllerAnimated:YES];
         
     } else {
         NSString *title = NSLocalizedString(@"You must enter a username!",
@@ -82,6 +83,15 @@
                                               otherButtonTitles:nil];
 		[alert show];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.usernameField) {
+        [textField resignFirstResponder];
+        [self userNameChanged:textField];
+        return NO;
+    }
+    return YES;
 }
 
 @end

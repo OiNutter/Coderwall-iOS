@@ -376,9 +376,10 @@
                                 <rect key="frame" x="20" y="20" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="userNameChanged:" destination="SbM-Z6-PLT" eventType="editingDidEnd" id="Nmj-Vp-WWa"/>
+                                    <outlet property="delegate" destination="SbM-Z6-PLT" id="RHu-6Y-kN5"/>
                                 </connections>
                             </textField>
                         </subviews>

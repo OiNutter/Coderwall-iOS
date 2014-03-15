@@ -15,13 +15,10 @@
 		BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
 		BE1C7F7A14F137E800E460AC /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
 		BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
-		BE546A631501967900B9A200 /* BadgesiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A621501967800B9A200 /* BadgesiPadViewController.m */; };
 		BE546A6615019A3D00B9A200 /* iPadBadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */; };
 		BE546A6D15028AE900B9A200 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6C15028AE900B9A200 /* SummaryViewController.m */; };
 		BE546A7015028B7800B9A200 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6F15028B7800B9A200 /* ProfileCell.m */; };
 		BE546A731502E81600B9A200 /* iPadAccomplishmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */; };
-		BE546A761502E96700B9A200 /* AccomplishmentsiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */; };
-		BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */; };
 		BE5663EA14F2E856002BC157 /* AccomplishmentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */; };
 		BE60B66A14EFA64100CF7151 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66914EFA64100CF7151 /* UIKit.framework */; };
 		BE60B66C14EFA64100CF7151 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE60B66B14EFA64100CF7151 /* Foundation.framework */; };
@@ -153,15 +150,12 @@
 		DAB00118159F8D3C00F773A2 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C367151DC8CA00CAE177 /* ImageLoader.m */; };
 		DAB00119159F8D3C00F773A2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B6A514EFB09100CF7151 /* ProfileViewController.m */; };
 		DAB0011A159F8D3C00F773A2 /* BadgesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F7914F137E800E460AC /* BadgesViewController.m */; };
-		DAB0011B159F8D3C00F773A2 /* AccomplishmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */; };
 		DAB0011C159F8D3C00F773A2 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9E92FC14F463AF00FC3704 /* StatsViewController.m */; };
 		DAB0011D159F8D3C00F773A2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE60B75514EFC4D500CF7151 /* MasterViewController.m */; };
 		DAB0011E159F8D3C00F773A2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE73BA1514F8FFAB00220316 /* SettingsViewController.m */; };
 		DAB0011F159F8D3C00F773A2 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE886C5014F95249003BC113 /* SearchViewController.m */; };
 		DAB00120159F8D3C00F773A2 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDD01D015005369006C4C29 /* SearchResultsViewController.m */; };
-		DAB00121159F8D3C00F773A2 /* BadgesiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A621501967800B9A200 /* BadgesiPadViewController.m */; };
 		DAB00122159F8D3C00F773A2 /* SummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A6C15028AE900B9A200 /* SummaryViewController.m */; };
-		DAB00123159F8D3C00F773A2 /* AccomplishmentsiPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */; };
 		DAB00124159F8D3C00F773A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE19C3EA15038F6200AAEE5E /* DetailViewController.m */; };
 		DAB00125159F8D3C00F773A2 /* BadgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C7F8014F17C1B00E460AC /* BadgeCell.m */; };
 		DAB00126159F8D3C00F773A2 /* AccomplishmentsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */; };
@@ -201,8 +195,6 @@
 		BE1C7F7914F137E800E460AC /* BadgesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesViewController.m; sourceTree = "<group>"; };
 		BE1C7F7F14F17C1B00E460AC /* BadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeCell.h; sourceTree = "<group>"; };
 		BE1C7F8014F17C1B00E460AC /* BadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeCell.m; sourceTree = "<group>"; };
-		BE546A611501967800B9A200 /* BadgesiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesiPadViewController.h; sourceTree = "<group>"; };
-		BE546A621501967800B9A200 /* BadgesiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesiPadViewController.m; sourceTree = "<group>"; };
 		BE546A6415019A3D00B9A200 /* iPadBadgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadBadgeCell.h; sourceTree = "<group>"; };
 		BE546A6515019A3D00B9A200 /* iPadBadgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadBadgeCell.m; sourceTree = "<group>"; };
 		BE546A6B15028AE900B9A200 /* SummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryViewController.h; sourceTree = "<group>"; };
@@ -211,10 +203,6 @@
 		BE546A6F15028B7800B9A200 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		BE546A711502E81500B9A200 /* iPadAccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadAccomplishmentCell.h; sourceTree = "<group>"; };
 		BE546A721502E81500B9A200 /* iPadAccomplishmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadAccomplishmentCell.m; sourceTree = "<group>"; };
-		BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsiPadViewController.h; sourceTree = "<group>"; };
-		BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsiPadViewController.m; sourceTree = "<group>"; };
-		BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentsViewController.h; sourceTree = "<group>"; };
-		BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsViewController.m; sourceTree = "<group>"; };
 		BE5663E814F2E856002BC157 /* AccomplishmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccomplishmentCell.h; sourceTree = "<group>"; };
 		BE5663E914F2E856002BC157 /* AccomplishmentsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccomplishmentsCell.m; sourceTree = "<group>"; };
 		BE60B66514EFA64100CF7151 /* Coderwall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coderwall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -535,12 +523,8 @@
 		BE74BFB71503857200433091 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
-				BE546A611501967800B9A200 /* BadgesiPadViewController.h */,
-				BE546A621501967800B9A200 /* BadgesiPadViewController.m */,
 				BE546A6B15028AE900B9A200 /* SummaryViewController.h */,
 				BE546A6C15028AE900B9A200 /* SummaryViewController.m */,
-				BE546A741502E96600B9A200 /* AccomplishmentsiPadViewController.h */,
-				BE546A751502E96600B9A200 /* AccomplishmentsiPadViewController.m */,
 				BE19C3E915038F6200AAEE5E /* DetailViewController.h */,
 				BE19C3EA15038F6200AAEE5E /* DetailViewController.m */,
 				BE9AEAE118D1145B00D8C6F7 /* BadgesCollectionViewController.h */,
@@ -556,8 +540,6 @@
 				BE60B6A514EFB09100CF7151 /* ProfileViewController.m */,
 				BE1C7F7814F137E800E460AC /* BadgesViewController.h */,
 				BE1C7F7914F137E800E460AC /* BadgesViewController.m */,
-				BE5663E514F2D5E7002BC157 /* AccomplishmentsViewController.h */,
-				BE5663E614F2D5E8002BC157 /* AccomplishmentsViewController.m */,
 				BE9E92FB14F463AF00FC3704 /* StatsViewController.h */,
 				BE9E92FC14F463AF00FC3704 /* StatsViewController.m */,
 			);
@@ -1010,7 +992,6 @@
 				BE9AEAE618D1167000D8C6F7 /* BadgeCollectionViewCell.m in Sources */,
 				BE1C7F8114F17C1B00E460AC /* BadgeCell.m in Sources */,
 				BE9AEADE18CFDE7D00D8C6F7 /* AvatarView.m in Sources */,
-				BE5663E714F2D5E8002BC157 /* AccomplishmentsViewController.m in Sources */,
 				BE5663EA14F2E856002BC157 /* AccomplishmentsCell.m in Sources */,
 				BE9E92FD14F463AF00FC3704 /* StatsViewController.m in Sources */,
 				BE9E930014F5658500FC3704 /* StatCell.m in Sources */,
@@ -1019,12 +1000,10 @@
 				BE886C5514F953E0003BC113 /* ClearSearchBar.m in Sources */,
 				BE9AEAE918D1254500D8C6F7 /* EmptyCollectionViewCell.m in Sources */,
 				BEDD01D11500536A006C4C29 /* SearchResultsViewController.m in Sources */,
-				BE546A631501967900B9A200 /* BadgesiPadViewController.m in Sources */,
 				BE546A6615019A3D00B9A200 /* iPadBadgeCell.m in Sources */,
 				BE546A6D15028AE900B9A200 /* SummaryViewController.m in Sources */,
 				BE546A7015028B7800B9A200 /* ProfileCell.m in Sources */,
 				BE546A731502E81600B9A200 /* iPadAccomplishmentCell.m in Sources */,
-				BE546A761502E96700B9A200 /* AccomplishmentsiPadViewController.m in Sources */,
 				BE19C3EB15038F6200AAEE5E /* DetailViewController.m in Sources */,
 				BE07C368151DC8CA00CAE177 /* ImageLoader.m in Sources */,
 				DA3197D6159BE9830027A608 /* ILCannedURLProtocol.m in Sources */,
@@ -1051,15 +1030,12 @@
 				DAB00118159F8D3C00F773A2 /* ImageLoader.m in Sources */,
 				DAB00119159F8D3C00F773A2 /* ProfileViewController.m in Sources */,
 				DAB0011A159F8D3C00F773A2 /* BadgesViewController.m in Sources */,
-				DAB0011B159F8D3C00F773A2 /* AccomplishmentsViewController.m in Sources */,
 				DAB0011C159F8D3C00F773A2 /* StatsViewController.m in Sources */,
 				DAB0011D159F8D3C00F773A2 /* MasterViewController.m in Sources */,
 				DAB0011E159F8D3C00F773A2 /* SettingsViewController.m in Sources */,
 				DAB0011F159F8D3C00F773A2 /* SearchViewController.m in Sources */,
 				DAB00120159F8D3C00F773A2 /* SearchResultsViewController.m in Sources */,
-				DAB00121159F8D3C00F773A2 /* BadgesiPadViewController.m in Sources */,
 				DAB00122159F8D3C00F773A2 /* SummaryViewController.m in Sources */,
-				DAB00123159F8D3C00F773A2 /* AccomplishmentsiPadViewController.m in Sources */,
 				DAB00124159F8D3C00F773A2 /* DetailViewController.m in Sources */,
 				DAB00125159F8D3C00F773A2 /* BadgeCell.m in Sources */,
 				DAB00126159F8D3C00F773A2 /* AccomplishmentsCell.m in Sources */,
@@ -1195,7 +1171,7 @@
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
@@ -1222,7 +1198,7 @@
 				GCC_PREFIX_HEADER = "Coderwall/Coderwall-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Coderwall/Coderwall-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Crittercism_v3_1_5/CrittercismExample/CrittercismExample/CrittercismSDK\"",
