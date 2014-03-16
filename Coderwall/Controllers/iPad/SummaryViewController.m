@@ -58,8 +58,8 @@
     
         summaryDetails = [summaryDetails stringByAppendingString:user.location];
         
-        NSArray *profileData = [[NSArray alloc] init];
-        NSArray *profileKeys = [[NSArray alloc] init];
+        NSArray *profileData;// = [NSArray alloc];
+        NSArray *profileKeys;// = [NSArray alloc];
         
         if(user.thumbnail != nil){
             profileData = [[NSArray alloc] initWithObjects:user.name,summaryDetails,user.thumbnail,nil];

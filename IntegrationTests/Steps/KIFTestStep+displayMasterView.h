@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 Bearded Apps. All rights reserved.
 //
 
+#import <KIFTestStepValidation.h>
 
-#import "KIFTestStep.h"
 
-
-@interface KIFTestStep (displayMasterView)
+@interface KIFTestStepValidation (displayMasterView)
 
 + (id)stepToPopToMasterView;
 

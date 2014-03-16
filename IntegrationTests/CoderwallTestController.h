@@ -8,9 +8,9 @@
 
 
 #import <Foundation/Foundation.h>
-#import "KIFTestController.h"
+#import <KIFTestCase.h>
 
 
-@interface CoderwallTestController : KIFTestController
+@interface CoderwallTestController : KIFTestCase
 
 @end

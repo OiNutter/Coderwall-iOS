@@ -43,14 +43,6 @@
         svc.delegate = (id)navigationController.topViewController;
     }
     
-    /*
-    // Add Crittercism debugging
-    [Crittercism initWithAppID: @"4fa9501fb093150f4300004c"
-                        andKey:@"ne780aghaohlirxlkzxwjbyusitf"
-                     andSecret:@"sbhf5kotnxxwscgapu39ddriz6ijvmpe"
-         andMainViewController:self.window.rootViewController];
-    */
-    
     [self registerForNetworkNotifications];
     [self loadCurrentUser];
     

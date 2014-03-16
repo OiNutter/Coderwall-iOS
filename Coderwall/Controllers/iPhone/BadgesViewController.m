@@ -116,13 +116,7 @@
         NSDictionary *badge = [self.badges objectAtIndex:indexPath.row];
         [cell.title setText:[badge objectForKey:@"name"]];
     
-        CGSize maximumSize = CGSizeMake(190, 60);
         NSString *descriptionText = [badge objectForKey:@"description"];
-        UIFont *descriptionFont = [UIFont fontWithName:@"Helvetica" size:11];
-        CGSize descriptionStringSize = [descriptionText sizeWithFont:descriptionFont 
-                                                   constrainedToSize:maximumSize 
-                                                       lineBreakMode:cell.detail.lineBreakMode];
-    
         [cell.detail setText:descriptionText];
     
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",[badge objectForKey:@"badge"]]];

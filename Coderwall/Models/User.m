@@ -64,7 +64,7 @@
 - (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    int code = [httpResponse statusCode];
+    int code = (int)[httpResponse statusCode];
     if(code == 200){
         [receivedData setLength:0];
     } else {

@@ -91,14 +91,7 @@
         
         summaryDetails = [summaryDetails stringByAppendingString:user.location];       
         
-        CGSize maximumSize = CGSizeMake(260, 80);
-        UIFont *summaryFont = [UIFont fontWithName:@"Helvetica" size:14];
-        CGSize summaryStringSize = [summaryDetails sizeWithFont:summaryFont 
-                                              constrainedToSize:maximumSize 
-                                                  lineBreakMode:summary.lineBreakMode];
-        
         [summary setText:summaryDetails];
-        [summary setFrame:CGRectMake(30, 265, 260, summaryStringSize.height)];
         
         [avatar setImage:[UIImage imageNamed:@"defaultavatar.png"]];
         if(user.thumbnail != nil){

@@ -317,98 +317,6 @@
             </objects>
             <point key="canvasLocation" x="541" y="516"/>
         </scene>
-        <!--Accomplishmentsi Pad View Controller - Accomplishments-->
-        <scene sceneID="oqd-PI-Rmf">
-            <objects>
-                <tableViewController id="U13-Da-NnJ" customClass="AccomplishmentsiPadViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oAX-DB-D80">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="accomplishmentsCell" rowHeight="195" id="bNg-oN-z24" customClass="iPadAccomplishmentCell">
-                                <rect key="frame" x="0.0" y="22" width="1024" height="195"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bNg-oN-z24" id="9Ac-H5-ji2">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="195"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="daM-wW-KsX" userLabel="bg1">
-                                            <rect key="frame" x="0.0" y="10" width="234" height="175"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="N6s-KW-LYb" userLabel="detail1">
-                                            <rect key="frame" x="22" y="25" width="190" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="GJc-xT-tEI" userLabel="bg2">
-                                            <rect key="frame" x="234" y="10" width="234" height="175"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="885-vP-k3E" userLabel="detail2">
-                                            <rect key="frame" x="257" y="25" width="190" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="kfy-1O-gRB" userLabel="bg3">
-                                            <rect key="frame" x="468" y="10" width="234" height="175"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="1sC-az-I7O" userLabel="detail3">
-                                            <rect key="frame" x="490" y="25" width="190" height="15"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bg1" destination="daM-wW-KsX" id="hHJ-54-N9b"/>
-                                    <outlet property="bg2" destination="GJc-xT-tEI" id="3rf-Wr-6sZ"/>
-                                    <outlet property="bg3" destination="kfy-1O-gRB" id="ubY-8K-FZ3"/>
-                                    <outlet property="detail1" destination="N6s-KW-LYb" id="OeQ-Bx-cum"/>
-                                    <outlet property="detail2" destination="885-vP-k3E" id="6eO-0V-oBm"/>
-                                    <outlet property="detail3" destination="1sC-az-I7O" id="b1v-kk-LgR"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emptyCell" textLabel="0YP-lN-kkZ" rowHeight="100" style="IBUITableViewCellStyleDefault" id="0Dq-Iz-xyP" customClass="BadgeCell">
-                                <rect key="frame" x="0.0" y="217" width="1024" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Dq-Iz-xyP" id="u5L-va-7h4">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" id="0YP-lN-kkZ">
-                                            <rect key="frame" x="15" y="0.0" width="994" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="shadowOffset" width="1" height="1"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="U13-Da-NnJ" id="coU-cb-gWs"/>
-                            <outlet property="delegate" destination="U13-Da-NnJ" id="GnX-XD-J4q"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Accomplishments" image="accomplishments.png" id="K55-EE-bNc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IHS-MD-V4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2469" y="987"/>
-        </scene>
         <!--Split View Controller-->
         <scene sceneID="18">
             <objects>
@@ -532,7 +440,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="accomplishments.png" width="30" height="30"/>
         <image name="profile.png" width="30" height="30"/>
         <image name="search.png" width="30" height="30"/>
         <image name="settings.png" width="20" height="20"/>
